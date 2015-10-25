@@ -1,5 +1,5 @@
 ILLUSTRO GADGETS
-Version 0.6.2
+Version 0.7d1
 By iamanai
 
 -----------------------
@@ -28,6 +28,42 @@ Base Code	SilverAzide
 
 -----------------------
 CHANGELOG
+v0.7 ??-??-2015:
+User Interface:
+ - Lowered bars by 1 pixel without increasing height of rows (bar is more "centered" between the rows)
+ - Removed hover effect for buttons (it causes too much lag when the gadgets update)
+ - Changed checkboxes to use actual images, rather than Wingdings characters
+ - Fixed slight overlap on some of the graphs
+Code cleanup:
+ - Removed the "v" from the version number
+ - Standardized all positioning, layout, and visual elements across skins
+ - Reduced number of meters for checkboxes
+ - Cleaned up styles, specifically for color / HWiNFO configuration elements
+ - Simplified overly complicated positioning equations
+ - Moved almost all raw positioning data to variables for easy debugging and changes
+ - Simplified background, making use of ScaleMargins to eliminate warping and combined into 1 meter (from the previous 3)
+Settings:
+ - Merged about skin and all settings skin into new unified skin
+ - Added an update checker to the about screen
+All CPU Meter:
+ - Removed settings skin
+ - Can change CPU clock and fan text to regular if so desired
+ - CPU name can now be displayed at the bottom, or as a hover-over, or a tooltip
+ - Fully removed support for CoreTemp and SpeedFan
+Network Meter:
+ - Removed settings skin
+ - Double-clicking on the skin will take you to the Network Management window
+ - Increased opacity of arrows to match those on Drives Meter
+GPU Meter:
+ - Removed settings skin
+ - Double-clicking on the skin will open HWiNFO's sensors window
+ - Added support for dual GPUs
+Drives Meter:
+ - Removed settings skin
+ - Added option to enable drive capacity warnings (and at what thresholds they appear)
+ - Fully fixed E drive, and squashed other flaws relating to copy/paste
+ - Fixed graph, which will now scale for all drives, not per-drive
+
 v0.6.2 10-10-2015:
 Drives Meter:
  - Fixed more mistakes causing the E drive to function incorrectly. How could I be so dumb as to mess it up so badly, I have no idea.
@@ -43,7 +79,7 @@ Drives Meter:
  - Settings let you show/hide the line graph or histogram, select if you want to hide certain drives, and customize colors
 Code Cleanup:
  - Cleaned up All CPU Meter's main section code, placing meters by row rather than by type
- - Removed All CPU Meter's support for CoreTemp and SpeedFan in favor of HWiNFO (if you want me to bring this back, let me know. I removed it because it was a pain in the butt to have compatibility with all three)
+ - Removed All CPU Meter's support for CoreTemp and SpeedFan in favor of HWiNFO
  - Added more settings to Network Meter and GPU Meter
  - Fixed mistake in GPU Meter's settings skin that broke middle-click-to-default functionality for the checkboxes
  - Preparation for mass code cleanup to take place in v0.7 and v0.8

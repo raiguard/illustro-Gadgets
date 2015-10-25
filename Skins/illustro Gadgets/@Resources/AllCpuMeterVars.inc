@@ -26,13 +26,13 @@ showGraph=1
 
 ; ## POSITIONING ##
 bgWidth=210
-bgHeight=(#bodyStartY# + ((#rowYOffset# + 1) * (1 + (#hidePage# = 0 ? 1 : 0) + #totalCores#)) + (#showClockAndFan# = 1 ? 12 : 0) + (#showGraph# = 1 ? #graphHeight# + 4 : 0) + 3)
+bgHeight=(#bodyStartY# + ((#rowYOffset# + 1) * (1 + (#hidePage# = 0 ? 1 : 0) + #totalCores#)) + (#showClockAndFan# = 1 ? 12 : 0) + (#showGraph# = 1 ? #graphHeight# + 3 : 0) + 12)
 lowerBGIntersect=(#bgHeight# - 60)
 bgCenterX=(#bgWidth# / 2)
 textXMarginRight=(#bgWidth# - 10)
 ; - Settings -
 settingsBGWidth=210
-settingsBGHeight=553
+settingsBGHeight=587
 settingsLowerBodyStartY=187
 settingsPageName=ColorSettings
 settingsTextXMarginRight=(#settingsBGWidth# - 10)

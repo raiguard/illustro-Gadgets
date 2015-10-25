@@ -6,7 +6,7 @@ hideLineGraph=0
 
 ; ## POSITIONING ##
 bgWidth=210
-bgHeight=(#bodyStartY# + (#rowYOffset# * (8 - #hideCoreVoltage# - #hideMemController#)) + (#graphHeight# * (#hideLineGraph# = 0 ? 1 : 0)) + (#hideLineGraph# = 0 ? 9 : 4))
+bgHeight=(#bodyStartY# + (#rowYOffset# * (8 - #hideCoreVoltage# - #hideMemController#)) + (#graphHeight# * (#hideLineGraph# = 0 ? 1 : 0)) + (#hideLineGraph# = 0 ? 17 : 12))
 bottomBGIntersect=(#bgHeight# - 60)
 bgCenterX=(#bgWidth# / 2)
 textXMarginRight=(#bgWidth# - 10)

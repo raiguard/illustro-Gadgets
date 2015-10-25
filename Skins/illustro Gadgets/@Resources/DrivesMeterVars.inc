@@ -18,7 +18,7 @@ hideDiskL=0
 ; ## POSITIONING ##
 bgWidth=210
 diskChunkY=((#rowYOffset# * 3) + 3)
-bgHeight=([CalcDiskCount] * #diskChunkY# + (#hideGraph# = 0 ? #graphHeight# + 15 : 13))
+bgHeight=(#bodyStartY# + ([CalcDiskCount] * #diskChunkY#) + (#hideGraph# = 0 ? #graphHeight# + 5 : 0) + 8)
 textXMarginRight=(#bgWidth# - 11)
 bgCenterX=(#bgWidth# / 2)
 barWidth=(#bgWidth# - #textXMarginLeft# - 11 - 3)

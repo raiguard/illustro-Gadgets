@@ -5,7 +5,7 @@ hideGraph=0
 
 ; ## POSITIONING ##
 bgWidth=210
-bgHeight=(#bodyStartY# + (#rowYOffset# * 5) + (#hideGraph# = 0 ? #graphHeight# + 3 : 0))
+bgHeight=(#bodyStartY# + (#rowYOffset# * 5) + (#hideGraph# = 0 ? #graphHeight# + 3 : 0) + 7)
 bgCenterX=(#bgWidth# / 2)
 ipInfoTextX=50
 lowerBGIntersect=(#bgHeight# - 60)
@@ -50,5 +50,5 @@ textNetOutBytesTotal=""
 ; network interface of each type, all other reported interfaces should be virtual or disconnected.
 ;
 interfaceBroadband=0
-interfaceEthernet=2
+interfaceEthernet=0
 interfaceWireless=0
