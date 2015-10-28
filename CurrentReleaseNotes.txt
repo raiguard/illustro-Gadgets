@@ -1,0 +1,3 @@
+v0.6.2 10-10-2015:
+Drives Meter:
+ - Fixed more mistakes causing the E drive to function incorrectly. How could I be so dumb as to mess it up so badly, I have no idea.
