@@ -1,9 +1,9 @@
 [Variables]
 ; ## GENERAL ##
-version="0.7.0-d1"
-versionAbsolute=0701
+version="0.7.0-d2"
+versionAbsolute=0702
 updatedDate="04 October 2015"
-RainRGB=#@#RainRGB4.exe
+RainRGB=#@#Addons/RainRGB/RainRGB4.exe
 
 ; ## FONT FACES AND SIZES ##
 fontName=Trebuchet MS

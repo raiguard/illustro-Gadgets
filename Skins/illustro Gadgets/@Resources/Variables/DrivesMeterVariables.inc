@@ -1,31 +1,19 @@
 [Variables]
-; ## SHOW / HIDE ##
-hideHistogram=0
-hideGraph=0
-hideDriveWarnings=0
-
-; - Disks -
-hideDiskD=0
-hideDiskE=0
-hideDiskF=0
-hideDiskG=0
-hideDiskH=0
-hideDiskI=0
-hideDiskJ=0
-hideDiskK=0
-hideDiskL=0
-
-; ## POSITIONING ##
+; -- General positioning --
 bgWidth=210
-diskChunkY=((#rowYOffset# * 3) + 3)
 bgHeight=(#bodyStartY# + ([CalcDiskCount] * #diskChunkY#) + (#hideGraph# = 0 ? #graphHeight# + 5 : 0) + 8)
-textXMarginRight=(#bgWidth# - 11)
 bgCenterX=(#bgWidth# / 2)
+
+generalXMarginRight=(#bgWidth# - 11)
+diskChunkY=((#rowYOffset# * 3) + 3)
+
 barWidth=(#bgWidth# - #generalXMarginLeft# - 11 - 3)
+
 graphY=(#hideGraph# = 1 ? -#graphHeight# - 1 : 5)r
 graphWidth=(#bgWidth# - #generalXMarginLeft# - 11)
 
-; ## DRIVES TO MONITOR ##
+; -- Disks --
+; Drives to monitor
 d01="C:"
 d02="D:"
 d03="E:"
@@ -37,26 +25,7 @@ d08="J:"
 d09="K:"
 d10="L:"
 
-; ## COLORS ##
-colorDisk1=107,238,98
-colorDisk2=255,246,42
-colorDisk3=250,158,0
-colorDisk4=236,28,70
-colorDisk5=199,36,199
-colorDisk6=145,70,232
-colorDisk7=42,112,250
-colorDisk8=43,224,224
-colorDisk9=121,182,62
-colorDisk10=204,255,0
-colorDiskCapacityWarn=220,200,0
-colorDiskCapacityFull=200,0,0
-
-; ## DISK WARNING THRESHOLDS ##
-diskThreshholdFull=0.90
-diskThreshholdWarn=0.80
-
-; ## DYNAMIC VALUES - DO NOT CHANGE ##
-; - Colors -
+; Colors (Dynamic)
 colorDiskC=0,0,0,0
 colorDiskD=0,0,0,0
 colorDiskE=0,0,0,0
@@ -68,10 +37,7 @@ colorDiskJ=0,0,0,0
 colorDiskK=0,0,0,0
 colorDiskL=0,0,0,0
 
-; - Alpha -
-alphaHistogram=50
-
-; - Disk not Found Variables -
+; Disk not found
 diskNotFoundC=0
 diskNotFoundD=0
 diskNotFoundE=0
@@ -83,7 +49,7 @@ diskNotFoundJ=0
 diskNotFoundK=0
 diskNotFoundL=0
 
-; - Text Variables -
+; Text variables (dynamic)
 textDiskSpaceFreeC=""
 textDiskSpaceFreeD=""
 textDiskSpaceFreeE=""

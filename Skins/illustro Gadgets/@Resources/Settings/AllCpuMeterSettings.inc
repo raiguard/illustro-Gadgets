@@ -1,11 +1,11 @@
 [Variables]
-; ## SHOW/HIDE ##
-hidePage=1
-showClockAndFan=1
+; -- Show/Hide --
+hidePage=0
+showClockAndFan=0
 showAvgCpuOnly=1
 showLineGraph=1
 
-; ## COLORING OPTIONS ##
+; -- Colors --
 colorCore1=107,238,98
 colorCore2=255,246,42
 colorCore3=250,158,0
@@ -27,7 +27,7 @@ colorPage=255,204,0
 colorAvgCpu=236,28,70
 
 disableTemps=0
-tempsInCelsius=1
+tempUOM=C
 
 ; ## HWiNFO HEXADECIMAL VALUES ##
 ; - CPU 0 DTS -

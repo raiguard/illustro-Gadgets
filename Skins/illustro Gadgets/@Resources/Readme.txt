@@ -1,5 +1,5 @@
 ILLUSTRO GADGETS
-Version 0.7d1
+Version 0.7.0-d.2
 By iamanai
 
 -----------------------
@@ -11,8 +11,8 @@ you can have quick access to a variety of information about your system.
 -----------------------
 CONTACT
 
-Email: exhelah@gmail.com
-Twitter: @Iamanai_
+Email: iamanaiofficial@gmail.com
+Twitter: @iamanai_
 
 -----------------------
 LICENSE AND CREDITS
@@ -28,14 +28,14 @@ Base Code	SilverAzide
 
 -----------------------
 CHANGELOG
-v0.7 ??-??-2015:
+0.7.0 ??-??-2015:
 User Interface:
  - Lowered bars by 1 pixel without increasing height of rows (bar is more "centered" between the rows)
  - Removed hover effect for buttons (it causes too much lag when the gadgets update)
  - Changed checkboxes to use actual images, rather than Wingdings characters
  - Fixed slight overlap on some of the graphs
 Code cleanup:
- - Removed the "v" from the version number
+ - Changed versioning to follow the Semantic Versioning format
  - Standardized all positioning, layout, and visual elements across skins
  - Reduced number of meters for checkboxes
  - Cleaned up styles, specifically for color / HWiNFO configuration elements
@@ -43,8 +43,8 @@ Code cleanup:
  - Moved almost all raw positioning data to variables for easy debugging and changes
  - Simplified background, making use of ScaleMargins to eliminate warping and combined into 1 meter (from the previous 3)
 Settings:
- - Merged about skin and all settings skin into new unified skin
- - Added an update checker to the about screen
+ - Merged the about skin and all settings skins into new unified skin
+ - Added an update checker and external links to the about screen
 All CPU Meter:
  - Removed settings skin
  - Can change CPU clock and fan text to regular if so desired
