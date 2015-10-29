@@ -5,7 +5,7 @@ bgHeight=(#bodyStartY# + ([CalcDiskCount] * #diskChunkY#) + (#hideGraph# = 0 ? #
 bgCenterX=(#bgWidth# / 2)
 
 generalXMarginRight=(#bgWidth# - 11)
-diskChunkY=((#rowYOffset# * 3) + 3)
+diskChunkY=((#rowYOffset# * 3))
 
 barWidth=(#bgWidth# - #generalXMarginLeft# - 11 - 3)
 

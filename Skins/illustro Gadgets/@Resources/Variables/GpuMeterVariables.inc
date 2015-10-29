@@ -1,13 +1,13 @@
 [Variables]
 ; -- General visual properties --
 bgWidth=210
-bgHeight=(#bodyStartY# + ((#rowYOffset# + 1) * (8 - #hideCoreVoltage# - #hideMemController#)) + (#hideLineGraph# = 0 ? #graphHeight# + 7 : 0))
+bgHeight=(#bodyStartY# + (#rowYOffset# * (8 - #hideCoreVoltage# - #hideMemController#)) + (#hideLineGraph# = 0 ? #rowYOffset# + #graphHeight# - 3 : 0))
 bgCenterX=(#bgWidth# / 2)
 
 generalXMarginRight=(#bgWidth# - 10)
 
 barWidth=(#bgWidth# - #generalXMarginLeft# - (#bgWidth# - #generalXMarginRight#))
-graphWidth=(#bgWidth# - #generalXMarginLeft# - (#bgWidth# - #generalXMarginRight#))
+graphWidth=(#bgWidth# - #generalXMarginLeft# - (#bgWidth# - #generalXMarginRight# + 1))
 
 ; -- Dynamic (do not change) --
 ; Colors

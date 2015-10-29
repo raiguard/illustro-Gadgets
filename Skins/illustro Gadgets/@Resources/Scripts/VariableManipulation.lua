@@ -1,5 +1,5 @@
 -- 
--- ILLUSTRO GADGETS 0.7.0-d.3
+-- ILLUSTRO GADGETS 0.7.0-d.4
 -- By iamanai
 --
 -- Variable Manipulation Script 1.0.0-d.1 

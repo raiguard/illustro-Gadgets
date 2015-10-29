@@ -1,7 +1,7 @@
 [Variables]
 ; -- General Skin Pack Info --
-version="0.7.0-d.3"
-versionAbsolute=0703
+version="0.7.0-d.4"
+versionAbsolute=0704
 updatedDate="25 October 2015"
 platform="Rainmeter 3.3 (r2468)"
 license="Creative Commons BY-NC-SA 3.0"
@@ -21,7 +21,7 @@ generalOpacity=200
 ghostedOpacity=150
 
 bodyStartY=37
-rowYOffset=15
+rowYOffset=16
 
 barTextYOffset=13
 barHeight=1
