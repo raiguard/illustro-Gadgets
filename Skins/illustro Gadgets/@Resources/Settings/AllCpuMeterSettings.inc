@@ -1,8 +1,8 @@
 [Variables]
 ; -- Show/Hide --
 hidePage=0
-showClockAndFan=0
-showAvgCpuOnly=1
+showClockAndFan=1
+showAvgCpuOnly=0
 showLineGraph=1
 
 ; -- Colors --

@@ -26,30 +26,31 @@ disableTemps=0
 
 ; -- Positioning --
 bgWidth=210
-bgHeight=(#bodyStartY# + ((#rowYOffset# + 1) * (1 + (#hidePage# = 0 ? 1 : 0) + #cpuCores#)) + (#showClockAndFan# = 1 ? 12 : 0) + (#showLineGraph# = 1 ? #graphHeight# + 3 : 0) + 12)
+bgHeight=(#bodyStartY# + ((#rowYOffset# + 1) * (1 + (#hidePage# = 0 ? 1 : 0) + #cpuCores#)) + (#showClockAndFan# = 1 ? 12 : 0) + (#showLineGraph# = 1 ? #graphHeight# + 3 : 0) + 13)
 bgCenterX=(#bgWidth# / 2)
-textXMarginRight=(#bgWidth# - 10)
+generalXMarginRight=(#bgWidth# - 10)
+graphWidth=190
 
 ; -- Colors (Dynamic) --
-core1Color=
-core2Color=
-core3Color=
-core4Color=
-core5Color=
-core6Color=
-core7Color=
-core8Color=
-core9Color=
-core10Color=
-core11Color=
-core12Color=
-core13Color=
-core14Color=
-core15Color=
-core16Color=
-ramColor=
-pageColor=
-avgCpuColor=
+core1Color=0,0,0
+core2Color=0,0,0
+core3Color=0,0,0
+core4Color=0,0,0
+core5Color=0,0,0
+core6Color=0,0,0
+core7Color=0,0,0
+core8Color=0,0,0
+core9Color=0,0,0
+core10Color=0,0,0
+core11Color=0,0,0
+core12Color=0,0,0
+core13Color=0,0,0
+core14Color=0,0,0
+core15Color=0,0,0
+core16Color=0,0,0
+ramColor=0,0,0
+pageColor=0,0,0
+avgCpuColor=0,0,0
 
 ; -- Dynamic Variables --
 textRAMUsed=""

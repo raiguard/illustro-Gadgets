@@ -1,4 +1,4 @@
-[MeasureCPUTempCore1HWiNFO]
+[MeasureCPUTempCore1]
 Measure=Plugin
 Plugin=HWiNFO
 HWiNFOSensorId=#HWiNFO-CPU0-DTS-SensorId#
@@ -8,7 +8,7 @@ HWiNFOType=CurrentValue
 Disabled=(#disableTemps#) || (#isHWiNFOInUse# = 0)
 DynamicVariables=1
 
-[MeasureCPUTempCore2HWiNFO]
+[MeasureCPUTempCore2]
 Measure=Plugin
 Plugin=HWiNFO
 HWiNFOSensorId=#HWiNFO-CPU0-DTS-SensorId#
@@ -18,7 +18,7 @@ HWiNFOType=CurrentValue
 Disabled=(#disableTemps#) ||  (#hideCore2#) || (#isHWiNFOInUse# = 0)
 DynamicVariables=1
 
-[MeasureCPUTempCore3HWiNFO]
+[MeasureCPUTempCore3]
 Measure=Plugin
 Plugin=HWiNFO
 HWiNFOSensorId=#HWiNFO-CPU0-DTS-SensorId#
@@ -28,7 +28,7 @@ HWiNFOType=CurrentValue
 Disabled=(#disableTemps#) || (#hideCore3#) || (#isHWiNFOInUse# = 0)
 DynamicVariables=1
 
-[MeasureCPUTempCore4HWiNFO]
+[MeasureCPUTempCore4]
 Measure=Plugin
 Plugin=HWiNFO
 HWiNFOSensorId=#HWiNFO-CPU0-DTS-SensorId#
@@ -38,7 +38,7 @@ HWiNFOType=CurrentValue
 Disabled=(#disableTemps#) || (#hideCore4#) || (#isHWiNFOInUse# = 0)
 DynamicVariables=1
 
-[MeasureCPUTempCore5HWiNFO]
+[MeasureCPUTempCore5]
 Measure=Plugin
 Plugin=HWiNFO
 HWiNFOSensorId=#HWiNFO-CPU0-DTS-SensorId#
@@ -48,7 +48,7 @@ HWiNFOType=CurrentValue
 Disabled=(#disableTemps#) || (#hideCore5#) || (#isHWiNFOInUse# = 0)
 DynamicVariables=1
 
-[MeasureCPUTempCore6HWiNFO]
+[MeasureCPUTempCore6]
 Measure=Plugin
 Plugin=HWiNFO
 HWiNFOSensorId=#HWiNFO-CPU0-DTS-SensorId#
@@ -58,7 +58,7 @@ HWiNFOType=CurrentValue
 Disabled=(#disableTemps#) || (#hideCore6#) || (#isHWiNFOInUse# = 0)
 DynamicVariables=1
 
-[MeasureCPUTempCore7HWiNFO]
+[MeasureCPUTempCore7]
 Measure=Plugin
 Plugin=HWiNFO
 HWiNFOSensorId=#HWiNFO-CPU0-DTS-SensorId#
@@ -68,7 +68,7 @@ HWiNFOType=CurrentValue
 Disabled=(#disableTemps#) || (#hideCore7#) || (#isHWiNFOInUse# = 0)
 DynamicVariables=1
 
-[MeasureCPUTempCore8HWiNFO]
+[MeasureCPUTempCore8]
 Measure=Plugin
 Plugin=HWiNFO
 HWiNFOSensorId=#HWiNFO-CPU0-DTS-SensorId#
@@ -78,7 +78,7 @@ HWiNFOType=CurrentValue
 Disabled=(#disableTemps#) || (#hideCore8#) || (#isHWiNFOInUse# = 0)
 DynamicVariables=1
 
-[MeasureCPUTempCore9HWiNFO]
+[MeasureCPUTempCore9]
 Measure=Plugin
 Plugin=HWiNFO
 HWiNFOSensorId=#HWiNFO-CPU0-DTS-SensorId#
@@ -88,7 +88,7 @@ HWiNFOType=CurrentValue
 Disabled=(#disableTemps#) || (#hideCore9#) || (#isHWiNFOInUse# = 0)
 DynamicVariables=1
 
-[MeasureCPUTempCore10HWiNFO]
+[MeasureCPUTempCore10]
 Measure=Plugin
 Plugin=HWiNFO
 HWiNFOSensorId=#HWiNFO-CPU0-DTS-SensorId#
@@ -98,7 +98,7 @@ HWiNFOType=CurrentValue
 Disabled=(#disableTemps#) || (#hideCore10#) || (#isHWiNFOInUse# = 0)
 DynamicVariables=1
 
-[MeasureCPUTempCore11HWiNFO]
+[MeasureCPUTempCore11]
 Measure=Plugin
 Plugin=HWiNFO
 HWiNFOSensorId=#HWiNFO-CPU0-DTS-SensorId#
@@ -108,7 +108,7 @@ HWiNFOType=CurrentValue
 Disabled=(#disableTemps#) || (#hideCore11#) || (#isHWiNFOInUse# = 0)
 DynamicVariables=1
 
-[MeasureCPUTempCore12HWiNFO]
+[MeasureCPUTempCore12]
 Measure=Plugin
 Plugin=HWiNFO
 HWiNFOSensorId=#HWiNFO-CPU0-DTS-SensorId#
@@ -118,7 +118,7 @@ HWiNFOType=CurrentValue
 Disabled=(#disableTemps#) || (#hideCore12#) || (#isHWiNFOInUse# = 0)
 DynamicVariables=1
 
-[MeasureCPUTempCore13HWiNFO]
+[MeasureCPUTempCore13]
 Measure=Plugin
 Plugin=HWiNFO
 HWiNFOSensorId=#HWiNFO-CPU0-DTS-SensorId#
@@ -128,7 +128,7 @@ HWiNFOType=CurrentValue
 Disabled=(#disableTemps#) || (#hideCore13#) || (#isHWiNFOInUse# = 0)
 DynamicVariables=1
 
-[MeasureCPUTempCore14HWiNFO]
+[MeasureCPUTempCore14]
 Measure=Plugin
 Plugin=HWiNFO
 HWiNFOSensorId=#HWiNFO-CPU0-DTS-SensorId#
@@ -138,7 +138,7 @@ HWiNFOType=CurrentValue
 Disabled=(#disableTemps#) || (#hideCore14#) || (#isHWiNFOInUse# = 0)
 DynamicVariables=1
 
-[MeasureCPUTempCore15HWiNFO]
+[MeasureCPUTempCore15]
 Measure=Plugin
 Plugin=HWiNFO
 HWiNFOSensorId=#HWiNFO-CPU0-DTS-SensorId#
@@ -148,7 +148,7 @@ HWiNFOType=CurrentValue
 Disabled=(#disableTemps#) || (#hideCore15#) || (#isHWiNFOInUse# = 0)
 DynamicVariables=1
 
-[MeasureCPUTempCore16HWiNFO]
+[MeasureCPUTempCore16]
 Measure=Plugin
 Plugin=HWiNFO
 HWiNFOSensorId=#HWiNFO-CPU0-DTS-SensorId#

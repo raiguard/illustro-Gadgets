@@ -1,5 +1,5 @@
 ILLUSTRO GADGETS
-Version 0.7.0-d.2
+Version 0.7.0-d.3
 By iamanai
 
 -----------------------
