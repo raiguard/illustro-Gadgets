@@ -57,7 +57,10 @@ Network Meter:
 GPU Meter:
  - Removed settings skin
  - Double-clicking on the skin will open HWiNFO's sensors window
+ - Added memory used / total memory fraction to the memory usage row
  - Added support for dual GPUs
+    - Names of drives will be displayed to make differentiating easier
+    - Added optional "compact mode" to save vertical space with two GPUs
 Drives Meter:
  - Removed settings skin
  - Added option to enable drive capacity warnings (and at what thresholds they appear)
@@ -67,9 +70,11 @@ Drives Meter:
 v0.6.2 10-10-2015:
 Drives Meter:
  - Fixed more mistakes causing the E drive to function incorrectly. How could I be so dumb as to mess it up so badly, I have no idea.
+
 v0.6.1 09-10-2015:
 Drives Meter:
  - ... ... ... ... Actually renamed the E drive's meters... Let us never speak of this again. Those of you with an E drive will find that it works now!
+
 v0.6 04-10-2015:
 Drives Meter:
  - Shows Name, Disk Read Time Percentage, Read/Write Speeds, and storage used / capacity for each hard drive or removable disk connected to slots C-L

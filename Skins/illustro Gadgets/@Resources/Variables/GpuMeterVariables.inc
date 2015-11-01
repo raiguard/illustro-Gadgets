@@ -19,4 +19,4 @@ colorCoreVoltage=0,0,0
 
 ; Text
 textMemoryUsed=""
-textMemoryAlloc=""
+textMemoryTotal=""
