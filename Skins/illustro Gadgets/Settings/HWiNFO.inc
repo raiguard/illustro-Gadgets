@@ -16,9 +16,9 @@ SolidColor=#graphBgColorAlt#,#graphOpacity#
 AntiAlias=1
 X=([HWiNFOConfigSeparatorBar:X] + 5)
 Y=20r
-H=15
+H=14
 W=(#generalXMarginRight# - ([HWiNFOConfigSeparatorBar:X] + 5) - 2)
-Padding=2,3,0,0
+Padding=2,2,0,0
 
 ; ============================================================
 ;   METERS
@@ -61,13 +61,16 @@ LeftMouseUpAction=["#@#Addons\HWiNFO\HWiNFOSharedMemoryViewer.exe"]
 DynamicVariables=1
 
 [HWiNFOHelpButton]
-Meter=String
-MeterStyle=StyleText
-StringAlign=Right
-FontColor=#fontColorLink#,#generalOpacity#
-X=#generalXMarginRight#
+Meter=Image
+ImageName=#@#Images\Settings\Help.png
+ImageAlpha=#generalOpacity#
+X=(#generalXMarginRight# - 11)
 Y=0r
-Text="Help"
+W=11
+H=11
+AntiAlias=1
+ToolTipTitle="How to configure HWiNFO sensors"
+ToolTipText="By SilverAzide, edited by iamanai"
 
 [HWiNFOHelpButtonMouseRegion]
 Meter=Image
@@ -80,7 +83,7 @@ LeftMouseUpAction=["#@#Addons\HWiNFO\HWiNFOHowTo.txt"]
 DynamicVariables=1
 
 ; -- Configuration Backup --
-[LinksLabel]
+[HWiNFOConfigBackupLabel]
 Meter=String
 MeterStyle=StyleText
 FontSize=10
@@ -89,7 +92,38 @@ X=(#separatorBarX# - 5)
 Y=[HWiNFOConfigSeparatorBar:Y]
 Text="Config Backup"
 
-[HWiNFOConfigBackupLabel]
+[HWiNFOConfigBackupViewFileButton]
+Meter=String
+MeterStyle=StyleText
+FontColor=#fontColorLink#,#generalOpacity#
+X=([HWiNFOConfigSeparatorBar:X] + 5)
+Y=3r
+Text="View File"
+ToolTipTitle="View raw data file"
+ToolTipText="#HWiNFO-CONFIGPATH#"
+
+[HWiNFOConfigBackupViewFileButtonMouseRegion]
+Meter=Image
+SolidColor=0,0,0,0
+X=[HWiNFOConfigBackupViewFileButton:X]
+Y=[HWiNFOConfigBackupViewFileButton:Y]
+W=[HWiNFOConfigBackupViewFileButton:W]
+H=[HWiNFOConfigBackupViewFileButton:H]
+LeftMouseUpAction=["#HWiNFO-CONFIGPATH#"]
+DynamicVariables=1
+
+[HWiNFOConfigBackupViewFileHelpButton]
+Meter=Image
+ImageName=#@#Images\Settings\Help.png
+ImageAlpha=#generalOpacity#
+X=(#generalXMarginRight# - 11)
+Y=0r
+W=11
+H=11
+AntiAlias=1
+ToolTipTitle="How to configure HWiNFO sensors"
+
+[HWiNFOConfigBackupFilePathLabel]
 Meter=String
 MeterStyle=StyleText
 FontColor=#fontColor#,#ghostedOpacity#
@@ -97,20 +131,22 @@ StringAlign=Right
 X=([HWiNFOConfigSeparatorBar:X] - 5)
 Text="File Path"
 
-[HWiNFOConfigBackupTextBox]
+[HWiNFOConfigBackupFilePathTextBox]
 Meter=String
 MeterStyle=StyleInputBoxText
 Y=-2r
-Text="C:\Users\Caleb\Documents\Rainmeter\External\illustro Gadgets\HWiNFOConfig.inc"
+Text="#HWiNFO-CONFIGPATH#"
 LeftMouseUpAction=[!CommandMeasure "MeasureInputHWiNFOConfig" "Executebatch 1"]
 ClipString=1
 
-[MeaureInputHWiNFOConfig]
+[MeasureInputHWiNFOConfig]
 Measure=Plugin
 Plugin=InputText
 SolidColor=#colorInputTextBackground#
 FontColor=#colorInputTextFont#,#alphaInputTextFont#
 FontFace=#fontFace#
+FontSize=#fontSize#
+StringStyle=Bold
 UpdateDivider=-1
 FocusDismiss=1
-Command1=[!WriteKeyValue Variables HWiNFO-CONFIGPATH "$UserInput$" "#commonSettingsPath#"] DefaultValue="#@#Addons\HWiNFO\HWiNFOConfig.inc" X=[HWiNFOConfigBackupTextBox:X] Y=[HWiNFOConfigBackupTextBox:Y]  W=[HWiNFOConfigBackupTextBox:W] H=[HWiNFOConfigBackupTextBox:H]
+Command1=[!WriteKeyValue Variables HWiNFO-CONFIGPATH "$UserInput$" "#commonSettingsPath#"][!RefreshGroup illustroGadgetsSettings] DefaultValue="#HWiNFO-CONFIGPATH#" X=[HWiNFOConfigBackupFilePathTextBox:X] Y=[HWiNFOConfigBackupFilePathTextBox:Y]  W=[HWiNFOConfigBackupFilePathTextBox:W] H=[HWiNFOConfigBackupFilePathTextBox:H]

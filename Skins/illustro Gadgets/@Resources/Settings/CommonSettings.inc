@@ -1,3 +1,3 @@
 [Variables]
 ; -- HWiNFO --
-HWiNFO-CONFIGPATH="C:\Users\Caleb\Documents\Rainmeter\External\illustro Gadgets\HWiNFOConfig.inc"
+HWiNFO-CONFIGPATH=D:\Files\Settings\Caleb\Rainmeter\Skins\illustro Gadgets\@Resources\Addons\HWiNFO\HWiNFOConfig.inc

@@ -81,3 +81,4 @@ dBGAlpha=255
 dBGstyle=2
 dDisableTemps=0
 dHidePage=0
+tempsInCelsius=0

@@ -31,7 +31,7 @@ CHANGELOG
 0.7.0 ??-??-2015:
 User Interface:
  - Lowered bars by 1 pixel without increasing height of rows (bar is more "centered" between the rows)
- - Removed hover effect for buttons (it causes too much lag when the gadgets update)
+ - Removed hover effect for buttons (it causes too much lag when the gadgets refresh)
  - Changed checkboxes to use actual images, rather than Wingdings characters
  - Fixed slight overlap on some of the graphs
 Code cleanup:
