@@ -79,7 +79,7 @@ DynamicVariables=1
 [DriveStorageFractionC]
 Meter=String
 MeterStyle=StyleText
-FontColor=#fontColor#,#ghostedOpacity#
+FontColor=#colorFont#,#ghostedOpacity#
 StringStyle=Normal
 X=([DriveStorageLabelC:W] + 1)r
 Y=0r
@@ -189,7 +189,7 @@ DynamicVariables=1
 [DriveStorageFractionD]
 Meter=String
 MeterStyle=StyleText
-FontColor=#fontColor#,#ghostedOpacity#
+FontColor=#colorFont#,#ghostedOpacity#
 StringStyle=Normal
 X=([DriveStorageLabelD:W] + 1)r
 Y=0r
@@ -299,7 +299,7 @@ DynamicVariables=1
 [DriveStorageFractionE]
 Meter=String
 MeterStyle=StyleText
-FontColor=#fontColor#,#ghostedOpacity#
+FontColor=#colorFont#,#ghostedOpacity#
 StringStyle=Normal
 X=([DriveStorageLabelE:W] + 1)r
 Y=0r
@@ -410,7 +410,7 @@ DynamicVariables=1
 [DriveStorageFractionF]
 Meter=String
 MeterStyle=StyleText
-FontColor=#fontColor#,#ghostedOpacity#
+FontColor=#colorFont#,#ghostedOpacity#
 StringStyle=Normal
 X=([DriveStorageLabelF:W] + 1)r
 Y=0r
@@ -521,7 +521,7 @@ DynamicVariables=1
 [DriveStorageFractionG]
 Meter=String
 MeterStyle=StyleText
-FontColor=#fontColor#,#ghostedOpacity#
+FontColor=#colorFont#,#ghostedOpacity#
 StringStyle=Normal
 X=([DriveStorageLabelG:W] + 1)r
 Y=0r
@@ -632,7 +632,7 @@ DynamicVariables=1
 [DriveStorageFractionH]
 Meter=String
 MeterStyle=StyleText
-FontColor=#fontColor#,#ghostedOpacity#
+FontColor=#colorFont#,#ghostedOpacity#
 StringStyle=Normal
 X=([DriveStorageLabelH:W] + 1)r
 Y=0r
@@ -743,7 +743,7 @@ DynamicVariables=1
 [DriveStorageFractionI]
 Meter=String
 MeterStyle=StyleText
-FontColor=#fontColor#,#ghostedOpacity#
+FontColor=#colorFont#,#ghostedOpacity#
 StringStyle=Normal
 X=([DriveStorageLabelI:W] + 1)r
 Y=0r
@@ -854,7 +854,7 @@ DynamicVariables=1
 [DriveStorageFractionJ]
 Meter=String
 MeterStyle=StyleText
-FontColor=#fontColor#,#ghostedOpacity#
+FontColor=#colorFont#,#ghostedOpacity#
 StringStyle=Normal
 X=([DriveStorageLabelJ:W] + 1)r
 Y=0r
@@ -963,7 +963,7 @@ DynamicVariables=1
 [DriveStorageFractionK]
 Meter=String
 MeterStyle=StyleText
-FontColor=#fontColor#,#ghostedOpacity#
+FontColor=#colorFont#,#ghostedOpacity#
 StringStyle=Normal
 X=([DriveStorageLabelK:W] + 1)r
 Y=0r
@@ -1074,7 +1074,7 @@ DynamicVariables=1
 [DriveStorageFractionL]
 Meter=String
 MeterStyle=StyleText
-FontColor=#fontColor#,#ghostedOpacity#
+FontColor=#colorFont#,#ghostedOpacity#
 StringStyle=Normal
 X=([DriveStorageLabelL:W] + 1)r
 Y=0r

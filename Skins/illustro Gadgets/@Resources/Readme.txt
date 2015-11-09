@@ -1,5 +1,5 @@
 ILLUSTRO GADGETS
-Version 0.7.0-d.4
+Version 0.7.0-d.5
 By iamanai
 
 -----------------------
@@ -33,53 +33,63 @@ Special thanks to	SilverAzide
 -----------------------
 CHANGELOG
 v0.7.0 ??-??-2015:
-User Interface:
- - Lowered bars by 1 pixel without increasing height of rows (bar is more "centered" between the rows)
+UI (all skins):
+ - Increased row spacing by 1 pixel, and lowered bars from text by 1 pixel
  - Removed hover effect for buttons (it causes too much lag when the gadgets refresh)
  - Changed checkboxes to use actual images, rather than Wingdings characters
  - Fixed slight overlap on some of the graphs
+ - Fixed background height calculations, making the background stretch uniformly below the graphs on
+ all skins
 Code cleanup:
  - Changed versioning to follow the Semantic Versioning format
  - Standardized all positioning, layout, and visual elements across skins
- - Reduced number of meters for checkboxes
  - Cleaned up styles, specifically for color / HWiNFO configuration elements
  - Simplified overly complicated positioning equations
  - Moved almost all raw positioning data to variables for easy debugging and changes
  - Simplified background, making use of ScaleMargins to eliminate warping and combined into 1 meter
+ - Removed AllCpuMeterConfig.lua, which is no longer needed
 Settings:
  - Merged the about skin and all settings skins into new unified skin
  - Added an update checker and external links to the about screen
+ - Added option to disable antialiasing on graph lines (more accurate, but less pretty)
+ - Implemented more coloring options (main font colors, graph backgrounds, etc.)
 All CPU Meter:
- - Removed settings skin
  - Can change CPU clock and fan text to regular if so desired
  - CPU name can now be displayed at the bottom, or as a hover-over, or a tooltip
  - Fully removed support for CoreTemp and SpeedFan
 Network Meter:
- - Removed settings skin
  - Double-clicking on the skin will take you to the Network Management window
  - Increased opacity of arrows to match those on Drives Meter
 GPU Meter:
- - Removed settings skin
  - Double-clicking on the skin will open HWiNFO's sensors window
  - Added memory used / total memory fraction to the memory usage row
  - Added support for dual GPUs
-    - Names of drives will be displayed to make differentiating easier
-    - Added optional "compact mode" to save vertical space with two GPUs
+    - Variant of the regular skin - select from Rainmeter's context menu
+    - Components are compacted to save vertical space
+ - Added optional memory controller usage bar
+ - Fixed copy/paste error in the metadata section
 Drives Meter:
- - Removed settings skin
  - Added option to enable drive capacity warnings (and at what thresholds they appear)
- - Fully fixed E drive, and squashed other flaws relating to copy/paste
- - Fixed graph, which will now scale for all drives, not per-drive
+ - Fixed flaw in the line graph that would cause a line to not scale itself in relation to the other
+ lines
+
+v0.6.3 11-06-2015:
+Readme.txt:
+ - Backported v0.7.0-d.4 format updating to be more aesthetically pleasing on GitHub
+ - Reworded some things
+ - Fixed changelog dates to be "normal"
+Drives Meter:
+ - Backported fixes from v0.7.0-d.2 to correct copy/paste errors with the L drive's meters
 
 v0.6.2 10-10-2015:
 Drives Meter:
  - Fixed more mistakes that broke the functionality of the E drive's information
 
-v0.6.1 09-10-2015:
+v0.6.1 10-09-2015:
 Drives Meter:
  - Corrected some copy/paste errors made when creating meters for E drive
 
-v0.6 04-10-2015:
+v0.6 10-04-2015:
 Drives Meter:
  - Shows Name, Disk Read Time Percentage, Read/Write Speeds, and storage used / capacity for each hard drive or
  removable disk connected to slots C-L
@@ -96,7 +106,7 @@ Code Cleanup:
  - Fixed mistake in GPU Meter's settings skin that broke middle-click-to-default functionality for the checkboxes
  - Preparation for mass code cleanup to take place in v0.7 and v0.8
 
-v0.5.1 13-9-2015:
+v0.5.1 9-13-2015:
 All CPU Meter:
  - Added support for HWiNFO core temps and fan speed
  - Implemented HWiNFO configuration into settings skin
@@ -108,7 +118,7 @@ Notes:
  - Auto-detection of system monitoring software is currently broken. Implemented a temporary workaround in
  All CPU Meter's settings skin
 
-v0.5 12-9-2015:
+v0.5 9-12-2015:
 GPU Meter:
  - Monitors your graphics card usage, clock speed, temperature
  - Gives information about memory clock speed, memory usage, fan speed and usage, memory controller usage,
@@ -116,12 +126,12 @@ GPU Meter:
  - Requires HWiNFO
  - Settings skin has tools for configuring the skin to work with HWiNFO as well as color customization
 
-v0.4.1 20-8-2015:
+v0.4.1 8-20-2015:
 Changed how Network Meter reads the internal I.P. address (It is now REQUIRED to have Rainmeter 3.3 Beta
 installed to make this work properly)
 Fixed a flaw with All CPU Meter that messed up snapping other skins below it.
 
-v0.4 19-8-2015:
+v0.4 8-19-2015:
 Code cleanup:
  - Created a global variables .inc file to share variables between skins
  - Moved more positioning numbers to variables for easy debugging
@@ -149,7 +159,7 @@ Network Meter:
  - Added Network Meter (uses the ActiveNet Plugin)
  - NOTE: To configure the Network Meter, follow this link: http://comments.deviantart.com/1/522574269/3808722511
 
-v0.3 05-8-2015:
+v0.3 8-05-2015:
 Added support for core temperatures using CoreTemp or SpeedFan
 Some code cleanup
 Implemented settings skin (incomplete)
@@ -160,5 +170,6 @@ Settings:
  - Choose either Fahrenheit or Celsius for core temps
  - Customize colors of each bar and its corresponding line on the graph
 
-v0.2 02-8-2015:
+v0.2 8-02-2015:
 Added All CPU Meter
+

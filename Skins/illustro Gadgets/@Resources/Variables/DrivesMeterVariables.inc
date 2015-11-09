@@ -1,16 +1,18 @@
 [Variables]
 ; -- General positioning --
 bgWidth=210
-bgHeight=(#bodyStartY# + ([CalcDiskCount] * #diskChunkY#) + (#hideGraph# = 0 ? #graphHeight# + 5 : 0) + 8)
+bgHeight=(#bodyStartY# + ([CalcDiskCount] * #diskChunkY#) + (#hideGraph# = 0 ? #graphHeight# + 6 : 3) + 8)
 bgCenterX=(#bgWidth# / 2)
 
 generalXMarginRight=(#bgWidth# - 11)
-diskChunkY=((#rowYOffset# * 3))
+diskChunkY=((#rowYOffset# * 3) + 1)
 
 barWidth=(#bgWidth# - #generalXMarginLeft# - 11 - 3)
 
 graphY=(#hideGraph# = 1 ? -#graphHeight# - 1 : 5)r
 graphWidth=(#bgWidth# - #generalXMarginLeft# - 11)
+
+alphaHistogram=50
 
 ; -- Disks --
 ; Drives to monitor

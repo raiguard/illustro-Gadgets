@@ -7,7 +7,7 @@ Meter=String
 MeterStyle=StyleText
 FontSize=(#titleSize#)
 StringAlign=Right
-X=(#panelCenterX# - 10)
+X=(#panelCenterX# - 5)
 Y=(#bodyStartY#)
 Text="A L L  C P U  M E T E R"
 
@@ -18,4 +18,3 @@ X=#panelCenterX#
 Y=([CpuConfigTitle:Y] + 20)
 H=(#bgHeight# - [CpuConfigSeparatorBar:Y] - 8)
 W=1
-

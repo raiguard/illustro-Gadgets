@@ -21,12 +21,13 @@ hideCore15=1
 hideCore16=1
 
 ; -- Temperatures --
-noTempReader=1
+noTempReader=
 disableTemps=0
 
 ; -- Positioning --
 bgWidth=210
-bgHeight=(#bodyStartY# + (#rowYOffset# * (1 + #showPage# + #cpuCores# + #showClockAndFan#)) + (#showLineGraph# = 1 ? #rowYOffset# + #graphHeight# - 3 : 6) + ((#showPage# = 0 && #showClockAndFan# = 0 && #showLineGraph# = 0) ? 2 : 0))
+; bgHeight is defined in the [MeasureBgHeightCalc] measure in AllCpuMeter.ini
+bgHeight=
 bgCenterX=(#bgWidth# / 2)
 generalXMarginRight=(#bgWidth# - 10)
 graphWidth=(#bgWidth# - #generalXMarginLeft# - (#bgWidth# - #generalXMarginRight# + 1))

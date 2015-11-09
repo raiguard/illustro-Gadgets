@@ -4,15 +4,15 @@
 ; =======================================================================
 
 [StyleUpdateCaptionConnecting]
-FontColor=#fontColorLink#,#generalOpacity#
+FontColor=#colorFontLink#,#generalOpacity#
 Text="Connecting to GitHub..."
 
 [StyleUpdateCaptionYes]
-FontColor=#fontColorLink#,#generalOpacity#
+FontColor=#colorFontLink#,#generalOpacity#
 Text="Update Available!"
 
 [StyleUpdateCaptionNo]
-FontColor=#fontColor#,#ghostedOpacity#
+FontColor=#colorFont#,#ghostedOpacity#
 Text="None"
 
 ; ------
@@ -29,6 +29,13 @@ Text="illustro Gadgets is up to date."
 
 [StyleUpdateNotesAlpha]
 Text="Your version is newer than the last released version. Thanks for being a development tester!"
+
+; ------
+[StyleToggleButtonEnabled]
+Text="Enabled"
+
+[StyleToggleButtonDisabled]
+Text="Disabled"
 
 ; =======================================================================
 ;  MEASURES
@@ -92,7 +99,7 @@ W=1
 [VersionLabel]
 Meter=String
 MeterStyle=StyleText
-FontColor=#fontColor#,#ghostedOpacity#
+FontColor=#colorFont#,#ghostedOpacity#
 StringAlign=Right
 X=(#separatorBarX# - 5)
 Y=0r
@@ -111,7 +118,7 @@ Text="illustro Gadgets #version#"
 [DateLabel]
 Meter=String
 MeterStyle=StyleText
-FontColor=#fontColor#,#ghostedOpacity#
+FontColor=#colorFont#,#ghostedOpacity#
 StringAlign=Right
 X=(#separatorBarX# - 5)
 Y=18r
@@ -130,7 +137,7 @@ Text="#updatedDate#"
 [PlatformLabel]
 Meter=String
 MeterStyle=StyleText
-FontColor=#fontColor#,#ghostedOpacity#
+FontColor=#colorFont#,#ghostedOpacity#
 StringAlign=Right
 X=(#separatorBarX# - 5)
 Y=18r
@@ -149,7 +156,7 @@ Text="#platform#"
 [LicenseLabel]
 Meter=String
 MeterStyle=StyleText
-FontColor=#fontColor#,#ghostedOpacity#
+FontColor=#colorFont#,#ghostedOpacity#
 StringAlign=Right
 X=(#separatorBarX# - 5)
 Y=18r
@@ -168,7 +175,7 @@ Text="#license#"
 [AuthorLabel]
 Meter=String
 MeterStyle=StyleText
-FontColor=#fontColor#,#ghostedOpacity#
+FontColor=#colorFont#,#ghostedOpacity#
 StringAlign=Right
 X=(#separatorBarX# - 5)
 Y=18r
@@ -223,7 +230,7 @@ Text="Readme"
 [ReadmeViewButton]
 Meter=String
 MeterStyle=StyleText
-FontColor=#fontColorLink#,#generalOpacity#
+FontColor=#colorFontLink#,#generalOpacity#
 StringStyle=Bold
 FontSize=10
 X=10r
@@ -252,7 +259,7 @@ Text="Links"
 [LinksGithubButton]
 Meter=String
 MeterStyle=StyleText
-FontColor=#fontColorLink#,#generalOpacity#
+FontColor=#colorFontLink#,#generalOpacity#
 StringStyle=Bold
 FontSize=10
 X=10r
@@ -271,7 +278,7 @@ Text="Report issues, contribute and beta test."
 [LinksRmForumsButton]
 Meter=String
 MeterStyle=StyleText
-FontColor=#fontColorLink#,#generalOpacity#
+FontColor=#colorFontLink#,#generalOpacity#
 StringStyle=Bold
 FontSize=10
 X=0r
@@ -290,7 +297,7 @@ Text="View update info and ask questions."
 [LinksRainmeterButton]
 Meter=String
 MeterStyle=StyleText
-FontColor=#fontColorLink#,#generalOpacity#
+FontColor=#colorFontLink#,#generalOpacity#
 StringStyle=Bold
 FontSize=10
 X=0r
@@ -309,7 +316,7 @@ Text="Learn more about Rainmeter."
 [LinksTwitterButton]
 Meter=String
 MeterStyle=StyleText
-FontColor=#fontColorLink#,#generalOpacity#
+FontColor=#colorFontLink#,#generalOpacity#
 StringStyle=Bold
 FontSize=10
 X=0r

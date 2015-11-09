@@ -1,7 +1,7 @@
 [Variables]
 ; -- General visual properties --
 bgWidth=210
-bgHeight=(#bodyStartY# + (#rowYOffset# * 5) + (#hideLineGraph# = 0 ? #graphHeight# + 3 : 0) + 7)
+bgHeight=(#bodyStartY# + (#rowYOffset# * 5) + (#hideLineGraph# = 0 ? #graphHeight# + 3 : 0) + 5)
 bgCenterX=(#bgWidth# / 2)
 
 generalXMarginRight=(#bgWidth# - 11)

@@ -45,7 +45,4 @@ fontSize=8
 fontSize2=9
 titleSize=10
 
-fontColor=255,255,255
-fontColorLink=138,210,255
-
 ; DEGREES SYMBOL: °

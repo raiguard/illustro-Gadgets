@@ -2,6 +2,8 @@
 ; -- Show/Hide --
 showPage=1
 showClockAndFan=1
+clockAndFanDefaultTheme=1
+showCpuName=0
 showAvgCpuOnly=0
 showLineGraph=1
 
