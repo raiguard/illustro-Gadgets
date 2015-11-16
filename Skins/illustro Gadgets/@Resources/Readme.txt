@@ -1,5 +1,5 @@
 ILLUSTRO GADGETS
-Version 0.7.0-d.5
+Version 0.7.0-d.6
 By iamanai
 
 -----------------------
@@ -21,7 +21,7 @@ LICENSE AND CREDITS
 This software has been released to you under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 License
 (http://creativecommons.org/licenses/by-nc-sa/3.0/).
 
-Project lead		iamanai
+Project leader		iamanai
 
 Contributors		iamanai
 			SilverAzide
@@ -41,29 +41,30 @@ UI (all skins):
  - Fixed background height calculations, making the background stretch uniformly below the graphs on
  all skins
 Code cleanup:
+ - Changed versioning to follow the Semantic Versioning format
  - Standardized all positioning, layout, and visual elements across skins
  - Cleaned up styles, specifically for color / HWiNFO configuration elements
  - Simplified overly complicated positioning equations
- - Moved almost all raw visual data (positioning, colors, etc) to variables for easy debugging and changes
+ - Separated out HWiNFO sensor IDs, combined into a separate file
  - Simplified background, making use of ScaleMargins to eliminate warping and combined into 1 meter
+ - Removed AllCpuMeterConfig.lua, which is no longer needed
+ - Combined colors and opacities, making customization easier
 Settings:
- - Merged the about skin and all settings skins into one
+ - Merged the about skin and all settings skins into new unified skin
  - Added an update checker and external links to the about screen
  - Added option to disable antialiasing on graph lines (more accurate, but less pretty)
  - Implemented more coloring options (main font colors, graph backgrounds, etc.)
- - HWiNFO sensor IDs are now a separate file, which can be moved and backed up if so desired
+ - Changed color selectors to be prettier, and incorporate opacity (heavily based on the one from
+ "Circuitrous" by Flying Hyrax) 
 All CPU Meter:
- - Changed clock and fan speed displays
-    - Fan speed is displayed between the Page row and the CPU cores, and has a bar and percentage
-    - Clock speed will be displayed just below the header, along with the CPU name
-    - Can also be displayed in the title bar as a hover-over
-    - If so desired, there is an option to display them as they have been in the past
- - CPU name can now be displayed at the top (next to the clock speed), or as a hover-over in the header
- - Fully removed support for CoreTemp and SpeedFan (removed AllCpuMeterConfig.lua)
+ - Can change CPU clock and fan text to regular if so desired
+ - CPU name can now be displayed at the bottom, or as a hover-over, or a tooltip
+ - Fully removed support for CoreTemp and SpeedFan
 Network Meter:
  - Double-clicking on the skin will take you to the Network Management window
  - Increased opacity of arrows to match those on Drives Meter
 GPU Meter:
+ - Double-clicking on the skin will open HWiNFO's sensors window
  - Added memory used / total memory fraction to the memory usage row
  - Added support for dual GPUs
     - Variant of the regular skin - select from Rainmeter's context menu
@@ -72,8 +73,8 @@ GPU Meter:
  - Fixed copy/paste error in the metadata section
 Drives Meter:
  - Added option to enable drive capacity warnings (and at what thresholds they appear)
- - Fixed flaw in the line graph that prevented the graphs of different drives from scaling in relation to
- each other
+ - Fixed flaw in the line graph that would cause a line to not scale itself in relation to the other
+ lines
 
 v0.6.3 11-06-2015:
 Readme.txt:
