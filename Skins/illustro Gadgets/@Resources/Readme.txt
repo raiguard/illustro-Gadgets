@@ -36,45 +36,53 @@ v0.7.0 ??-??-2015:
 UI (all skins):
  - Increased row spacing by 1 pixel, and lowered bars from text by 1 pixel
  - Removed hover effect for buttons (it causes too much lag when the gadgets refresh)
- - Changed checkboxes to use actual images, rather than Wingdings characters
+ - Slightly repositioned the settings button, to align better with the title text
  - Fixed slight overlap on some of the graphs
- - Fixed background height calculations, making the background stretch uniformly below the graphs on
- all skins
+ - Made space under the line graphs consistent across the skins
+ - Removed "about" button
 Code cleanup:
- - Changed versioning to follow the Semantic Versioning format
- - Standardized all positioning, layout, and visual elements across skins
  - Cleaned up styles, specifically for color / HWiNFO configuration elements
  - Simplified overly complicated positioning equations
- - Separated out HWiNFO sensor IDs, combined into a separate file
+ - Separated out HWiNFO sensor IDs from settings files, combined into a separate file
  - Simplified background, making use of ScaleMargins to eliminate warping and combined into 1 meter
- - Removed AllCpuMeterConfig.lua, which is no longer needed
- - Combined colors and opacities, making customization easier
+ - Removed AllCpuMeterConfig.lua
+ - Combined most colors and opacities, making customization easier
+ - Changed variable naming scheme, hopefully for the final time
+ - Fixed "illustro Gadgets Default" layout to position accurately on any display size
 Settings:
  - Merged the about skin and all settings skins into new unified skin
  - Added an update checker and external links to the about screen
  - Added option to disable antialiasing on graph lines (more accurate, but less pretty)
- - Implemented more coloring options (main font colors, graph backgrounds, etc.)
+ - Implemented ability to change the location of the HWiNFO config file using RainFile (so you don't
+ lose your configs when updating the skin pack)
+ - Added more HWiNFO sensor IDs for you to input (future-proofing)
+ - Implemented more coloring options (main font colors, graph backgrounds, buttons, etc.)
  - Changed color selectors to be prettier, and incorporate opacity (heavily based on the one from
- "Circuitrous" by Flying Hyrax) 
+ "Circuitrous" by Flying Hyrax)
 All CPU Meter:
- - Can change CPU clock and fan text to regular if so desired
+ - Moved fan info to above CPU cores, changed to regular display
+ - Added ability to display fan speed and clock speed in the line graph
+ - Moved CPU clock to top, separated from fan speed
+ - Added CPU name to top-right, can be disabled individually from clock speed
  - CPU name can now be displayed at the bottom, or as a hover-over, or a tooltip
  - Fully removed support for CoreTemp and SpeedFan
 Network Meter:
  - Double-clicking on the skin will take you to the Network Management window
  - Increased opacity of arrows to match those on Drives Meter
+ - Added optional compact mode, saving vertical space for low-resolution displays
 GPU Meter:
- - Double-clicking on the skin will open HWiNFO's sensors window
  - Added memory used / total memory fraction to the memory usage row
  - Added support for dual GPUs
     - Variant of the regular skin - select from Rainmeter's context menu
-    - Components are compacted to save vertical space
+    - Components are compacted to save vertical space for low-resolution displays
+    - Line graph options: Combined, separated, hidden
  - Added optional memory controller usage bar
  - Fixed copy/paste error in the metadata section
 Drives Meter:
  - Added option to enable drive capacity warnings (and at what thresholds they appear)
  - Fixed flaw in the line graph that would cause a line to not scale itself in relation to the other
  lines
+ - Added optional compact mode, saving vertical space for low-resolution displays
 
 v0.6.3 11-06-2015:
 Readme.txt:
