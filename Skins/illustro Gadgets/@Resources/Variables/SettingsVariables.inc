@@ -16,5 +16,5 @@ navMenuSeparatorX=150
 panelContentMarginLeftX=(#navMenuSeparatorX# + 10)
 
 ; Text Input
-colorInputTextBackground=255,255,255,255
-colorInputTextFont=0,0,0,255
+colorInputTextBackground=0,0,0,255
+colorInputTextFont=#colorSecondary#

@@ -20,6 +20,7 @@ X=2r
 Y=2r
 W=20
 H=20
+ToolTipText="Edit this color using RainRGB"
 
 [StyleColorsAlphaBarBg]
 SolidColor=#colorDim#
@@ -27,6 +28,7 @@ X=26r
 Y=0r
 W=110
 H=4
+ToolTipText="Edit this color's alpha value (opacity)"
 
 [StyleColorsAlphaBar]
 SolidColor=#colorPrimary#
@@ -39,6 +41,7 @@ FontSize=#fontSize2#
 FontColor=#colorSecondary#
 X=-2r
 Y=8r
+ToolTipText="Edit this color by typing an RGBA value"
 
 [StyleToggleButtonLabel]
 FontSize=#fontSize2#
@@ -57,12 +60,14 @@ Measure=Plugin
 Plugin=InputText
 SolidColor=#colorInputTextBackground#
 FontColor=#colorInputTextFont#
-FontFace=#fontFace#
 FontSize=#fontSize#
 StringStyle=Bold
 UpdateDivider=-1
 FocusDismiss=1
 Command1=[!WriteKeyValue Variables colorPrimary "$UserInput$" "#commonSettingsPath#"][!RefreshGroup illustroGadgets] DefaultValue="#colorPrimary#" X=[ColorsPrimaryString:X] Y=[ColorsPrimaryString:Y] W=[ColorsPrimaryString:W] H=[ColorsPrimaryString:H]
+Command2=[!WriteKeyValue Variables colorSecondary "$UserInput$" "#commonSettingsPath#"][!RefreshGroup illustroGadgets] DefaultValue="#colorSecondary#" X=[ColorsSecondaryString:X] Y=[ColorsSecondaryString:Y] W=[ColorsSecondaryString:W] H=[ColorsSecondaryString:H]
+Command3=[!WriteKeyValue Variables colorAccent "$UserInput$" "#commonSettingsPath#"][!RefreshGroup illustroGadgets] DefaultValue="#colorAccent#" X=[ColorsAccentString:X] Y=[ColorsAccentString:Y] W=[ColorsAccentString:W] H=[ColorsAccentString:H]
+Command4=[!WriteKeyValue Variables colorDim "$UserInput$" "#commonSettingsPath#"][!RefreshGroup illustroGadgets] DefaultValue="#colorDim#" X=[ColorsDimString:X] Y=[ColorsDimString:Y] W=[ColorsDimString:W] H=[ColorsDimString:H]
 
 ; ========================================================================================================================
 ;   METERS
@@ -135,6 +140,8 @@ MeterStyle=StyleColorsBoxBg
 [ColorsPrimaryBox]
 Meter=Image
 MeterStyle=StyleColorsBox
+LeftMouseUpAction=["#rainRgb#" "VarName=colorPrimary" "FileName=#commonSettingsPath#"]
+MiddleMouseUpAction=[!WriteKeyValue Variables colorPrimary "#dColorPrimary#" "#commonSettingsPath#"][!RefreshGroup illustroGadgets]
 SolidColor=#colorPrimary#
 
 [ColorsPrimaryAlphaBarBg]
@@ -152,6 +159,7 @@ Meter=String
 MeterStyle=StyleText | StyleColorsString
 Text=#colorPrimary#
 LeftMouseUpAction=[!CommandMeasure MeasureInputColorConfig "Executebatch 1"]
+MiddleMouseUpAction=[!WriteKeyValue Variables colorPrimary "#dColorPrimary#" "#commonSettingsPath#"][!RefreshGroup illustroGadgets]
 
 ; Secondary color
 [ColorsSecondaryLabel]
@@ -167,6 +175,8 @@ MeterStyle=StyleColorsBoxBg
 Meter=Image
 MeterStyle=StyleColorsBox
 SolidColor=#colorSecondary#
+LeftMouseUpAction=["#rainRgb#" "VarName=colorSecondary" "FileName=#commonSettingsPath#"]
+MiddleMouseUpAction=[!WriteKeyValue Variables colorSecondary "#dColorSecondary#" "#commonSettingsPath#"][!RefreshGroup illustroGadgets]
 
 [ColorsSecondaryAlphaBarBg]
 Meter=Image
@@ -180,6 +190,8 @@ W=80
 [ColorsSecondaryString]
 Meter=String
 MeterStyle=StyleText | StyleColorsString
+LeftMouseUpAction=[!CommandMeasure MeasureInputColorConfig "Executebatch 2"]
+MiddleMouseUpAction=[!WriteKeyValue Variables colorSecondary "#dColorSecondary#" "#commonSettingsPath#"][!RefreshGroup illustroGadgets]
 Text=#colorSecondary#
 
 ; Accent color
@@ -196,6 +208,8 @@ MeterStyle=StyleColorsBoxBg
 Meter=Image
 MeterStyle=StyleColorsBox
 SolidColor=#colorAccent#
+LeftMouseUpAction=["#rainRgb#" "VarName=colorAccent" "FileName=#commonSettingsPath#"]
+MiddleMouseUpAction=[!WriteKeyValue Variables colorAccent "#dColorAccent#" "#commonSettingsPath#"][!RefreshGroup illustroGadgets]
 
 [ColorsAccentAlphaBarBg]
 Meter=Image
@@ -210,6 +224,8 @@ W=80
 Meter=String
 MeterStyle=StyleText | StyleColorsString
 Text=#colorAccent#
+LeftMouseUpAction=[!CommandMeasure MeasureInputColorConfig "Executebatch 3"]
+MiddleMouseUpAction=[!WriteKeyValue Variables colorAccent "#dColorAccent#" "#commonSettingsPath#"][!RefreshGroup illustroGadgets]
 
 ; Dim color
 [ColorsDimLabel]
@@ -225,6 +241,8 @@ MeterStyle=StyleColorsBoxBg
 Meter=Image
 MeterStyle=StyleColorsBox
 SolidColor=#colorDim#
+LeftMouseUpAction=["#rainRgb#" "VarName=colorDim" "FileName=#commonSettingsPath#"]
+MiddleMouseUpAction=[!WriteKeyValue Variables colorDim "#dColorDim#" "#commonSettingsPath#"][!RefreshGroup illustroGadgets]
 
 [ColorsDimAlphaBarBg]
 Meter=Image
@@ -238,4 +256,6 @@ W=80
 [ColorsDimString]
 Meter=String
 MeterStyle=StyleText | StyleColorsString
+LeftMouseUpAction=[!CommandMeasure MeasureInputColorConfig "Executebatch 4"]
+MiddleMouseUpAction=[!WriteKeyValue Variables colorDim "#dColorDim#" "#commonSettingsPath#"][!RefreshGroup illustroGadgets]
 Text=#colorDim#
