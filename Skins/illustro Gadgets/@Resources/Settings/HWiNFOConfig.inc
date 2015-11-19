@@ -98,8 +98,12 @@ HWiNFO-GPU0-MemoryClock=0x6000004
 HWiNFO-GPU0-MemoryUsage=0x7000008
 ; GPU memory allocated (MB)
 HWiNFO-GPU0-MemoryAlloc=0x800003c
+; GPU fan speed (RPM)
+HWiNFO-GPU0-FanSpeed=0x3000000
 ; GPU fan usage (percent, not RPM!)
-HWiNFO-GPU0-FanSpeed=0x8000000
+HWiNFO-GPU0-FanUsage=0x8000000
+; GPU memory controller usage
+HWiNFO-GPU0-MemController=0x7000001
 ; GPU core voltage (volts)
 HWiNFO-GPU0-CoreVoltage=0x2000000
 

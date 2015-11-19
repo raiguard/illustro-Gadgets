@@ -1,7 +1,7 @@
 [Variables]
 bgWidth=600
 bgHeight=450
-pageName=welcome
+pageName=appearance
 
 ; -- Visual Properties --
 generalXMarginRight=(#bgWidth# - 12)
@@ -17,5 +17,4 @@ panelContentMarginLeftX=(#navMenuSeparatorX# + 10)
 
 ; Text Input
 colorInputTextBackground=255,255,255,255
-colorInputTextFont=0,0,0
-alphaInputTextFont=255
+colorInputTextFont=0,0,0,255

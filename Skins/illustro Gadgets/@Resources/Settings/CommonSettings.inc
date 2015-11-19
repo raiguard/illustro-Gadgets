@@ -6,14 +6,14 @@ HWiNFO-CONFIGPATH=D:\Files\Settings\Caleb\Rainmeter\Skins\illustro Gadgets\@Reso
 enableLineGraphAntialiasing=0
 dEnableLineGraphAntialiasing=0
 
-colorPrimary=255,255,255,200
-dColorPrimary=255,255,255,200
+colorPrimary=250,250,250,200
+dColorPrimary=250,250,250,200
 
 colorSecondary=250,250,250,155
 dColorSecondary=250,250,250,155
 
-colorAccent=138,210,255,200
-dColorAccent=138,210,255,200
+colorAccent=138,210,250,200
+dColorAccent=138,210,250,200
 
 colorDim=100,100,100,51
 dColorDim=100,100,100,51
