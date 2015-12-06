@@ -1,7 +1,8 @@
 [Variables]
 bgWidth=600
 bgHeight=450
-pageName=appearance
+pageName=skinsettings
+gadgetsSubpage=allcpumeter
 
 ; -- Visual Properties --
 generalXMarginRight=(#bgWidth# - 12)

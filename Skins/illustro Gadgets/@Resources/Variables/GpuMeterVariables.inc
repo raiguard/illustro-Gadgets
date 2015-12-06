@@ -15,8 +15,14 @@ colorTotalUsage=0,0,0
 colorMemoryUsage=0,0,0
 colorFanUsage=0,0,0
 colorMemController=0,0,0
-colorCoreVoltage=0,0,0
 
 ; Text
-textMemoryUsed=""
-textMemoryTotal=""
+textMemoryUsed=
+textMemoryTotal=
+
+; Dual meter text
+textMemoryUsedGpu0=
+textMemoryUsedGpu1=
+
+textMemoryTotalGpu0=
+textMemoryTotalGpu1=

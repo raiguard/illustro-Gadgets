@@ -3,54 +3,6 @@
 ;   STYLES
 ; ========================================================================================================================
 
-[StyleColorsLabel]
-FontSize=#fontSize2#
-X=(#navMenuSeparatorX# + 10)
-Y=23r
-
-[StyleColorsBoxBg]
-SolidColor=0,0,0,255
-X=3r
-Y=20r
-W=24
-H=24
-
-[StyleColorsBox]
-X=2r
-Y=2r
-W=20
-H=20
-ToolTipText="Edit this color using RainRGB"
-
-[StyleColorsAlphaBarBg]
-SolidColor=#colorDim#
-X=26r
-Y=0r
-W=110
-H=4
-ToolTipText="Edit this color's alpha value (opacity)"
-
-[StyleColorsAlphaBar]
-SolidColor=#colorPrimary#
-X=0r
-Y=0r
-H=4
-
-[StyleColorsString]
-FontSize=#fontSize2#
-FontColor=#colorSecondary#
-X=-2r
-Y=8r
-ToolTipText="Edit this color by typing an RGBA value"
-
-[StyleToggleButtonLabel]
-FontSize=#fontSize2#
-Y=25r
-
-[StyleToggleButton]
-FontSize=#fontSize2#
-FontColor=#colorSecondary#
-
 ; ========================================================================================================================
 ;   MEASURES
 ; ========================================================================================================================
@@ -102,7 +54,7 @@ Text="Line Graph Antialiasing:"
 [GraphAntialiasingToggleButtonOn]
 Meter=String
 MeterStyle=StyleText | StyleToggleButton
-X=([GraphAntialiasingLabel:W] + 2)r
+X=[GraphAntialiasingLabel:W]r
 Y=0r
 Text="Enabled"
 LeftMouseUpAction=[!WriteKeyValue Variables enableLineGraphAntialiasing 0 "#commonSettingsPath#"][!RefreshGroup illustroGadgets]
@@ -123,7 +75,7 @@ Meter=String
 MeterStyle=StyleText
 FontColor=#colorAccent#
 FontSize=#fontSize3#
-X=(#navMenuSeparatorX# + 10)
+X=(#navMenuSeparatorX# + 9)
 Y=25r
 Text="Coloring Options"
 
@@ -153,6 +105,7 @@ Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
 W=80
+LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup illustroGadgets]
 
 [ColorsPrimaryString]
 Meter=String

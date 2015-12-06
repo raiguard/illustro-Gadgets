@@ -9,7 +9,6 @@ sColorTotalUsage=255,246,42
 sColorMemoryUsage=107,198,250
 sColorFanUsage=107,238,98
 sColorMemController=250,158,0
-sColorCoreVoltage=236,28,70
 
 ; -- HWiNFO Settings --
 ; - GPU 0 -
@@ -27,3 +26,15 @@ HWiNFO-GPU0-FanSpeed=0x3000000
 HWiNFO-GPU0-FanUsage=0x8000000
 HWiNFO-GPU0-MemController=0x7000001
 HWiNFO-GPU0-CoreVoltage=0x2000000
+
+; ----- Defaults -----
+
+dHideMemController=0
+dHideCoreVoltage=0
+dHideLineGraph=0
+
+dColorTotalUsage=255,246,42
+dColorMemoryUsage=107,198,250
+dColorFanUsage=107,238,98
+dColorMemController=250,158,0
+dColorCoreVoltage=236,28,70

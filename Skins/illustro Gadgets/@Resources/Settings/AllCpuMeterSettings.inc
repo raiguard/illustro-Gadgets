@@ -33,12 +33,17 @@ sColorFan=150,150,150
 
 disableTemps=0
 tempUOM=C
+tempsInCelsius=1
 
 ; ==========
 ;  DEFAULTS
 ; ==========
 
+dShowPage=1
+dShowCpuClockSpeed=1
+dShowCpuFanSpeed=1
 dShowGraph=1
+dShowLineGraph=1
 dAvgCpuGraphOnly=0
 dShowClockAndFan=0
 dColorRAM=107,198,250
@@ -64,5 +69,5 @@ dBarPosX=12
 dBGAlpha=255
 dBGstyle=2
 dDisableTemps=0
-dHidePage=0
-tempsInCelsius=0
+dTempUOM=C
+dTempsInCelsius=1

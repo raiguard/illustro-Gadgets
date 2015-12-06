@@ -9,6 +9,7 @@ rainFile=#@#Addons\RainFile\RainFile.exe
 
 ; -- Scripts --
 fixedPrecisionFormatScript=#@#Scripts\FixedPrecisionFormat.lua
+settingsScript=#@#Scripts\Settings.lua
 
 ; -- General Visual Properties --
 generalXMarginLeft=9
