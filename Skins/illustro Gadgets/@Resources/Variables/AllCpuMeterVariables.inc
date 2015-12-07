@@ -20,9 +20,8 @@ hideCore14=1
 hideCore15=1
 hideCore16=1
 
-; -- Temperatures --
-noTempReader=
-disableTemps=0
+; -- HWiNFO --
+isHWiNFOInUse=
 
 ; -- Positioning --
 bgWidth=210
@@ -52,6 +51,7 @@ colorCore16=0,0,0
 colorRam=0,0,0,0
 colorPage=0,0,0
 colorAvgCpu=0,0,0
+colorFan=0,0,0
 
 ; -- Dynamic Variables --
 textRAMUsed=""
