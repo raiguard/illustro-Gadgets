@@ -1,7 +1,7 @@
 [Variables]
 gadgetSettingsPath=#@#Settings\AllCpuMeterSettings.inc
 @includeAllCpuMeterSettings=#gadgetSettingsPath#
-bgHeight=690
+bgHeight=660
 
 ; ========================================================================================================================
 ;   MEASURES

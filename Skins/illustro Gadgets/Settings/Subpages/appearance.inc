@@ -58,6 +58,7 @@ X=[GraphAntialiasingLabel:W]r
 Y=0r
 Text="Enabled"
 LeftMouseUpAction=[!WriteKeyValue Variables enableLineGraphAntialiasing 0 "#commonSettingsPath#"][!RefreshGroup illustroGadgets]
+MiddleMouseUpAction=[!WriteKeyValue Variables enableLineGraphAntialiasing "#dEnableLineGraphAntialiasing#" "#commonSettingsPath#"][!RefreshGroup illustroGadgets]
 Hidden=(#enableLineGraphAntialiasing# = 1) ? 0 : 1
 
 [GraphAntialiasingToggleButtonOff]
@@ -67,6 +68,7 @@ X=0r
 Y=0r
 Text="Disabled"
 LeftMouseUpAction=[!WriteKeyValue Variables enableLineGraphAntialiasing 1 "#commonSettingsPath#"][!RefreshGroup illustroGadgets]
+MiddleMouseUpAction=[!WriteKeyValue Variables enableLineGraphAntialiasing "#dEnableLineGraphAntialiasing#" "#commonSettingsPath#"][!RefreshGroup illustroGadgets]
 Hidden=#enableLineGraphAntialiasing#
 
 ; ----- Colors -----
@@ -105,7 +107,7 @@ Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
 W=80
-LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup illustroGadgets]
+; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup illustroGadgets]
 
 [ColorsPrimaryString]
 Meter=String

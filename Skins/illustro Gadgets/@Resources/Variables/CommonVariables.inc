@@ -1,11 +1,12 @@
 [Variables]
 ; -- Version --
-version="0.7.0-d.6"
-versionAbsolute=0706
+version="0.7.0"
+versionAbsolute=070
 
 ; -- Addons --
 rainRGB=#@#Addons\RainRGB\RainRGB4.exe
 rainFile=#@#Addons\RainFile\RainFile.exe
+hwinfoSmv=#@#Addons\HWiNFO\HWiNFOSharedMemoryViewer.exe
 
 ; -- Scripts --
 fixedPrecisionFormatScript=#@#Scripts\FixedPrecisionFormat.lua

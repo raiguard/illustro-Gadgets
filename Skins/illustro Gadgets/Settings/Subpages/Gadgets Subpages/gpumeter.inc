@@ -253,3 +253,15 @@ MeterStyle=StyleText | StyleColorsString
 Text=#sColorMemController#
 LeftMouseUpAction=[!CommandMeasure MeasureInputColorConfig "Executebatch 4"]
 MiddleMouseUpAction=[!WriteKeyValue Variables sColorMemController "#dColorMemController#" "#gadgetSettingsPath#"][!RefreshGroup "GpuMeter"][!Refresh]
+
+; ----- Dual GPU Meter Description -----
+
+[DualGpuMeterDescriptionText]
+Meter=String
+MeterStyle=StyleText
+FontColor=#colorSecondary#
+X=#panelContentMarginLeftX#
+Y=17r
+W=#panelWidth#
+Text="A GPU Meter for dual graphics cards is available as a variant of the original GPU meter. However, it currently does not offer much customization, and is fairly limited. The line graph currently only shows data from GPU0, but in the future you will be able to toggle between GPU0, GPU1, and average. The settings skin will get official support for it in upcoming releases."
+ClipString=2

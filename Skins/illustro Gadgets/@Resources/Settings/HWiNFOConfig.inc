@@ -112,7 +112,7 @@ HWiNFO-GPU0-CoreVoltage=0x2000000
 ;
 ; sensor ID and instance
 HWiNFO-GPU1-SensorId=0xe0002000
-HWiNFO-GPU1-SensorInstance=0x0
+HWiNFO-GPU1-SensorInstance=0x14
 ; entry IDs
 ; GPU core clock frequency (MHz)
 HWiNFO-GPU1-Clock=0x6000000
@@ -127,6 +127,10 @@ HWiNFO-GPU1-MemoryUsage=0x7000008
 ; GPU memory allocated (MB)
 HWiNFO-GPU1-MemoryAlloc=0x800003c
 ; GPU fan usage (percent, not RPM!)
-HWiNFO-GPU1-FanSpeed=0x8000000
+HWiNFO-GPU1-FanSpeed=0x3000000
+; GPU fan usage (percent, not RPM!)
+HWiNFO-GPU1-FanUsage=0x8000000
+; GPU memory controller usage
+HWiNFO-GPU1-MemController=0x7000001
 ; GPU core voltage (volts)
 HWiNFO-GPU1-CoreVoltage=0x2000000
