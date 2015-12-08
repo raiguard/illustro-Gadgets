@@ -1,6 +1,7 @@
 [Variables]
 ; -- HWiNFO --
-HWiNFO-CONFIGPATH=D:\Files\Settings\Caleb\Rainmeter\Skins\illustro Gadgets\@Resources\Settings\HWiNFOConfig.inc
+HWiNFO-CONFIGPATH=#@#Settings\HWiNFOConfig.inc
+HWiNFO-CONFIGPATH-DEFAULT=#@#Settings\HWiNFOConfig.inc
 
 ; -- Visual Properties --
 enableLineGraphAntialiasing=0
