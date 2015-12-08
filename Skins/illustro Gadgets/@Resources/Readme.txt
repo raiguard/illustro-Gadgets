@@ -32,6 +32,9 @@ Special thanks to	SilverAzide
 
 -----------------------
 CHANGELOG
+v0.8.0 ??-??-2016:
+
+
 v0.7.1 12-07-2015:
 Settings:
  - Added ability to middle-click on HWiNFOConfig.inc's file path to reset it to the default value
