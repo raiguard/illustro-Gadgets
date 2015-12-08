@@ -1,10 +1,9 @@
 [Variables]
 ; -- General visual properties --
-hideRefresh=0
-hideLineGraph=0
+showRefreshButtons=1
+showLineGraph=1
 
 ; -- Colors --
-sColorHyperlink=236,28,70
 sColorUpload=107,238,98
 sColorDownload=255,246,42
 
@@ -22,3 +21,10 @@ sColorDownload=255,246,42
 interfaceBroadband=0
 interfaceEthernet=0
 interfaceWireless=0
+
+; ----- Defaults -----
+dShowRefreshButtons=1
+dShowLineGraph=1
+
+dColorUpload=107,238,98
+dColorDownload=255,246,42

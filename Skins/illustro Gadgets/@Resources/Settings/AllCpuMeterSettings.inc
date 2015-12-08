@@ -1,11 +1,13 @@
 [Variables]
 ; -- Show/Hide --
 showPage=1
-showClockAndFan=1
-clockAndFanDefaultTheme=1
-showCpuName=0
+showCpuClockSpeed=1
+showCpuName=#showCpuClockSpeed#
+showCpuFanSpeed=1
 showAvgCpuOnly=0
 showLineGraph=1
+useHWiNFOClockSpeed=1
+useHWiNFOCoreUsages=0
 
 ; -- Colors --
 sColorCore1=107,238,98
@@ -27,36 +29,21 @@ sColorCore16=99,125,217
 sColorRam=107,198,250
 sColorPage=255,204,0
 sColorAvgCpu=236,28,70
+sColorFan=150,150,150
 
 disableTemps=0
 tempUOM=C
-
-; ## HWiNFO HEXADECIMAL VALUES ##
-; - CPU 0 DTS -
-; sensor ID and instance
-HWiNFO-CPU0-DTS-SensorId=0xf0000400
-HWiNFO-CPU0-DTS-SensorInstance=0x0
-; entry IDs
-HWiNFO-CPU0-DTS-Core0Temp=0x1000000
-HWiNFO-CPU0-DTS-Core1Temp=0x1000001
-HWiNFO-CPU0-DTS-Core2Temp=0x1000002
-HWiNFO-CPU0-DTS-Core3Temp=0x1000003
-HWiNFO-CPU0-DTS-Core4Temp=0x1000004
-HWiNFO-CPU0-DTS-Core5Temp=0x1000005
-HWiNFO-CPU0-DTS-Core6Temp=0x1000006
-HWiNFO-CPU0-DTS-Core7Temp=0x1000007
-HWiNFO-CPU0-DTS-CoreMax=0x100007f
-
-; - Motherboard -
-HWiNFO-MOBO-SensorId=0xf7067760
-HWiNFO-MOBO-SensorInstance=0x0
-HWiNFO-MOBO-CPUFan=0x3000001
+tempsInCelsius=1
 
 ; ==========
 ;  DEFAULTS
 ; ==========
 
+dShowPage=1
+dShowCpuClockSpeed=1
+dShowCpuFanSpeed=1
 dShowGraph=1
+dShowLineGraph=1
 dAvgCpuGraphOnly=0
 dShowClockAndFan=0
 dColorRAM=107,198,250
@@ -82,5 +69,5 @@ dBarPosX=12
 dBGAlpha=255
 dBGstyle=2
 dDisableTemps=0
-dHidePage=0
-tempsInCelsius=0
+dTempUOM=C
+dTempsInCelsius=1

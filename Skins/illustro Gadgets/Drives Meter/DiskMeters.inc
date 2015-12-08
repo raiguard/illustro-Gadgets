@@ -11,7 +11,7 @@ Hidden=#diskNotFoundC#
 
 [DriveUsagePercentC]
 Meter=String
-MeterStyle=StyleTextRightJustification
+MeterStyle=StyleText | StyleTextRightJustification
 MeasureName=MeasureDiskTimeC
 Y=0r
 Percentual=1
@@ -23,7 +23,7 @@ DynamicVariables=1
 [DriveReadArrowC]
 Meter=Image
 ImageName=#@#Images/ArrowUp.png
-ImageAlpha=#generalOpacity#
+ImageAlpha=#alphaPrimary#
 ImageTint=#colorDiskC#
 X=#generalXMarginLeft#
 Y=#rowYOffset#r
@@ -47,7 +47,7 @@ DynamicVariables=1
 [DriveWriteArrowC]
 Meter=Image
 ImageName=#@#Images/ArrowDown.png
-ImageAlpha=#generalOpacity#
+ImageAlpha=#alphaPrimary#
 ImageTint=#colorDiskC#
 X=(#bgWidth# - 115)r
 Y=0r
@@ -79,7 +79,7 @@ DynamicVariables=1
 [DriveStorageFractionC]
 Meter=String
 MeterStyle=StyleText
-FontColor=#colorFont#,#ghostedOpacity#
+FontColor=#colorSecondary#
 StringStyle=Normal
 X=([DriveStorageLabelC:W] + 1)r
 Y=0r
@@ -90,7 +90,7 @@ DynamicVariables=1
 
 [DriveStoragePercentC]
 Meter=String
-MeterStyle=StyleTextRightJustification
+MeterStyle=StyleText | StyleTextRightJustification
 MeasureName=MeasureDiskPercentFullC
 Percentual=1
 Y=0r
@@ -102,7 +102,7 @@ DynamicVariables=1
 Meter=Bar
 MeterStyle=StyleBar
 MeasureName=MeasureDiskPercentFullC
-BarColor=#colorDiskC#,#generalOpacity#
+BarColor=#colorDiskC#,#alphaPrimary#
 Percentual=1
 Group=GroupDiskC
 Hidden=#diskNotFoundC#
@@ -121,7 +121,7 @@ Hidden=#diskNotFoundD#
 
 [DriveUsagePercentD]
 Meter=String
-MeterStyle=StyleTextRightJustification
+MeterStyle=StyleText | StyleTextRightJustification
 MeasureName=MeasureDiskTimeD
 Y=0r
 Percentual=1
@@ -133,7 +133,7 @@ DynamicVariables=1
 [DriveReadArrowD]
 Meter=Image
 ImageName=#@#Images/ArrowUp.png
-ImageAlpha=#generalOpacity#
+ImageAlpha=#alphaPrimary#
 ImageTint=#colorDiskD#
 X=9
 Y=#rowYOffset#r
@@ -157,7 +157,7 @@ DynamicVariables=1
 [DriveWriteArrowD]
 Meter=Image
 ImageName=#@#Images/ArrowDown.png
-ImageAlpha=#generalOpacity#
+ImageAlpha=#alphaPrimary#
 ImageTint=#colorDiskD#
 X=(#bgWidth# - 115)r
 Y=0r
@@ -189,7 +189,7 @@ DynamicVariables=1
 [DriveStorageFractionD]
 Meter=String
 MeterStyle=StyleText
-FontColor=#colorFont#,#ghostedOpacity#
+FontColor=#colorSecondary#
 StringStyle=Normal
 X=([DriveStorageLabelD:W] + 1)r
 Y=0r
@@ -200,7 +200,7 @@ DynamicVariables=1
 
 [DriveStoragePercentD]
 Meter=String
-MeterStyle=StyleTextRightJustification
+MeterStyle=StyleText | StyleTextRightJustification
 MeasureName=MeasureDiskPercentFullD
 Percentual=1
 Y=0r
@@ -212,7 +212,7 @@ DynamicVariables=1
 Meter=Bar
 MeterStyle=StyleBar
 MeasureName=MeasureDiskPercentFullD
-BarColor=#colorDiskD#,#generalOpacity#
+BarColor=#colorDiskD#,#alphaPrimary#
 Percentual=1
 Group=GroupDiskD
 Hidden=#diskNotFoundD#
@@ -231,7 +231,7 @@ DynamicVariables=1
 
 [DriveUsagePercentE]
 Meter=String
-MeterStyle=StyleTextRightJustification
+MeterStyle=StyleText | StyleTextRightJustification
 MeasureName=MeasureDiskTimeE
 Y=0r
 Percentual=1
@@ -243,7 +243,7 @@ DynamicVariables=1
 [DriveReadArrowE]
 Meter=Image
 ImageName=#@#Images/ArrowUp.png
-ImageAlpha=#generalOpacity#
+ImageAlpha=#alphaPrimary#
 ImageTint=#colorDiskE#
 X=9
 Y=#rowYOffset#r
@@ -267,7 +267,7 @@ DynamicVariables=1
 [DriveWriteArrowE]
 Meter=Image
 ImageName=#@#Images/ArrowDown.png
-ImageAlpha=#generalOpacity#
+ImageAlpha=#alphaPrimary#
 ImageTint=#colorDiskE#
 X=(#bgWidth# - 115)r
 Y=0r
@@ -299,7 +299,7 @@ DynamicVariables=1
 [DriveStorageFractionE]
 Meter=String
 MeterStyle=StyleText
-FontColor=#colorFont#,#ghostedOpacity#
+FontColor=#colorSecondary#
 StringStyle=Normal
 X=([DriveStorageLabelE:W] + 1)r
 Y=0r
@@ -310,7 +310,7 @@ DynamicVariables=1
 
 [DriveStoragePercentE]
 Meter=String
-MeterStyle=StyleTextRightJustification
+MeterStyle=StyleText | StyleTextRightJustification
 MeasureName=MeasureDiskPercentFullE
 Percentual=1
 Y=0r
@@ -323,7 +323,7 @@ DynamicVariables=1
 Meter=Bar
 MeterStyle=StyleBar
 MeasureName=MeasureDiskPercentFullE
-BarColor=#colorDiskE#,#generalOpacity#
+BarColor=#colorDiskE#,#alphaPrimary#
 Percentual=1
 Group=GroupDiskE
 Hidden=#diskNotFoundE#
@@ -342,7 +342,7 @@ DynamicVariables=1
 
 [DriveUsagePercentF]
 Meter=String
-MeterStyle=StyleTextRightJustification
+MeterStyle=StyleText | StyleTextRightJustification
 MeasureName=MeasureDiskTimeF
 Y=0r
 Percentual=1
@@ -354,7 +354,7 @@ DynamicVariables=1
 [DriveReadArrowF]
 Meter=Image
 ImageName=#@#Images/ArrowUp.png
-ImageAlpha=#generalOpacity#
+ImageAlpha=#alphaPrimary#
 ImageTint=#colorDiskF#
 X=9
 Y=#rowYOffset#r
@@ -378,7 +378,7 @@ DynamicVariables=1
 [DriveWriteArrowF]
 Meter=Image
 ImageName=#@#Images/ArrowDown.png
-ImageAlpha=#generalOpacity#
+ImageAlpha=#alphaPrimary#
 ImageTint=#colorDiskF#
 X=(#bgWidth# - 115)r
 Y=0r
@@ -410,7 +410,7 @@ DynamicVariables=1
 [DriveStorageFractionF]
 Meter=String
 MeterStyle=StyleText
-FontColor=#colorFont#,#ghostedOpacity#
+FontColor=#colorSecondary#
 StringStyle=Normal
 X=([DriveStorageLabelF:W] + 1)r
 Y=0r
@@ -421,7 +421,7 @@ DynamicVariables=1
 
 [DriveStoragePercentF]
 Meter=String
-MeterStyle=StyleTextRightJustification
+MeterStyle=StyleText | StyleTextRightJustification
 MeasureName=MeasureDiskPercentFullF
 Percentual=1
 Y=0r
@@ -434,7 +434,7 @@ DynamicVariables=1
 Meter=Bar
 MeterStyle=StyleBar
 MeasureName=MeasureDiskPercentFullF
-BarColor=#colorDiskF#,#generalOpacity#
+BarColor=#colorDiskF#,#alphaPrimary#
 Percentual=1
 Group=GroupDiskF
 Hidden=#diskNotFoundF#
@@ -453,7 +453,7 @@ DynamicVariables=1
 
 [DriveUsagePercentG]
 Meter=String
-MeterStyle=StyleTextRightJustification
+MeterStyle=StyleText | StyleTextRightJustification
 MeasureName=MeasureDiskTimeG
 Y=0r
 Percentual=1
@@ -465,7 +465,7 @@ DynamicVariables=1
 [DriveReadArrowG]
 Meter=Image
 ImageName=#@#Images/ArrowUp.png
-ImageAlpha=#generalOpacity#
+ImageAlpha=#alphaPrimary#
 ImageTint=#colorDiskG#
 X=9
 Y=#rowYOffset#r
@@ -489,7 +489,7 @@ DynamicVariables=1
 [DriveWriteArrowG]
 Meter=Image
 ImageName=#@#Images/ArrowDown.png
-ImageAlpha=#generalOpacity#
+ImageAlpha=#alphaPrimary#
 ImageTint=#colorDiskG#
 X=(#bgWidth# - 115)r
 Y=0r
@@ -521,7 +521,7 @@ DynamicVariables=1
 [DriveStorageFractionG]
 Meter=String
 MeterStyle=StyleText
-FontColor=#colorFont#,#ghostedOpacity#
+FontColor=#colorSecondary#
 StringStyle=Normal
 X=([DriveStorageLabelG:W] + 1)r
 Y=0r
@@ -532,7 +532,7 @@ DynamicVariables=1
 
 [DriveStoragePercentG]
 Meter=String
-MeterStyle=StyleTextRightJustification
+MeterStyle=StyleText | StyleTextRightJustification
 MeasureName=MeasureDiskPercentFullG
 Percentual=1
 Y=0r
@@ -545,7 +545,7 @@ DynamicVariables=1
 Meter=Bar
 MeterStyle=StyleBar
 MeasureName=MeasureDiskPercentFullG
-BarColor=#colorDiskG#,#generalOpacity#
+BarColor=#colorDiskG#,#alphaPrimary#
 Percentual=1
 Group=GroupDiskG
 Hidden=#diskNotFoundG#
@@ -564,7 +564,7 @@ DynamicVariables=1
 
 [DriveUsagePercentH]
 Meter=String
-MeterStyle=StyleTextRightJustification
+MeterStyle=StyleText | StyleTextRightJustification
 MeasureName=MeasureDiskTimeH
 Y=0r
 Percentual=1
@@ -576,7 +576,7 @@ DynamicVariables=1
 [DriveReadArrowH]
 Meter=Image
 ImageName=#@#Images/ArrowUp.png
-ImageAlpha=#generalOpacity#
+ImageAlpha=#alphaPrimary#
 ImageTint=#colorDiskH#
 X=9
 Y=#rowYOffset#r
@@ -600,7 +600,7 @@ DynamicVariables=1
 [DriveWriteArrowH]
 Meter=Image
 ImageName=#@#Images/ArrowDown.png
-ImageAlpha=#generalOpacity#
+ImageAlpha=#alphaPrimary#
 ImageTint=#colorDiskH#
 X=(#bgWidth# - 115)r
 Y=0r
@@ -632,7 +632,7 @@ DynamicVariables=1
 [DriveStorageFractionH]
 Meter=String
 MeterStyle=StyleText
-FontColor=#colorFont#,#ghostedOpacity#
+FontColor=#colorSecondary#
 StringStyle=Normal
 X=([DriveStorageLabelH:W] + 1)r
 Y=0r
@@ -643,7 +643,7 @@ DynamicVariables=1
 
 [DriveStoragePercentH]
 Meter=String
-MeterStyle=StyleTextRightJustification
+MeterStyle=StyleText | StyleTextRightJustification
 MeasureName=MeasureDiskPercentFullH
 Percentual=1
 Y=0r
@@ -656,7 +656,7 @@ DynamicVariables=1
 Meter=Bar
 MeterStyle=StyleBar
 MeasureName=MeasureDiskPercentFullH
-BarColor=#colorDiskH#,#generalOpacity#
+BarColor=#colorDiskH#,#alphaPrimary#
 Percentual=1
 Group=GroupDiskH
 Hidden=#diskNotFoundH#
@@ -675,7 +675,7 @@ DynamicVariables=1
 
 [DriveUsagePercentI]
 Meter=String
-MeterStyle=StyleTextRightJustification
+MeterStyle=StyleText | StyleTextRightJustification
 MeasureName=MeasureDiskTimeI
 Y=0r
 Percentual=1
@@ -687,7 +687,7 @@ DynamicVariables=1
 [DriveReadArrowI]
 Meter=Image
 ImageName=#@#Images/ArrowUp.png
-ImageAlpha=#generalOpacity#
+ImageAlpha=#alphaPrimary#
 ImageTint=#colorDiskI#
 X=9
 Y=#rowYOffset#r
@@ -711,7 +711,7 @@ DynamicVariables=1
 [DriveWriteArrowI]
 Meter=Image
 ImageName=#@#Images/ArrowDown.png
-ImageAlpha=#generalOpacity#
+ImageAlpha=#alphaPrimary#
 ImageTint=#colorDiskI#
 X=(#bgWidth# - 115)r
 Y=0r
@@ -743,7 +743,7 @@ DynamicVariables=1
 [DriveStorageFractionI]
 Meter=String
 MeterStyle=StyleText
-FontColor=#colorFont#,#ghostedOpacity#
+FontColor=#colorSecondary#
 StringStyle=Normal
 X=([DriveStorageLabelI:W] + 1)r
 Y=0r
@@ -754,7 +754,7 @@ DynamicVariables=1
 
 [DriveStoragePercentI]
 Meter=String
-MeterStyle=StyleTextRightJustification
+MeterStyle=StyleText | StyleTextRightJustification
 MeasureName=MeasureDiskPercentFullI
 Percentual=1
 Y=0r
@@ -767,7 +767,7 @@ DynamicVariables=1
 Meter=Bar
 MeterStyle=StyleBar
 MeasureName=MeasureDiskPercentFullI
-BarColor=#colorDiskI#,#generalOpacity#
+BarColor=#colorDiskI#,#alphaPrimary#
 Percentual=1
 Group=GroupDiskI
 Hidden=#diskNotFoundI#
@@ -786,7 +786,7 @@ DynamicVariables=1
 
 [DriveUsagePercentJ]
 Meter=String
-MeterStyle=StyleTextRightJustification
+MeterStyle=StyleText | StyleTextRightJustification
 MeasureName=MeasureDiskTimeJ
 Y=0r
 Percentual=1
@@ -798,7 +798,7 @@ DynamicVariables=1
 [DriveReadArrowJ]
 Meter=Image
 ImageName=#@#Images/ArrowUp.png
-ImageAlpha=#generalOpacity#
+ImageAlpha=#alphaPrimary#
 ImageTint=#colorDiskJ#
 X=9
 Y=#rowYOffset#r
@@ -822,7 +822,7 @@ DynamicVariables=1
 [DriveWriteArrowJ]
 Meter=Image
 ImageName=#@#Images/ArrowDown.png
-ImageAlpha=#generalOpacity#
+ImageAlpha=#alphaPrimary#
 ImageTint=#colorDiskJ#
 X=(#bgWidth# - 115)r
 Y=0r
@@ -854,7 +854,7 @@ DynamicVariables=1
 [DriveStorageFractionJ]
 Meter=String
 MeterStyle=StyleText
-FontColor=#colorFont#,#ghostedOpacity#
+FontColor=#colorSecondary#
 StringStyle=Normal
 X=([DriveStorageLabelJ:W] + 1)r
 Y=0r
@@ -865,7 +865,7 @@ DynamicVariables=1
 
 [DriveStoragePercentJ]
 Meter=String
-MeterStyle=StyleTextRightJustification
+MeterStyle=StyleText | StyleTextRightJustification
 MeasureName=MeasureDiskPercentFullJ
 Percentual=1
 Y=0r
@@ -878,7 +878,7 @@ DynamicVariables=1
 Meter=Bar
 MeterStyle=StyleBar
 MeasureName=MeasureDiskPercentFullJ
-BarColor=#colorDiskJ#,#generalOpacity#
+BarColor=#colorDiskJ#,#alphaPrimary#
 Percentual=1
 Group=GroupDiskJ
 Hidden=#diskNotFoundJ#
@@ -897,7 +897,7 @@ DynamicVariables=1
 
 [DriveUsagePercentK]
 Meter=String
-MeterStyle=StyleTextRightJustification
+MeterStyle=StyleText | StyleTextRightJustification
 MeasureName=MeasureDiskTimeK
 Y=0r
 Percentual=1
@@ -909,7 +909,7 @@ DynamicVariables=1
 [DriveReadArrowK]
 Meter=Image
 ImageName=#@#Images/ArrowUp.png
-ImageAlpha=#generalOpacity#
+ImageAlpha=#alphaPrimary#
 ImageTint=#colorDiskK#
 X=9
 Y=#rowYOffset#r
@@ -932,7 +932,7 @@ DynamicVariables=1
 [DriveWriteArrowK]
 Meter=Image
 ImageName=#@#Images/ArrowDown.png
-ImageAlpha=#generalOpacity#
+ImageAlpha=#alphaPrimary#
 ImageTint=#colorDiskK#
 X=(#bgWidth# - 115)r
 Y=0r
@@ -963,7 +963,7 @@ DynamicVariables=1
 [DriveStorageFractionK]
 Meter=String
 MeterStyle=StyleText
-FontColor=#colorFont#,#ghostedOpacity#
+FontColor=#colorSecondary#
 StringStyle=Normal
 X=([DriveStorageLabelK:W] + 1)r
 Y=0r
@@ -974,7 +974,7 @@ DynamicVariables=1
 
 [DriveStoragePercentK]
 Meter=String
-MeterStyle=StyleTextRightJustification
+MeterStyle=StyleText | StyleTextRightJustification
 MeasureName=MeasureDiskPercentFullK
 Percentual=1
 Y=0r
@@ -987,7 +987,7 @@ DynamicVariables=1
 Meter=Bar
 MeterStyle=StyleBar
 MeasureName=MeasureDiskPercentFullK
-BarColor=#colorDiskK#,#generalOpacity#
+BarColor=#colorDiskK#,#alphaPrimary#
 Percentual=1
 Group=GroupDiskK
 Hidden=#diskNotFoundK#
@@ -1006,7 +1006,7 @@ DynamicVariables=1
 
 [DriveUsagePercentL]
 Meter=String
-MeterStyle=StyleTextRightJustification
+MeterStyle=StyleText | StyleTextRightJustification
 MeasureName=MeasureDiskTimeL
 Y=0r
 Percentual=1
@@ -1018,7 +1018,7 @@ DynamicVariables=1
 [DriveReadArrowL]
 Meter=Image
 ImageName=#@#Images/ArrowUp.png
-ImageAlpha=#generalOpacity#
+ImageAlpha=#alphaPrimary#
 ImageTint=#colorDiskL#
 X=9
 Y=#rowYOffset#r
@@ -1042,7 +1042,7 @@ DynamicVariables=1
 [DriveWriteArrowL]
 Meter=Image
 ImageName=#@#Images/ArrowDown.png
-ImageAlpha=#generalOpacity#
+ImageAlpha=#alphaPrimary#
 ImageTint=#colorDiskL#
 X=(#bgWidth# - 115)r
 Y=0r
@@ -1074,7 +1074,7 @@ DynamicVariables=1
 [DriveStorageFractionL]
 Meter=String
 MeterStyle=StyleText
-FontColor=#colorFont#,#ghostedOpacity#
+FontColor=#colorSecondary#
 StringStyle=Normal
 X=([DriveStorageLabelL:W] + 1)r
 Y=0r
@@ -1085,7 +1085,7 @@ DynamicVariables=1
 
 [DriveStoragePercentL]
 Meter=String
-MeterStyle=StyleTextRightJustification
+MeterStyle=StyleText | StyleTextRightJustification
 MeasureName=MeasureDiskPercentFullL
 Percentual=1
 Y=0r
@@ -1098,7 +1098,7 @@ DynamicVariables=1
 Meter=Bar
 MeterStyle=StyleBar
 MeasureName=MeasureDiskPercentFullL
-BarColor=#colorDiskL#,#generalOpacity#
+BarColor=#colorDiskL#,#alphaPrimary#
 Percentual=1
 Group=GroupDiskL
 Hidden=#diskNotFoundL#

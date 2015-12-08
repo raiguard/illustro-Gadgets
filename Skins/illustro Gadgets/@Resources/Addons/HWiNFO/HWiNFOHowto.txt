@@ -1,5 +1,5 @@
 HOW TO CONFIGURE HWiNFO SENSORS:
-(Written by SilverAzide, edited by iamanai)
+Written by SilverAzide, edited by iamanai
 
  1. Ensure the HWiNFO application is open and ensure the Sensors window is enabled.
 
@@ -27,7 +27,7 @@ HOW TO CONFIGURE HWiNFO SENSORS:
               In the Viewer app, expand the "CPU [#0]: <your CPU name>: DTS" branch of the sensor
               tree and look for a entry named "Core #0" and select it.  In the bottom left corner
               of the Entry Details, highlight the hexadecimal ID value (0x1000000) and paste it as
-              the value of the "HWiNFO-CPU0-DTS-Core0Temp" variable in this file.
+              the value of the "HWiNFO-CPU0-DTS-Core0Temp" variable in the settings skin.
 
     If you can't find the Entry ID in the Viewer, that may simply mean that sensor is not
     available on your hardware, OR that the name of the sensor is slightly different than shown.
@@ -36,9 +36,8 @@ HOW TO CONFIGURE HWiNFO SENSORS:
     if you don't have a particular sensor.
 
  5. After you have gone through the annoying and painful process of mapping all the values, please
-    make a backup copy of the GpuMeterVars.inc file
-    (Rainmeter/Skins/illustro Gadgets/@Resources/GpuMeterVars.inc) and keep it in a safe location.
-    If you upgrade or reinstall your Gadgets, your work will be lost (sorry).
+    use the settings skin to relocate your HWiNFOConfig.inc file. Otherwise, if you upgrade or
+    reinstall illustro Gadgets, your work will be lost (sorry).
 
  FINAL NOTE:  Every CPU, motherboard, GPU, etc. WILL HAVE DIFFERENT SENSOR IDs.  Your PC may not
               have one or more sensors available, or the names of the sensors may be completely
