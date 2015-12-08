@@ -1,5 +1,5 @@
 ILLUSTRO GADGETS
-Version 0.7.0
+Version 0.7.1
 By iamanai
 
 -----------------------
@@ -32,7 +32,17 @@ Special thanks to	SilverAzide
 
 -----------------------
 CHANGELOG
-v0.7.0 12-07-2015:
+v0.7.1 12-07-2015:
+Settings:
+ - Added ability to middle-click on HWiNFOConfig.inc's file path to reset it to the default value
+Bug fixes:
+ - Corrected the default value of HWiNFOConfig.inc's file path so it will automatically work on any computer
+ - Changed hard-coded file path of the settings skin (for gadget settings buttons) to use #ROOTCONFIG#
+ - Fixed a mistake causing the GPU usage and memory usage lines in GPU meter to not display accurately
+ - Fixed mistake in Dual GPU Meter that would incorrectly size the background when you hide the line graph
+ - Updated v0.7.0's changelog in the readme file to the version currently on the Rainmeter Forums
+
+v0.7.0 12-06-2015:
 UI (all skins):
  - Increased row spacing by 1 pixel, and lowered bars from text by 1 pixel
  - Fixed row relative positioning so the 'rowYOffset' variable actually has meaning
@@ -42,6 +52,7 @@ UI (all skins):
  - Made space under the line graphs consistent across the skins
  - Changed bar background color and graph background color to be dimmer
  - Removed "about" button
+ - Graph lines are no longer antialiased by default (can be changed back)
 Code cleanup:
  - Simplified overly complicated positioning equations
  - Separated out HWiNFO sensor IDs from settings files, combined into a separate file
@@ -51,7 +62,7 @@ Code cleanup:
  - Changed variable naming scheme (again)
 Settings:
  - Merged the about skin and all settings skins into new unified skin
- - Added an update checker and external links to the about screen
+ - Added an update checker and external links to the about (now "welcome") screen
  - Added option to disable antialiasing on graph lines (more accurate, but less pretty)
  - Implemented ability to change the location of the HWiNFO config file using RainFile (so you don't
  lose your configs when updating the skin pack)
@@ -60,7 +71,6 @@ Settings:
  "Circuitrous" by Flying Hyrax)
 All CPU Meter:
  - Moved fan info to above CPU cores, changed to regular display (label, percentage, value, bar)
- - Added ability to display fan speed and clock speed in the line graph
  - Moved CPU clock to top, separated from fan speed
  - Added CPU name to top-right, can be disabled individually from clock speed in advanced settings
  - Fully removed support for CoreTemp and SpeedFan
@@ -68,11 +78,7 @@ Network Meter:
  - Increased opacity of arrows to match those on Drives Meter
 GPU Meter:
  - Added memory used / total memory fraction to the memory usage row
- - Added support for dual GPUs
-    - Variant of the regular skin - select from Rainmeter's context menu
-    - Components are compacted to save vertical space for low-resolution displays
-    - Line graph options: Combined, separated, hidden
- - Added optional memory controller usage bar
+ - Added dual GPU meter variant (select from rainmeter's context menu)
  - Fixed copy/paste error in the metadata section
 Drives Meter:
  - Fixed flaw in the line graph that would cause a line to not scale itself in relation to the other

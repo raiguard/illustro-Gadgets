@@ -53,6 +53,7 @@ Meter=String
 MeterStyle=StyleText | StyleFileString
 Text="#HWiNFO-CONFIGPATH#"
 LeftMouseUpAction=["#rainFile#" "File" "Variables" "HWiNFO-CONFIGPATH" "#commonSettingsPath#" "#HWINFO-CONFIGPATH#"]
+MiddleMouseUpAction=[!WriteKeyValue Variables HWiNFO-CONFIGPATH "#HWiNFO-CONFIGPATH-DEFAULT#" "#commonSettingsPath#"][!RefreshGroup illustroGadgets]
 
 [ConfigFileDescription]
 Meter=String

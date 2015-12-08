@@ -1,7 +1,7 @@
 [Variables]
 ; -- Version --
-version="0.7.0"
-versionAbsolute=070
+version="0.7.1"
+versionAbsolute=071
 
 ; -- Addons --
 rainRGB=#@#Addons\RainRGB\RainRGB4.exe
