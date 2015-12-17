@@ -2,6 +2,8 @@
 gadgetSettingsPath=#@#Settings\GpuMeterSettings.inc
 @includeGpuMeterSettings=#gadgetSettingsPath#
 
+bgHeight=500
+
 ; ========================================================================================================================
 ;   STYLES
 ; ========================================================================================================================
@@ -29,6 +31,58 @@ Command4=[!WriteKeyValue Variables sColorMemController "$UserInput$" "#gadgetSet
 ; ========================================================================================================================
 
 ; ----- Toggles -----
+
+; Gpu Name
+[GpuNameLabel]
+Meter=String
+MeterStyle=StyleText | StyleToggleButtonLabel
+Text="GPU Name:"
+
+[GpuNameButtonEnabled]
+Meter=String
+MeterStyle=StyleText | StyleToggleButton
+X=[GpuNameLabel:W]r
+Y=0r
+Text="Enabled"
+Hidden=#hideGpuName#
+LeftMouseUpAction=[!WriteKeyValue Variables "hideGpuName" 1 "#gadgetSettingsPath#"][!RefreshGroup "GpuMeter"][!Refresh]
+MiddleMouseUpAction=[!WriteKeyValue Variables "hideGpuName" "#dHideGpuName#" "#gadgetSettingsPath#"][!RefreshGroup "GpuMeter"][!Refresh]
+
+[GpuNameButtonDisabled]
+Meter=String
+MeterStyle=StyleText | StyleToggleButton
+X=0r
+Y=0r
+Text="Disabled"
+Hidden=(#hideGpuName# = 1 ? 0 : 1)
+LeftMouseUpAction=[!WriteKeyValue Variables "hideGpuName" 0 "#gadgetSettingsPath#"][!RefreshGroup "GpuMeter"][!Refresh]
+MiddleMouseUpAction=[!WriteKeyValue Variables "hideGpuName" "#dHideGpuName#" "#gadgetSettingsPath#"][!RefreshGroup "GpuMeter"][!Refresh]
+
+; Shader Clock Information
+[ShaderClockLabel]
+Meter=String
+MeterStyle=StyleText | StyleToggleButtonLabel
+Text="Shader Clock Information:"
+
+[ShaderClockButtonEnabled]
+Meter=String
+MeterStyle=StyleText | StyleToggleButton
+X=[ShaderClockLabel:W]r
+Y=0r
+Text="Enabled"
+Hidden=#hideShaderClock#
+LeftMouseUpAction=[!WriteKeyValue Variables "hideShaderClock" 1 "#gadgetSettingsPath#"][!RefreshGroup "GpuMeter"][!Refresh]
+MiddleMouseUpAction=[!WriteKeyValue Variables "hideShaderClock" "#dHideShaderClock#" "#gadgetSettingsPath#"][!RefreshGroup "GpuMeter"][!Refresh]
+
+[ShaderClockButtonDisabled]
+Meter=String
+MeterStyle=StyleText | StyleToggleButton
+X=0r
+Y=0r
+Text="Disabled"
+Hidden=(#hideShaderClock# = 1 ? 0 : 1)
+LeftMouseUpAction=[!WriteKeyValue Variables "hideShaderClock" 0 "#gadgetSettingsPath#"][!RefreshGroup "GpuMeter"][!Refresh]
+MiddleMouseUpAction=[!WriteKeyValue Variables "hideShaderClock" "#dHideShaderClock#" "#gadgetSettingsPath#"][!RefreshGroup "GpuMeter"][!Refresh]
 
 ; Memory Controller
 [MemControllerLabel]
@@ -254,14 +308,63 @@ Text=#sColorMemController#
 LeftMouseUpAction=[!CommandMeasure MeasureInputColorConfig "Executebatch 4"]
 MiddleMouseUpAction=[!WriteKeyValue Variables sColorMemController "#dColorMemController#" "#gadgetSettingsPath#"][!RefreshGroup "GpuMeter"][!Refresh]
 
-; ----- Dual GPU Meter Description -----
+; ----- Dual GPU Meter -----
 
-[DualGpuMeterDescriptionText]
+[DualGpuMeterSettingsSectionLabel]
+Meter=String
+MeterStyle=StyleText | StyleSectionLabel
+Text="Dual GPU Meter Settings"
+
+[DualGpuMeterSettingsSectionNote]
 Meter=String
 MeterStyle=StyleText
 FontColor=#colorSecondary#
 X=#panelContentMarginLeftX#
-Y=17r
-W=#panelWidth#
-Text="A GPU Meter for dual graphics cards is available as a variant of the original GPU meter. However, it currently does not offer much customization, and is fairly limited. The line graph currently only shows data from GPU0, but in the future you will be able to toggle between GPU0, GPU1, and average. The settings skin will get official support for it in upcoming releases."
-ClipString=2
+Y=20r
+Text="All of the previous settings also affect Dual GPU Meter"
+
+[DualGpuMeterGraphTypeLabel]
+Meter=String
+MeterStyle=StyleText | StyleToggleButtonLabel
+Y=20r
+Text="Graph Type:"
+
+[DualGpuMeterGraphTypeButton0]
+Meter=String
+MeterStyle=StyleText | StyleToggleButton
+X=[DualGpuMeterGraphTypeLabel:W]r
+Y=0r
+Text="Disabled"
+Hidden=(#graphType# = 0 ? 0 : 1)
+LeftMouseUpAction=[!WriteKeyValue Variables "graphType" 1 "#gadgetSettingsPath#"][!RefreshGroup "GpuMeter"][!Refresh]
+MiddleMouseUpAction=[!WriteKeyValue Variables "graphType" "#dGraphType#" "#gadgetSettingsPath#"][!RefreshGroup "GpuMeter"][!Refresh]
+
+[DualGpuMeterGraphTypeButton1]
+Meter=String
+MeterStyle=StyleText | StyleToggleButton
+X=0r
+Y=0r
+Text="GPU 0 Only"
+Hidden=(#graphType# = 1 ? 0 : 1)
+LeftMouseUpAction=[!WriteKeyValue Variables "graphType" 2 "#gadgetSettingsPath#"][!RefreshGroup "GpuMeter"][!Refresh]
+MiddleMouseUpAction=[!WriteKeyValue Variables "graphType" "#dGraphType#" "#gadgetSettingsPath#"][!RefreshGroup "GpuMeter"][!Refresh]
+
+[DualGpuMeterGraphTypeButton2]
+Meter=String
+MeterStyle=StyleText | StyleToggleButton
+X=0r
+Y=0r
+Text="GPU 1 Only"
+Hidden=(#graphType# = 2 ? 0 : 1)
+LeftMouseUpAction=[!WriteKeyValue Variables "graphType" 3 "#gadgetSettingsPath#"][!RefreshGroup "GpuMeter"][!Refresh]
+MiddleMouseUpAction=[!WriteKeyValue Variables "graphType" "#dGraphType#" "#gadgetSettingsPath#"][!RefreshGroup "GpuMeter"][!Refresh]
+
+[DualGpuMeterGraphTypeButton3]
+Meter=String
+MeterStyle=StyleText | StyleToggleButton
+X=0r
+Y=0r
+Text="Average"
+Hidden=(#graphType# = 3 ? 0 : 1)
+LeftMouseUpAction=[!WriteKeyValue Variables "graphType" 0 "#gadgetSettingsPath#"][!RefreshGroup "GpuMeter"][!Refresh]
+MiddleMouseUpAction=[!WriteKeyValue Variables "graphType" "#dGraphType#" "#gadgetSettingsPath#"][!RefreshGroup "GpuMeter"][!Refresh]

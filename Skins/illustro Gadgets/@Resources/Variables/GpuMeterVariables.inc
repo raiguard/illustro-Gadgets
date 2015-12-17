@@ -1,7 +1,7 @@
 [Variables]
 ; -- General visual properties --
 bgWidth=210
-bgHeight=(#bodyStartY# + (#rowYOffset# * (8 - #hideCoreVoltage# - #hideMemController#)) + (#hideLineGraph# = 0 ? #rowYOffset# + #graphHeight# - 5 : 9))
+bgHeight=(#bodyStartY# + (#rowYOffset# * (10 - #hideGpuName# - #hideShaderClock# - #hideCoreVoltage# - #hideMemController#)) + (#hideLineGraph# = 0 ? #rowYOffset# + #graphHeight# - 5 : 9))
 bgCenterX=(#bgWidth# / 2)
 
 generalXMarginRight=(#bgWidth# - 10)

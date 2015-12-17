@@ -1,8 +1,13 @@
 [Variables]
 ; -- General visual properties --
+hideGpuName=0
+hideShaderClock=0
 hideMemController=0
-hideCoreVoltage=0
+hideCoreVoltage=1
 hideLineGraph=0
+
+; Dual GPU Meter
+graphType=3
 
 ; -- Colors --
 sColorTotalUsage=255,246,42
@@ -12,9 +17,12 @@ sColorMemController=250,158,0
 
 ; ----- Defaults -----
 
+dHideShaderClock=0
 dHideMemController=0
-dHideCoreVoltage=0
+dHideCoreVoltage=1
 dHideLineGraph=0
+
+dGraphType=3
 
 dColorTotalUsage=255,246,42
 dColorMemoryUsage=107,198,250

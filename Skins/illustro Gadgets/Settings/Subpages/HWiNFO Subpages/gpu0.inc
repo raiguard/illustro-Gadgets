@@ -1,5 +1,5 @@
 [Variables]
-bgHeight=460
+bgHeight=470
 
 [MeasureInputHWiNFOConfigGpu0]
 Measure=Plugin
@@ -23,6 +23,7 @@ Command9=[!WriteKeyValue Variables HWiNFO-GPU0-FanSpeed "$UserInput$" "#HWiNFO-C
 Command10=[!WriteKeyValue Variables HWiNFO-GPU0-FanUsage "$UserInput$" "#HWiNFO-CONFIGPATH#"][!RefreshGroup GPUMeter][!Refresh] DefaultValue="#HWiNFO-GPU0-FanUsage#" X=[Gpu0FanUsageValue:X] Y=[Gpu0FanUsageValue:Y] H=[Gpu0FanUsageValue:H]
 Command11=[!WriteKeyValue Variables HWiNFO-GPU0-MemController "$UserInput$" "#HWiNFO-CONFIGPATH#"][!RefreshGroup GPUMeter][!Refresh] DefaultValue="#HWiNFO-GPU0-MemController#" X=[Gpu0MemControllerValue:X] Y=[Gpu0MemControllerValue:Y] H=[Gpu0MemControllerValue:H]
 Command12=[!WriteKeyValue Variables HWiNFO-GPU0-CoreVoltage "$UserInput$" "#HWiNFO-CONFIGPATH#"][!RefreshGroup GPUMeter][!Refresh] DefaultValue="#HWiNFO-GPU0-CoreVoltage#" X=[Gpu0CoreVoltageValue:X] Y=[Gpu0CoreVoltageValue:Y] H=[Gpu0CoreVoltageValue:H]
+Command13=[!WriteKeyValue Variables HWiNFO-GPU0-VideoClock "$UserInput$" "#HWiNFO-CONFIGPATH#"][!RefreshGroup GPUMeter][!Refresh] DefaultValue="#HWiNFO-GPU0-VideoClock#" X=[Gpu0VideoClockValue:X] Y=[Gpu0VideoClockValue:Y] H=[Gpu0VideoClockValue:H]
 
 ; ----- Sensor IDs -----
 
@@ -145,6 +146,18 @@ MeterStyle=StyleText | StyleHWiNFOValue
 X=([Gpu0FanUsageLabel:W] + 2)r
 Text="#HWiNFO-GPU0-FanUsage#"
 LeftMouseUpAction=[!CommandMeasure MeasureInputHWiNFOConfigGpu0 "Executebatch 10"]
+
+[Gpu0VideoClockLabel]
+Meter=String
+MeterStyle=StyleText | StyleHWiNFOLabel
+Text="HWiNFO-GPU0-VideoClock:"
+
+[Gpu0VideoClockValue]
+Meter=String
+MeterStyle=StyleText | StyleHWiNFOValue
+X=([Gpu0VideoClockLabel:W] + 2)r
+Text="#HWiNFO-GPU0-VideoClock#"
+LeftMouseUpAction=[!CommandMeasure MeasureInputHWiNFOConfigGpu0 "Executebatch 13"]
 
 [Gpu0MemControllerLabel]
 Meter=String

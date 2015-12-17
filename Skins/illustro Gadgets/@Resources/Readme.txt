@@ -32,8 +32,20 @@ Special thanks to	SilverAzide
 
 -----------------------
 CHANGELOG
-v0.8.0 ??-??-2016:
+v1.0.0 ??-??-2016:
+PLANNED CHANGES:
+ - Add scaling to the gadgets
+ - Implement proper help buttons and documentation
+ - Polish stuff, finalize the UI
 
+v0.8.0 ??-??-2016:
+PLANNED CHANGES: # = Completed
+# - Added Shader Clock information to GPU meter
+# - Fixed inconsistency with memory fraction on single GPU meter (was bolded, changed to normal)
+ - Add drive capacity warnings to drives meter
+# - Implemented proper support for long drive names in drives meter
+# - Added GPU name to single GPU meter
+# - Implemented proper settings support for dual GPU meter
 
 v0.7.1 12-07-2015:
 Settings:
