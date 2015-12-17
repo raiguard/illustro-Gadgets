@@ -43,6 +43,8 @@ PLANNED CHANGES: # = Completed
 # - Added Shader Clock information to GPU meter
 # - Fixed inconsistency with memory fraction on single GPU meter (was bolded, changed to normal)
  - Add drive capacity warnings to drives meter
+ - Make CPU name separate from clock speed (changeable back to old version)
+ - Add memory controller usage bar to GPU meters
 # - Implemented proper support for long drive names in drives meter
 # - Added GPU name to single GPU meter
 # - Implemented proper settings support for dual GPU meter
