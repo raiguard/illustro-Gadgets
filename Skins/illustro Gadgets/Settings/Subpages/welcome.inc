@@ -32,7 +32,7 @@ DynamicVariables=1
 FontColor=#colorSecondary#
 Text="illustro Gadgets is up to date"
 
-[StyleUpdateCheckerDevVersion]
+[StyleUpdateCheckerDev]
 FontColor=#colorSecondary#
 Text="Using development version"
 
@@ -40,36 +40,41 @@ Text="Using development version"
 ;   MEASURES
 ; ========================================================================================================================
 
+[MeasureVersionAbsolute]
+Measure=String
+String=#version#
+Substitute=".":"","-d":""
+
 [MeasureIPAddress]
 Measure=Plugin
-Plugin=Plugins/WebParser.dll
+Plugin=WebParser
 UpdateRate=1000
 Url="https://github.com/iamanai/illustro-Gadgets/blob/master/CurrentReleaseVer.txt"
 RegExp="(?siU)<td id="LC1" class="blob-code blob-code-inner js-file-line">(.*)</td>.*"
 FinishAction=[!EnableMeasure MeasureVersionCheck]
 
-[MeasureReleaseVer]
+[MeasureCurrentReleaseVer]
 Measure=Plugin
-Plugin=Plugins\WebParser.dll
+Plugin=WebParser
 Url=[MeasureIPAddress]
 StringIndex=1
 
-[MeasureReleaseVerAbsolute]
+[MeasureCurrentReleaseVerAbsolute]
 Measure=Plugin
-Plugin=Plugins\WebParser.dll
+Plugin=WebParser
 Url=[MeasureIPAddress]
 StringIndex=1
 Substitute=".":"","-d":""
 
 [MeasureVersionCheck]
 Measure=Calc
-Formula=[MeasureReleaseVerAbsolute] - #versionAbsolute#
+Formula=[MeasureCurrentReleaseVerAbsolute] - [MeasureVersionAbsolute]
 IfAboveValue=0
-IfAboveAction=[!SetOption UpdateCheckerContent MeterStyle "StyleText | StyleUpdateCheckerYes"][!Redraw]
+IfAboveAction=[!SetOption UpdateCheckerString MeterStyle "StyleText | StyleUpdateCheckerYes"][!Redraw]
 IfEqualValue=0
-IfEqualAction=[!SetOption UpdateCheckerContent MeterStyle "StyleText | StyleUpdateCheckerNo"][!Redraw]
+IfEqualAction=[!SetOption UpdateCheckerString MeterStyle "StyleText | StyleUpdateCheckerNo"][!Redraw]
 IfBelowValue=0
-IfBelowAction=[!SetOption UpdateCheckerContent MeterStyle "StyleText | StyleUpdateCheckerDevVersion"][!Redraw]
+IfBelowAction=[!SetOption UpdateCheckerString MeterStyle "StyleText | StyleUpdateCheckerDev"][!Redraw]
 DynamicVariables=1
 Disabled=1
 
@@ -108,20 +113,20 @@ Y=30r
 Text="illustro Gadgets is a skin suite designed to present the information provided by the AddGadgets.com gadgets from Windows 7, in the sleek theme of illustro. The included All CPU Meter, Network Meter, GPU Meter, and Drives Meter present various bits of information about your system. For full functionality, the skin pack requires HWiNFO to be installed"
 
 ; ----- Links Bar -----
-[LinksBarReadmeButton]
+[LinksBarDeviantartButton]
 Meter=String
 MeterStyle=StyleText | StyleLinksBar
-X=(#navMenuSeparatorX# + 25)
+X=(#navMenuSeparatorX# + 15)
 Y=([WelcomeText:H] + 10)r
-Text="Readme"
-ToolTipText="#@#Readme.txt"
-LeftMouseUpAction=["#@#Readme.txt"]
+Text="DeviantArt"
+ToolTipText="http://iamanai.deviantart.com/art/illustro-Gadgets-0-7-1-576638584"
+LeftMouseUpAction=["http://iamanai.deviantart.com/art/illustro-Gadgets-0-7-1-576638584"]
 
-[LinksBarReadmeSeparator]
+[LinksBarDeviantartSeparator]
 Meter=String
 MeterStyle=StyleText | StyleLinksBar
 FontColor=#colorPrimary#
-X=([LinksBarReadmeButton:W] + 5)r
+X=([LinksBarDeviantartButton:W] + 5)r
 Text="|"
 
 [LinksBarGithubButton]
@@ -169,7 +174,7 @@ X=#panelContentMarginLeftX#
 Y=[CopyrightText:Y]
 Text="Update:"
 
-[UpdateCheckerContent]
+[UpdateCheckerString]
 Meter=String
 MeterStyle=StyleText | StyleUpdateCheckerConnecting
 X=([UpdateCheckerLabel:W] + 2)r

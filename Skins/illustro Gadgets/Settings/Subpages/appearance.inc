@@ -101,13 +101,13 @@ SolidColor=#colorPrimary#
 [ColorsPrimaryAlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('colorPrimary',$MouseX:%$,#commonSettingsPath#)"][!RefreshGroup illustroGadgets]
 
 [ColorsPrimaryAlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
-; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup illustroGadgets]
+W=1
 
 [ColorsPrimaryString]
 Meter=String
@@ -136,11 +136,12 @@ MiddleMouseUpAction=[!WriteKeyValue Variables colorSecondary "#dColorSecondary#"
 [ColorsSecondaryAlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('colorSecondary',$MouseX:%$,#commonSettingsPath#)"][!RefreshGroup illustroGadgets]
 
 [ColorsSecondaryAlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
-W=80
+W=1
 
 [ColorsSecondaryString]
 Meter=String
@@ -169,11 +170,12 @@ MiddleMouseUpAction=[!WriteKeyValue Variables colorAccent "#dColorAccent#" "#com
 [ColorsAccentAlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('colorAccent',$MouseX:%$,#commonSettingsPath#)"][!RefreshGroup illustroGadgets]
 
 [ColorsAccentAlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
-W=80
+W=1
 
 [ColorsAccentString]
 Meter=String
@@ -202,11 +204,12 @@ MiddleMouseUpAction=[!WriteKeyValue Variables colorDim "#dColorDim#" "#commonSet
 [ColorsDimAlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('colorDim',$MouseX:%$,#commonSettingsPath#)"][!RefreshGroup illustroGadgets]
 
 [ColorsDimAlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
-W=80
+W=1
 
 [ColorsDimString]
 Meter=String

@@ -44,12 +44,40 @@ Command7=[!WriteKeyValue Variables colorDisk7 "$UserInput$" "#gadgetSettingsPath
 Command8=[!WriteKeyValue Variables colorDisk8 "$UserInput$" "#gadgetSettingsPath#"][!RefreshGroup DrivesMeter][!Refresh] DefaultValue="#colorDisk8#" X=[ColorsDisk8String:X] Y=[ColorsDisk8String:Y] H=[ColorsDisk8String:H]
 Command9=[!WriteKeyValue Variables colorDisk9 "$UserInput$" "#gadgetSettingsPath#"][!RefreshGroup DrivesMeter][!Refresh] DefaultValue="#colorDisk9#" X=[ColorsDisk9String:X] Y=[ColorsDisk9String:Y] H=[ColorsDisk9String:H]
 Command10=[!WriteKeyValue Variables colorDisk10 "$UserInput$" "#gadgetSettingsPath#"][!RefreshGroup DrivesMeter][!Refresh] DefaultValue="#colorDisk10#" X=[ColorsDisk10String:X] Y=[ColorsDisk10String:Y] H=[ColorsDisk10String:H]
+Command11=[!WriteKeyValue Variables colorDiskThresholdWarn "$UserInput$" "#gadgetSettingsPath#"][!RefreshGroup DrivesMeter][!Refresh] DefaultValue="#colorDiskThresholdWarn#" X=[ColorsThresholdWarnString:X] Y=[ColorsThresholdWarnString:Y] H=[ColorsThresholdWarnString:H]
+Command12=[!WriteKeyValue Variables colorDiskThresholdFull "$UserInput$" "#gadgetSettingsPath#"][!RefreshGroup DrivesMeter][!Refresh] DefaultValue="#colorDiskThresholdFull#" X=[ColorsThresholdFullString:X] Y=[ColorsThresholdFullString:Y] H=[ColorsThresholdFullString:H]
 
 ; ========================================================================================================================
 ;   METERS
 ; ========================================================================================================================
 
 ; ----- Toggles -----
+
+; Disk Capacity Warnings
+[CapacityWarningsLabel]
+Meter=String
+MeterStyle=StyleText | StyleToggleButtonLabel
+Text="Drive Capacity Warnings:"
+
+[CapacityWarningsButtonEnabled]
+Meter=String
+MeterStyle=StyleText | StyleToggleButton
+X=[CapacityWarningsLabel:W]r
+Y=0r
+Text="Enabled"
+Hidden=#hideCapacityWarnings#
+LeftMouseUpAction=[!WriteKeyValue Variables "hideCapacityWarnings" 1 "#gadgetSettingsPath#"][!RefreshGroup "DrivesMeter"][!Refresh]
+MiddleMouseUpAction=[!WriteKeyValue Variables "hideCapacityWarnings" "#dHideCapacityWarnings#" "#gadgetSettingsPath#"][!RefreshGroup "DrivesMeter"][!Refresh]
+
+[CapacityWarningsButtonDisabled]
+Meter=String
+MeterStyle=StyleText | StyleToggleButton
+X=0r
+Y=0r
+Text="Disabled"
+Hidden=(#hideCapacityWarnings# = 1 ? 0 : 1)
+LeftMouseUpAction=[!WriteKeyValue Variables "hideCapacityWarnings" 0 "#gadgetSettingsPath#"][!RefreshGroup "DrivesMeter"][!Refresh]
+MiddleMouseUpAction=[!WriteKeyValue Variables "hideCapacityWarnings" "#dHideCapacityWarnings#" "#gadgetSettingsPath#"][!RefreshGroup "DrivesMeter"][!Refresh]
 
 ; Line Graph
 [LineGraphLabel]
@@ -674,3 +702,75 @@ MeterStyle=StyleText | StyleColorsString
 Text=#colorDisk10#
 LeftMouseUpAction=[!CommandMeasure MeasureInputColorConfig "Executebatch 10"]
 MiddleMouseUpAction=[!WriteKeyValue Variables colorDisk10 "#dColorDisk10#" "#gadgetSettingsPath#"][!RefreshGroup "DrivesMeter"][!Refresh]
+
+; Disk Capacity Warning Color
+[ColorsThresholdWarningLabel]
+Meter=String
+MeterStyle=StyleText | StyleColorsLabel
+X=[ColorsDisk9Label:X]
+Text="Capacity Warning Color"
+
+[ColorsThresholdWarnBoxBg]
+Meter=Image
+MeterStyle=StyleColorsBoxBg
+
+[ColorsThresholdWarnBox]
+Meter=Image
+MeterStyle=StyleColorsBox
+LeftMouseUpAction=["#rainRgb#" "VarName=colorDiskThresholdWarn" "FileName=#gadgetSettingsPath#"]
+MiddleMouseUpAction=[!WriteKeyValue Variables colorDiskThresholdWarn "#dColorDiskThresholdWarn#" "#gadgetSettingsPath#"][!RefreshGroup "DrivesMeter"][!Refresh]
+SolidColor=#colorDiskThresholdWarn#
+
+[ColorsThresholdWarnAlphaBarBg]
+Meter=Image
+MeterStyle=StyleColorsAlphaBarBg
+
+[ColorsThresholdWarnAlphaBar]
+Meter=Image
+MeterStyle=StyleColorsAlphaBar
+SolidColor=#colorPrimary#
+W=80
+; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup illustroGadgets]
+
+[ColorsThresholdWarnString]
+Meter=String
+MeterStyle=StyleText | StyleColorsString
+Text=#colorDiskThresholdWarn#
+LeftMouseUpAction=[!CommandMeasure MeasureInputColorConfig "Executebatch 11"]
+MiddleMouseUpAction=[!WriteKeyValue Variables colorDiskThresholdWarn "#dColorDiskThresholdWarn#" "#gadgetSettingsPath#"][!RefreshGroup "DrivesMeter"][!Refresh]
+
+; Disk Capacity Full Color
+[ColorsThresholdFullLabel]
+Meter=String
+MeterStyle=StyleText | StyleColorsLabel
+X=[ColorsDisk9Label:X]
+Text="Capacity Full Color"
+
+[ColorsThresholdFullBoxBg]
+Meter=Image
+MeterStyle=StyleColorsBoxBg
+
+[ColorsThresholdFullBox]
+Meter=Image
+MeterStyle=StyleColorsBox
+LeftMouseUpAction=["#rainRgb#" "VarName=colorDiskThresholdFull" "FileName=#gadgetSettingsPath#"]
+MiddleMouseUpAction=[!WriteKeyValue Variables colorDiskThresholdFull "#dColorDiskThresholdFull#" "#gadgetSettingsPath#"][!RefreshGroup "DrivesMeter"][!Refresh]
+SolidColor=#colorDiskThresholdFull#
+
+[ColorsThresholdFullAlphaBarBg]
+Meter=Image
+MeterStyle=StyleColorsAlphaBarBg
+
+[ColorsThresholdFullAlphaBar]
+Meter=Image
+MeterStyle=StyleColorsAlphaBar
+SolidColor=#colorPrimary#
+W=80
+; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup illustroGadgets]
+
+[ColorsThresholdFullString]
+Meter=String
+MeterStyle=StyleText | StyleColorsString
+Text=#colorDiskThresholdFull#
+LeftMouseUpAction=[!CommandMeasure MeasureInputColorConfig "Executebatch 12"]
+MiddleMouseUpAction=[!WriteKeyValue Variables colorDiskThresholdFull "#dColorDiskThresholdFull#" "#gadgetSettingsPath#"][!RefreshGroup "DrivesMeter"][!Refresh]

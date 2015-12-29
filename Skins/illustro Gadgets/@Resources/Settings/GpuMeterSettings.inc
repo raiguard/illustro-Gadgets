@@ -23,6 +23,7 @@ dHideCoreVoltage=1
 dHideLineGraph=0
 
 dGraphType=3
+dHideGpuName=0
 
 dColorTotalUsage=255,246,42
 dColorMemoryUsage=107,198,250

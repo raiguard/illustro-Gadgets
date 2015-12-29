@@ -1,5 +1,5 @@
 ILLUSTRO GADGETS
-Version 0.7.1
+Version 0.8.0
 By iamanai
 
 -----------------------
@@ -42,12 +42,18 @@ v0.8.0 ??-??-2016:
 PLANNED CHANGES: # = Completed
 # - Added Shader Clock information to GPU meter
 # - Fixed inconsistency with memory fraction on single GPU meter (was bolded, changed to normal)
- - Add drive capacity warnings to drives meter
- - Make CPU name separate from clock speed (changeable back to old version)
- - Add memory controller usage bar to GPU meters
+# - Add drive capacity warnings to drives meter
+ - Implement proper alpha editing support for color pickers
+# - Separated CPU name from clock speed, moved clock speed to bottom
+#  - Add memory controller usage bar to GPU meters
+#  - Update update checker to get rid of versionAbsolute variable
+# - Move readme link to the sidebar, replace previous location with DeviantArt link
 # - Implemented proper support for long drive names in drives meter
 # - Added GPU name to single GPU meter
 # - Implemented proper settings support for dual GPU meter
+
+Bug fixes:
+ - Fixed mistake in Dual GPU Meter that would cause GPU 1's name to display as GPU 0's name instead
 
 v0.7.1 12-07-2015:
 Settings:

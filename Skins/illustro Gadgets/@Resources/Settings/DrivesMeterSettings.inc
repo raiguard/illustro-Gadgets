@@ -2,7 +2,7 @@
 ; -- General Visual Properties --
 hideHistogram=0
 hideLineGraph=0
-hideDriveWarnings=1
+hideCapacityWarnings=0
 
 ; -- Drives --
 ; Hide
@@ -27,14 +27,17 @@ colorDisk7=42,112,250
 colorDisk8=43,224,224
 colorDisk9=121,182,62
 colorDisk10=204,255,0
-colorDiskCapacityWarn=220,200,0
-colorDiskCapacityFull=200,0,0
+colorDiskThresholdWarn=220,200,0
+colorDiskThresholdFull=200,0,0
+
+diskThresholdWarn=0.8
+diskThresholdFull=0.95
 
 ; ----- Defaults -----
 
 dHideLineGraph=0
 dHideHistogram=0
-dHideDriveWarnings=1
+dHideCapacityWarnings=0
 
 dColorDisk1=107,238,98
 dColorDisk2=255,246,42

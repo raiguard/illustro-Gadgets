@@ -43,6 +43,10 @@ IfFalseAction=[!SetVariable DiskNotFoundC 1][!SetOption MeasureDiskPercentFullC 
 [MeasureDiskPercentFullC]
 Measure=Calc
 Formula=MeasureDiskSpaceUsedC / MeasureDiskSpaceTotalC
+IfCondition=(MeasureDiskPercentFullC > #diskThresholdWarn#) && (#hideCapacityWarnings# = 0)
+IfTrueAction=[!SetOption DriveStoragePercentC FontColor "#colorDiskThresholdWarn#,#alphaPrimary#"][!SetOption DriveStorageBarC BarColor "#colorDiskThresholdWarn#,#alphaPrimary#"]
+IfCondition2=(MeasureDiskPercentFullC > #diskThresholdFull#) && (#hideCapacityWarnings# = 0)
+IfTrueAction2=[!SetOption DriveStoragePercentC FontColor "#colorDiskThresholdFull#,#alphaPrimary#"][!SetOption DriveStorageBarC BarColor "#colorDiskThresholdFull#,#alphaPrimary#"]
 
 [MeasureDiskIdleTimeC]
 Measure=Plugin
@@ -134,6 +138,10 @@ IfFalseAction=[!SetVariable diskNotFoundD 1][!SetOption MeasureDiskPercentFullD 
 [MeasureDiskPercentFullD]
 Measure=Calc
 Formula=MeasureDiskSpaceUsedD / MeasureDiskSpaceTotalD
+IfCondition=(MeasureDiskPercentFullD > #diskThresholdWarn#) && (#hideCapacityWarnings# = 0)
+IfTrueAction=[!SetOption DriveStoragePercentD FontColor "#colorDiskThresholdWarn#,#alphaPrimary#"][!SetOption DriveStorageBarD BarColor "#colorDiskThresholdWarn#,#alphaPrimary#"]
+IfCondition2=(MeasureDiskPercentFullD > #diskThresholdFull#) && (#hideCapacityWarnings# = 0)
+IfTrueAction2=[!SetOption DriveStoragePercentD FontColor "#colorDiskThresholdFull#,#alphaPrimary#"][!SetOption DriveStorageBarD BarColor "#colorDiskThresholdFull#,#alphaPrimary#"]
 
 [MeasureDiskIdleTimeD]
 Measure=Plugin
@@ -225,6 +233,10 @@ IfFalseAction=[!SetVariable diskNotFoundE 1][!SetOption MeasureDiskPercentFullE 
 [MeasureDiskPercentFullE]
 Measure=Calc
 Formula=MeasureDiskSpaceUsedE / MeasureDiskSpaceTotalE
+IfCondition=(MeasureDiskPercentFullE > #diskThresholdWarn#) && (#hideCapacityWarnings# = 0)
+IfTrueAction=[!SetOption DriveStoragePercentE FontColor "#colorDiskThresholdWarn#,#alphaPrimary#"][!SetOption DriveStorageBarE BarColor "#colorDiskThresholdWarn#,#alphaPrimary#"]
+IfCondition2=(MeasureDiskPercentFullE > #diskThresholdFull#) && (#hideCapacityWarnings# = 0)
+IfTrueAction2=[!SetOption DriveStoragePercentE FontColor "#colorDiskThresholdFull#,#alphaPrimary#"][!SetOption DriveStorageBarE BarColor "#colorDiskThresholdFull#,#alphaPrimary#"]
 
 [MeasureDiskIdleTimeE]
 Measure=Plugin
@@ -316,12 +328,10 @@ IfFalseAction=[!SetVariable DiskNotFoundF 1][!SetOption MeasureDiskPercentFullF 
 [MeasureDiskPercentFullF]
 Measure=Calc
 Formula=MeasureDiskSpaceUsedF / MeasureDiskSpaceTotalF
-IfCondition=(MeasureDiskPercentFullF >= #DiskThreshholdFull#)
-IfTrueAction=[!SetOption BarMeterDiskF BarColor #ColorBarFull#]
-IfCondition2=(MeasureDiskPercentFullF >= #DiskThreshholdWarn#) && (MeasureDiskPercentFullF < #DiskThreshholdFull#)
-IfTrueAction2=[!SetOption BarMeterDiskF BarColor #ColorBarWarn#]
-IfCondition3=(MeasureDiskPercentFullF < #DiskThreshholdWarn#)
-IfTrueAction3=[!SetOption BarMeterDiskF BarColor #ColorBarOK#]
+IfCondition=(MeasureDiskPercentFullF > #diskThresholdWarn#) && (#hideCapacityWarnings# = 0)
+IfTrueAction=[!SetOption DriveStoragePercentF FontColor "#colorDiskThresholdWarn#,#alphaPrimary#"][!SetOption DriveStorageBarF BarColor "#colorDiskThresholdWarn#,#alphaPrimary#"]
+IfCondition2=(MeasureDiskPercentFullF > #diskThresholdFull#) && (#hideCapacityWarnings# = 0)
+IfTrueAction2=[!SetOption DriveStoragePercentF FontColor "#colorDiskThresholdFull#,#alphaPrimary#"][!SetOption DriveStorageBarF BarColor "#colorDiskThresholdFull#,#alphaPrimary#"]
 
 [MeasureDiskIdleTimeF]
 Measure=Plugin
@@ -413,12 +423,10 @@ IfFalseAction=[!SetVariable DiskNotFoundG 1][!SetOption MeasureDiskPercentFullG 
 [MeasureDiskPercentFullG]
 Measure=Calc
 Formula=MeasureDiskSpaceUsedG / MeasureDiskSpaceTotalG
-IfCondition=(MeasureDiskPercentFullG >= #DiskThreshholdFull#)
-IfTrueAction=[!SetOption BarMeterDiskG BarColor #ColorBarFull#]
-IfCondition2=(MeasureDiskPercentFullG >= #DiskThreshholdWarn#) && (MeasureDiskPercentFullG < #DiskThreshholdFull#)
-IfTrueAction2=[!SetOption BarMeterDiskG BarColor #ColorBarWarn#]
-IfCondition3=(MeasureDiskPercentFullG < #DiskThreshholdWarn#)
-IfTrueAction3=[!SetOption BarMeterDiskG BarColor #ColorBarOK#]
+IfCondition=(MeasureDiskPercentFullG > #diskThresholdWarn#) && (#hideCapacityWarnings# = 0)
+IfTrueAction=[!SetOption DriveStoragePercentG FontColor "#colorDiskThresholdWarn#,#alphaPrimary#"][!SetOption DriveStorageBarG BarColor "#colorDiskThresholdWarn#,#alphaPrimary#"]
+IfCondition2=(MeasureDiskPercentFullG > #diskThresholdFull#) && (#hideCapacityWarnings# = 0)
+IfTrueAction2=[!SetOption DriveStoragePercentG FontColor "#colorDiskThresholdFull#,#alphaPrimary#"][!SetOption DriveStorageBarG BarColor "#colorDiskThresholdFull#,#alphaPrimary#"]
 
 [MeasureDiskIdleTimeG]
 Measure=Plugin
@@ -510,12 +518,10 @@ IfFalseAction=[!SetVariable DiskNotFoundH 1][!SetOption MeasureDiskPercentFullH 
 [MeasureDiskPercentFullH]
 Measure=Calc
 Formula=MeasureDiskSpaceUsedH / MeasureDiskSpaceTotalH
-IfCondition=(MeasureDiskPercentFullH >= #DiskThreshholdFull#)
-IfTrueAction=[!SetOption BarMeterDiskH BarColor #ColorBarFull#]
-IfCondition2=(MeasureDiskPercentFullH >= #DiskThreshholdWarn#) && (MeasureDiskPercentFullH < #DiskThreshholdFull#)
-IfTrueAction2=[!SetOption BarMeterDiskH BarColor #ColorBarWarn#]
-IfCondition3=(MeasureDiskPercentFullH < #DiskThreshholdWarn#)
-IfTrueAction3=[!SetOption BarMeterDiskH BarColor #ColorBarOK#]
+IfCondition=(MeasureDiskPercentFullH > #diskThresholdWarn#) && (#hideCapacityWarnings# = 0)
+IfTrueAction=[!SetOption DriveStoragePercentH FontColor "#colorDiskThresholdWarn#,#alphaPrimary#"][!SetOption DriveStorageBarH BarColor "#colorDiskThresholdWarn#,#alphaPrimary#"]
+IfCondition2=(MeasureDiskPercentFullH > #diskThresholdFull#) && (#hideCapacityWarnings# = 0)
+IfTrueAction2=[!SetOption DriveStoragePercentH FontColor "#colorDiskThresholdFull#,#alphaPrimary#"][!SetOption DriveStorageBarH BarColor "#colorDiskThresholdFull#,#alphaPrimary#"]
 
 [MeasureDiskIdleTimeH]
 Measure=Plugin
@@ -607,12 +613,10 @@ IfFalseAction=[!SetVariable DiskNotFoundI 1][!SetOption MeasureDiskPercentFullI 
 [MeasureDiskPercentFullI]
 Measure=Calc
 Formula=MeasureDiskSpaceUsedI / MeasureDiskSpaceTotalI
-IfCondition=(MeasureDiskPercentFullI >= #DiskThreshholdFull#)
-IfTrueAction=[!SetOption BarMeterDiskI BarColor #ColorBarFull#]
-IfCondition2=(MeasureDiskPercentFullI >= #DiskThreshholdWarn#) && (MeasureDiskPercentFullI < #DiskThreshholdFull#)
-IfTrueAction2=[!SetOption BarMeterDiskI BarColor #ColorBarWarn#]
-IfCondition3=(MeasureDiskPercentFullI < #DiskThreshholdWarn#)
-IfTrueAction3=[!SetOption BarMeterDiskI BarColor #ColorBarOK#]
+IfCondition=(MeasureDiskPercentFullI > #diskThresholdWarn#) && (#hideCapacityWarnings# = 0)
+IfTrueAction=[!SetOption DriveStoragePercentI FontColor "#colorDiskThresholdWarn#,#alphaPrimary#"][!SetOption DriveStorageBarI BarColor "#colorDiskThresholdWarn#,#alphaPrimary#"]
+IfCondition2=(MeasureDiskPercentFullI > #diskThresholdFull#) && (#hideCapacityWarnings# = 0)
+IfTrueAction2=[!SetOption DriveStoragePercentI FontColor "#colorDiskThresholdFull#,#alphaPrimary#"][!SetOption DriveStorageBarI BarColor "#colorDiskThresholdFull#,#alphaPrimary#"]
 
 [MeasureDiskIdleTimeI]
 Measure=Plugin
@@ -704,12 +708,10 @@ IfFalseAction=[!SetVariable DiskNotFoundJ 1][!SetOption MeasureDiskPercentFullJ 
 [MeasureDiskPercentFullJ]
 Measure=Calc
 Formula=MeasureDiskSpaceUsedJ / MeasureDiskSpaceTotalJ
-IfCondition=(MeasureDiskPercentFullJ >= #diskThreshholdFull#)
-IfTrueAction=[!SetOption BarMeterDiskJ BarColor #colorBarFull#]
-IfCondition2=(MeasureDiskPercentFullJ >= #diskThreshholdWarn#) && (MeasureDiskPercentFullJ < #DiskThreshholdFull#)
-IfTrueAction2=[!SetOption BarMeterDiskJ BarColor #colorBarWarn#]
-IfCondition3=(MeasureDiskPercentFullJ < #DiskThreshholdWarn#)
-IfTrueAction3=[!SetOption BarMeterDiskJ BarColor #colorBarOK#]
+IfCondition=(MeasureDiskPercentFullJ > #diskThresholdWarn#) && (#hideCapacityWarnings# = 0)
+IfTrueAction=[!SetOption DriveStoragePercentJ FontColor "#colorDiskThresholdWarn#,#alphaPrimary#"][!SetOption DriveStorageBarJ BarColor "#colorDiskThresholdWarn#,#alphaPrimary#"]
+IfCondition2=(MeasureDiskPercentFullJ > #diskThresholdFull#) && (#hideCapacityWarnings# = 0)
+IfTrueAction2=[!SetOption DriveStoragePercentJ FontColor "#colorDiskThresholdFull#,#alphaPrimary#"][!SetOption DriveStorageBarJ BarColor "#colorDiskThresholdFull#,#alphaPrimary#"]
 
 [MeasureDiskIdleTimeJ]
 Measure=Plugin
@@ -801,12 +803,10 @@ IfFalseAction=[!SetVariable DiskNotFoundK 1][!SetOption MeasureDiskPercentFullK 
 [MeasureDiskPercentFullK]
 Measure=Calc
 Formula=MeasureDiskSpaceUsedK / MeasureDiskSpaceTotalK
-IfCondition=(MeasureDiskPercentFullK >= #DiskThreshholdFull#)
-IfTrueAction=[!SetOption BarMeterDiskK BarColor #ColorBarFull#]
-IfCondition2=(MeasureDiskPercentFullK >= #DiskThreshholdWarn#) && (MeasureDiskPercentFullK < #DiskThreshholdFull#)
-IfTrueAction2=[!SetOption BarMeterDiskK BarColor #ColorBarWarn#]
-IfCondition3=(MeasureDiskPercentFullK < #DiskThreshholdWarn#)
-IfTrueAction3=[!SetOption BarMeterDiskK BarColor #ColorBarOK#]
+IfCondition=(MeasureDiskPercentFullK > #diskThresholdWarn#) && (#hideCapacityWarnings# = 0)
+IfTrueAction=[!SetOption DriveStoragePercentK FontColor "#colorDiskThresholdWarn#,#alphaPrimary#"][!SetOption DriveStorageBarK BarColor "#colorDiskThresholdWarn#,#alphaPrimary#"]
+IfCondition2=(MeasureDiskPercentFullK > #diskThresholdFull#) && (#hideCapacityWarnings# = 0)
+IfTrueAction2=[!SetOption DriveStoragePercentK FontColor "#colorDiskThresholdFull#,#alphaPrimary#"][!SetOption DriveStorageBarK BarColor "#colorDiskThresholdFull#,#alphaPrimary#"]
 
 [MeasureDiskIdleTimeK]
 Measure=Plugin
@@ -898,12 +898,10 @@ IfFalseAction=[!SetVariable DiskNotFoundL 1][!SetOption MeasureDiskPercentFullL 
 [MeasureDiskPercentFullL]
 Measure=Calc
 Formula=MeasureDiskSpaceUsedL / MeasureDiskSpaceTotalL
-IfCondition=(MeasureDiskPercentFullL >= #DiskThreshholdFull#)
-IfTrueAction=[!SetOption BarMeterDiskL BarColor #ColorBarFull#]
-IfCondition2=(MeasureDiskPercentFullL >= #DiskThreshholdWarn#) && (MeasureDiskPercentFullL < #DiskThreshholdFull#)
-IfTrueAction2=[!SetOption BarMeterDiskL BarColor #ColorBarWarn#]
-IfCondition3=(MeasureDiskPercentFullL < #DiskThreshholdWarn#)
-IfTrueAction3=[!SetOption BarMeterDiskL BarColor #ColorBarOK#]
+IfCondition=(MeasureDiskPercentFullL > #diskThresholdWarn#) && (#hideCapacityWarnings# = 0)
+IfTrueAction=[!SetOption DriveStoragePercentL FontColor "#colorDiskThresholdWarn#,#alphaPrimary#"][!SetOption DriveStorageBarL BarColor "#colorDiskThresholdWarn#,#alphaPrimary#"]
+IfCondition2=(MeasureDiskPercentFullL > #diskThresholdFull#) && (#hideCapacityWarnings# = 0)
+IfTrueAction2=[!SetOption DriveStoragePercentL FontColor "#colorDiskThresholdFull#,#alphaPrimary#"][!SetOption DriveStorageBarL BarColor "#colorDiskThresholdFull#,#alphaPrimary#"]
 
 [MeasureDiskIdleTimeL]
 Measure=Plugin
