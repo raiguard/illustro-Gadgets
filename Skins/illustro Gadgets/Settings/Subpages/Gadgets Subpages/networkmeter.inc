@@ -1,5 +1,6 @@
 [Variables]
 gadgetSettingsPath=#@#Settings\NetworkMeterSettings.inc
+gadgetSettingsPathLua=Settings\\NetworkMeterSettings.inc
 @includeNetworkMeterSettings=#gadgetSettingsPath#
 bgHeight=470
 
@@ -120,26 +121,25 @@ MeterStyle=StyleColorsBoxBg
 Meter=Image
 MeterStyle=StyleColorsBox
 LeftMouseUpAction=["#rainRgb#" "VarName=sColorUpload" "FileName=#gadgetSettingsPath#"]
-MiddleMouseUpAction=[!WriteKeyValue Variables sColorUpload "#dColorUpload#" "#gadgetSettingsPath#"][!RefreshGroup illustroGadgets]
+MiddleMouseUpAction=[!WriteKeyValue Variables sColorUpload "#dColorUpload#" "#gadgetSettingsPath#"][!RefreshGroup NetworkMeter][!Refresh]
 SolidColor=#sColorUpload#
 
 [ColorsUploadAlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorUpload', $MouseX:%$, '#gadgetSettingsPathLua#')"][!RefreshGroup NetworkMeter][!Refresh]
 
 [ColorsUploadAlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
-; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup illustroGadgets]
 
 [ColorsUploadString]
 Meter=String
 MeterStyle=StyleText | StyleColorsString
 Text=#sColorUpload#
 LeftMouseUpAction=[!CommandMeasure MeasureInputColorConfig "Executebatch 1"]
-MiddleMouseUpAction=[!WriteKeyValue Variables sColorUpload "#dColorUpload#" "#gadgetSettingsPath#"][!RefreshGroup illustroGadgets]
+MiddleMouseUpAction=[!WriteKeyValue Variables sColorUpload "#dColorUpload#" "#gadgetSettingsPath#"][!RefreshGroup NetworkMeter][!Refresh]
 
 ; Download Color
 [ColorsDownloadLabel]
@@ -157,26 +157,25 @@ MeterStyle=StyleColorsBoxBg
 Meter=Image
 MeterStyle=StyleColorsBox
 LeftMouseUpAction=["#rainRgb#" "VarName=sColorDownload" "FileName=#gadgetSettingsPath#"]
-MiddleMouseUpAction=[!WriteKeyValue Variables sColorDownload "#dColorDownload#" "#gadgetSettingsPath#"][!RefreshGroup illustroGadgets]
+MiddleMouseUpAction=[!WriteKeyValue Variables sColorDownload "#dColorDownload#" "#gadgetSettingsPath#"][!RefreshGroup NetworkMeter][!Refresh]
 SolidColor=#sColorDownload#
 
 [ColorsDownloadAlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorDownload', $MouseX:%$, '#gadgetSettingsPathLua#')"][!RefreshGroup NetworkMeter][!Refresh]
 
 [ColorsDownloadAlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
-; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup illustroGadgets]
 
 [ColorsDownloadString]
 Meter=String
 MeterStyle=StyleText | StyleColorsString
 Text=#sColorDownload#
 LeftMouseUpAction=[!CommandMeasure MeasureInputColorConfig "Executebatch 2"]
-MiddleMouseUpAction=[!WriteKeyValue Variables sColorDownload "#dColorDownload#" "#gadgetSettingsPath#"][!RefreshGroup illustroGadgets]
+MiddleMouseUpAction=[!WriteKeyValue Variables sColorDownload "#dColorDownload#" "#gadgetSettingsPath#"][!RefreshGroup NetworkMeter][!Refresh]
 
 ; ----- Interface Options -----
 

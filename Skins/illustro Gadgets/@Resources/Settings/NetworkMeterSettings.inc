@@ -4,8 +4,8 @@ showRefreshButtons=1
 showLineGraph=1
 
 ; -- Colors --
-sColorUpload=107,238,98
-sColorDownload=255,246,42
+sColorUpload=107,238,98,200
+sColorDownload=255,246,42,200
 
 ; -- Interfaces --
 ;
@@ -26,5 +26,5 @@ interfaceWireless=0
 dShowRefreshButtons=1
 dShowLineGraph=1
 
-dColorUpload=107,238,98
-dColorDownload=255,246,42
+dColorUpload=107,238,98,200
+dColorDownload=255,246,42,200

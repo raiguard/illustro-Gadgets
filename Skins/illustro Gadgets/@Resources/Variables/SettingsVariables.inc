@@ -2,8 +2,8 @@
 bgWidth=600
 bgHeight=450
 pageName=welcome
-gadgetsSubpage=gpumeter
-hwinfoSubpage=gpu0
+gadgetsSubpage=drivesmeter
+hwinfoSubpage=cpu0
 
 ; -- Visual Properties --
 generalXMarginRight=(#bgWidth# - 12)

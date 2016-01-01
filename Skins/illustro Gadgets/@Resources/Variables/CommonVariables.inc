@@ -1,7 +1,7 @@
 [Variables]
 ; -- Version --
-version="0.7.1"
-versionAbsolute=071
+version="0.8.0"
+versionAbsolute="080"
 
 ; -- Addons --
 rainRGB=#@#Addons\RainRGB\RainRGB4.exe
@@ -11,6 +11,7 @@ hwinfoSmv=#@#Addons\HWiNFO\HWiNFOSharedMemoryViewer.exe
 ; -- Scripts --
 fixedPrecisionFormatScript=#@#Scripts\FixedPrecisionFormat.lua
 settingsScript=#@#Scripts\Settings.lua
+graphColorConfigScript=#@#Scripts\GraphColorConfig.lua
 
 ; -- General Visual Properties --
 generalXMarginLeft=9
@@ -24,6 +25,8 @@ barHeight=1
 graphHeight=41
 
 scale=1
+
+colorSeparator=192,192,192,64
 
 ; -- Font Properties --
 fontFace=Trebuchet MS

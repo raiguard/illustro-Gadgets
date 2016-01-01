@@ -1,5 +1,5 @@
 ILLUSTRO GADGETS
-Version 0.7.1
+Version 0.8.0
 By iamanai
 
 -----------------------
@@ -32,6 +32,35 @@ Special thanks to	SilverAzide
 
 -----------------------
 CHANGELOG
+v1.0.0 ??-??-2016:
+PLANNED CHANGES:
+ - Add scaling to the gadgets
+ - Implement proper help buttons and documentation
+ - Polish stuff, finalize the UI
+
+v0.8.0 ??-??-2016:
+General Additions / Changes:
+ - Combined all colors with their alpha values
+ - Implemented changing of alpha values using the bars in settings skin color pickers
+ - Added custom LUA script to separate RGB values from their alphas
+ - Changed coloring mechanics in all gadgets to reflect the above changes
+ - Updated update checker to get rid of versionAbsolute variable
+All CPU Meter:
+ - Separated CPU name from clock speed, moved clock speed to bottom
+ - Fixed 'extra operation' errors
+GPU Meter:
+ - Added GPU name to single GPU meter
+ - Implemented proper settings support for dual GPU meter
+ - Added memory controller usage bar
+ - Added Shader Clock information
+ - Fixed inconsistency with memory fraction on single GPU meter (was bolded, changed to normal)
+ - Fixed mistake in Dual GPU Meter that would cause GPU 1's name to display as GPU 0's name instead
+Drives Meter:
+ - Implemented proper support for long drive names
+ - Added drive capacity warnings
+ - Moved settings skin readme link to the sidebar, replaced previous location with DeviantArt link
+ - Fixed more copy/paste mistakes
+
 v0.7.1 12-07-2015:
 Settings:
  - Added ability to middle-click on HWiNFOConfig.inc's file path to reset it to the default value

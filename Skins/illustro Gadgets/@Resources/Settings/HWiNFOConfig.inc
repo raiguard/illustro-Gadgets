@@ -75,9 +75,9 @@ HWiNFO-MOBO-SensorId=0xf7067760
 HWiNFO-MOBO-SensorInstance=0x0
 ; entry IDs
 ; CPU fan speed (RPM)
-HWiNFO-MOBO-CPUFan=0x3000000
+HWiNFO-MOBO-CPUFan=0x3000001
 ; GPU fan speed (RPM)
-HWiNFO-MOBO-GPUFan=0x3000001
+HWiNFO-MOBO-GPUFan=0x0
 
 ;
 ; GPU 0
@@ -102,6 +102,8 @@ HWiNFO-GPU0-MemoryAlloc=0x800003c
 HWiNFO-GPU0-FanSpeed=0x3000000
 ; GPU fan usage (percent, not RPM!)
 HWiNFO-GPU0-FanUsage=0x8000000
+; GPU shader clock
+HWiNFO-GPU0-VideoClock=0x6000005
 ; GPU memory controller usage
 HWiNFO-GPU0-MemController=0x7000001
 ; GPU core voltage (volts)
@@ -130,6 +132,8 @@ HWiNFO-GPU1-MemoryAlloc=0x800003c
 HWiNFO-GPU1-FanSpeed=0x3000000
 ; GPU fan usage (percent, not RPM!)
 HWiNFO-GPU1-FanUsage=0x8000000
+; GPU shader clock
+HWiNFO-GPU1-VideoClock=0x6000005
 ; GPU memory controller usage
 HWiNFO-GPU1-MemController=0x7000001
 ; GPU core voltage (volts)
