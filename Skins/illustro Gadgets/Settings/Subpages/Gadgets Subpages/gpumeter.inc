@@ -1,5 +1,6 @@
 [Variables]
 gadgetSettingsPath=#@#Settings\GpuMeterSettings.inc
+gadgetSettingsPathLua=Settings\\GpuMeterSettings.inc
 @includeGpuMeterSettings=#gadgetSettingsPath#
 
 bgHeight=500
@@ -188,13 +189,12 @@ SolidColor=#sColorTotalUsage#
 [ColorsTotalUsageAlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorTotalUsage',$MouseX:%$, '#gadgetSettingsPathLua#')"][!RefreshGroup GpuMeter][!Refresh]
 
 [ColorsTotalUsageAlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
-; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup illustroGadgets]
 
 [ColorsTotalUsageString]
 Meter=String
@@ -223,13 +223,12 @@ SolidColor=#sColorMemoryUsage#
 [ColorsMemoryUsageAlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorMemoryUsage',$MouseX:%$, '#gadgetSettingsPathLua#')"][!RefreshGroup GpuMeter][!Refresh]
 
 [ColorsMemoryUsageAlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
-; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup illustroGadgets]
 
 [ColorsMemoryUsageString]
 Meter=String
@@ -258,13 +257,12 @@ SolidColor=#sColorFanUsage#
 [ColorsFanUsageAlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorFanUsage',$MouseX:%$, '#gadgetSettingsPathLua#')"][!RefreshGroup GpuMeter][!Refresh]
 
 [ColorsFanUsageAlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
-; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup illustroGadgets]
 
 [ColorsFanUsageString]
 Meter=String
@@ -293,13 +291,12 @@ SolidColor=#sColorMemController#
 [ColorsMemControllerAlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorMemController',$MouseX:%$, '#gadgetSettingsPathLua#')"][!RefreshGroup GpuMeter][!Refresh]
 
 [ColorsMemControllerAlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
-; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup illustroGadgets]
 
 [ColorsMemControllerString]
 Meter=String

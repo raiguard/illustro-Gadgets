@@ -1,7 +1,7 @@
 [Variables]
 ; -- General visual properties --
 bgWidth=210
-bgHeight=(#bodyStartY# + (#rowYOffset# * (6 - #hideCoreVoltage# - #hideMemController#) * 2) + ((#hideLineGraph# = 0 && #graphType# > 0) ? #rowYOffset# + #graphHeight# - 5 : 9))
+bgHeight=(#bodyStartY# + (#rowYOffset# * (7 - #hideCoreVoltage# - #hideShaderClock# - #hideMemController#) * 2) + ((#hideLineGraph# = 0 && #graphType# > 0) ? #rowYOffset# + #graphHeight# - 4 : 9))
 bgCenterX=(#bgWidth# / 2)
 
 generalXMarginRight=(#bgWidth# - 10)
@@ -11,10 +11,15 @@ graphWidth=(#bgWidth# - #generalXMarginLeft# - (#bgWidth# - #generalXMarginRight
 
 ; -- Dynamic (do not change) --
 ; Colors
-colorTotalUsage=0,0,0
-colorMemoryUsage=0,0,0
-colorFanUsage=0,0,0
-colorMemController=0,0,0
+gColorTotalUsage=0,0,0
+gColorMemoryUsage=0,0,0
+gColorFanUsage=0,0,0
+gColorMemController=0,0,0
+
+gAlphaTotalUsage=0
+gAlphaMemoryUsage=0
+gAlphaFanUsage=0
+gAlphaMemController=0
 
 ; Text
 textMemoryUsed=

@@ -16,19 +16,16 @@ dColorSecondary=250,250,250,155
 colorAccent=138,210,250,200
 dColorAccent=138,210,250,200
 
-colorDim=100,100,100,51
-dColorDim=100,100,100,51
+colorDim=100,100,100,130
+dColorDim=100,100,100,130
 
-colorSeparator=192,192,192,64
-dColorSeparator=192,192,192,64
+colorGraphBg=100,100,100,51
+dColorGraphBg=100,100,100,51
 
 ; ---------- ADVANCED ----------
 
 colorButton=#colorPrimary#
 dColorButton=#dColorPrimary#
-
-colorGraphBg=#colorDim#
-dColorGraphBg=#dColorDim#
 
 alphaButton=200
 alphaBar=200

@@ -75,9 +75,9 @@ HWiNFO-MOBO-SensorId=0xf7067760
 HWiNFO-MOBO-SensorInstance=0x0
 ; entry IDs
 ; CPU fan speed (RPM)
-HWiNFO-MOBO-CPUFan=0x3000000
+HWiNFO-MOBO-CPUFan=0x3000001
 ; GPU fan speed (RPM)
-HWiNFO-MOBO-GPUFan=0x3000001
+HWiNFO-MOBO-GPUFan=0x0
 
 ;
 ; GPU 0

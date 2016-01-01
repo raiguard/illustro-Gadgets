@@ -1,4 +1,4 @@
-isDbg = true
+isDbg = false
 
 function Initialize()
 
@@ -9,32 +9,152 @@ function Initialize()
 	
 	page = SKIN:GetVariable('pageName')
 	
+	colors = {}
+	bars = {}
+	
 	if page == 'appearance' then
 	
 		colors = {	SKIN:GetVariable('colorPrimary'), 
 					SKIN:GetVariable('colorSecondary'), 
 					SKIN:GetVariable('colorAccent'), 
-					SKIN:GetVariable('colorDim')  }
+					SKIN:GetVariable('colorDim'),
+					SKIN:GetVariable('colorGraphBg')	}
 					
 		bars = {	SKIN:GetMeter('ColorsPrimaryAlphaBar'), 
 					SKIN:GetMeter('ColorsSecondaryAlphaBar'), 
 					SKIN:GetMeter('ColorsAccentAlphaBar'), 
-					SKIN:GetMeter('ColorsDimAlphaBar')  }
+					SKIN:GetMeter('ColorsDimAlphaBar'),
+					SKIN:GetMeter('ColorsGraphBgAlphaBar')	}
 		
 		maxBarW = SKIN:GetMeter('ColorsPrimaryAlphaBarBg'):GetW()
+	
+	elseif page == 'skinsettings' then
+	
+		gadgetsSubpage = SKIN:GetVariable('gadgetsSubpage')
+	
+		if gadgetsSubpage == 'allcpumeter' then
 		
-		-- set the width of the alpha bars
-		for i=1,#colors do
-			tempW = math.floor(getStringAlphaPercent(colors[i]) * maxBarW)
-			SKIN:Bang('!SetOption', bars[i]:GetName(), 'W', tempW)
-			if isDbg == true then
-				print("IG: set width of '" .. tostring(bars[i]:GetName()) .. "'")
-			end
+			if isDbg == true then SKIN:Bang('!Log', 'Page: allcpumeter', 'Debug') end
+	
+			colors = {	SKIN:GetVariable('sColorRam'), 
+						SKIN:GetVariable('sColorPage'), 
+						SKIN:GetVariable('sColorFan'), 
+						SKIN:GetVariable('sColorAvgCpu'),
+						SKIN:GetVariable('sColorCore1'),
+						SKIN:GetVariable('sColorCore2'),
+						SKIN:GetVariable('sColorCore3'),
+						SKIN:GetVariable('sColorCore4'),
+						SKIN:GetVariable('sColorCore5'),
+						SKIN:GetVariable('sColorCore6'),
+						SKIN:GetVariable('sColorCore7'),
+						SKIN:GetVariable('sColorCore8'),
+						SKIN:GetVariable('sColorCore9'),
+						SKIN:GetVariable('sColorCore10'),
+						SKIN:GetVariable('sColorCore11'),
+						SKIN:GetVariable('sColorCore12'),
+						SKIN:GetVariable('sColorCore13'),
+						SKIN:GetVariable('sColorCore14'),
+						SKIN:GetVariable('sColorCore15'),
+						SKIN:GetVariable('sColorCore16')	}
+						
+			bars = {	SKIN:GetMeter('ColorsRamAlphaBar'), 
+						SKIN:GetMeter('ColorsPageAlphaBar'), 
+						SKIN:GetMeter('ColorsFanAlphaBar'), 
+						SKIN:GetMeter('ColorsAvgCpuAlphaBar'),
+						SKIN:GetMeter('ColorsCore1AlphaBar'),
+						SKIN:GetMeter('ColorsCore2AlphaBar'),
+						SKIN:GetMeter('ColorsCore3AlphaBar'),
+						SKIN:GetMeter('ColorsCore4AlphaBar'),
+						SKIN:GetMeter('ColorsCore5AlphaBar'),
+						SKIN:GetMeter('ColorsCore6AlphaBar'),
+						SKIN:GetMeter('ColorsCore7AlphaBar'),
+						SKIN:GetMeter('ColorsCore8AlphaBar'),
+						SKIN:GetMeter('ColorsCore9AlphaBar'),
+						SKIN:GetMeter('ColorsCore10AlphaBar'),
+						SKIN:GetMeter('ColorsCore11AlphaBar'),
+						SKIN:GetMeter('ColorsCore12AlphaBar'),
+						SKIN:GetMeter('ColorsCore13AlphaBar'),
+						SKIN:GetMeter('ColorsCore14AlphaBar'),
+						SKIN:GetMeter('ColorsCore15AlphaBar'),
+						SKIN:GetMeter('ColorsCore16AlphaBar')	}
+			
+			maxBarW = SKIN:GetMeter('ColorsRamAlphaBarBg'):GetW()
+		
+		elseif gadgetsSubpage == 'networkmeter' then
+	
+			if isDbg == true then SKIN:Bang('!Log', 'page: networkmeter', 'Debug') end
+		
+			colors = {	SKIN:GetVariable('sColorUpload'),
+						SKIN:GetVariable('sColorDownload')	}
+						
+			bars = {	SKIN:GetMeter('ColorsUploadAlphaBar'),
+						SKIN:GetMeter('ColorsDownloadAlphaBar')	}
+						
+			maxBarW = SKIN:GetMeter('ColorsUploadAlphaBarBg'):GetW()
+		
+		elseif gadgetsSubpage == 'gpumeter' then
+	
+			if isDbg == true then SKIN:Bang('!Log', 'page: gpumeter', 'Debug') end
+		
+			colors = {	SKIN:GetVariable('sColorTotalUsage'),
+						SKIN:GetVariable('sColorMemoryUsage'),
+						SKIN:GetVariable('sColorFanUsage'),
+						SKIN:GetVariable('sColorMemController')	}
+						
+			bars = {	SKIN:GetMeter('ColorsTotalUsageAlphaBar'),
+						SKIN:GetMeter('ColorsMemoryUsageAlphaBar'),
+						SKIN:GetMeter('ColorsFanUsageAlphaBar'),
+						SKIN:GetMeter('ColorsMemControllerAlphaBar')	}
+						
+			maxBarW = SKIN:GetMeter('ColorsTotalUsageAlphaBarBg'):GetW()
+		
+		elseif gadgetsSubpage == 'drivesmeter' then
+	
+			if isDbg == true then SKIN:Bang('!Log', 'page: drivesmeter', 'Debug') end
+		
+			colors = {	SKIN:GetVariable('sColorDisk1'),
+						SKIN:GetVariable('sColorDisk2'),
+						SKIN:GetVariable('sColorDisk3'),
+						SKIN:GetVariable('sColorDisk4'),
+						SKIN:GetVariable('sColorDisk5'),
+						SKIN:GetVariable('sColorDisk6'),
+						SKIN:GetVariable('sColorDisk7'),
+						SKIN:GetVariable('sColorDisk8'),
+						SKIN:GetVariable('sColorDisk9'),
+						SKIN:GetVariable('sColorDisk10'),
+						SKIN:GetVariable('sColorDiskThresholdWarn'),
+						SKIN:GetVariable('sColorDiskThresholdFull')	}
+						
+			bars = {	SKIN:GetMeter('ColorsDisk1AlphaBar'),
+						SKIN:GetMeter('ColorsDisk2AlphaBar'),
+						SKIN:GetMeter('ColorsDisk3AlphaBar'),
+						SKIN:GetMeter('ColorsDisk4AlphaBar'),
+						SKIN:GetMeter('ColorsDisk5AlphaBar'),
+						SKIN:GetMeter('ColorsDisk6AlphaBar'),
+						SKIN:GetMeter('ColorsDisk7AlphaBar'),
+						SKIN:GetMeter('ColorsDisk8AlphaBar'),
+						SKIN:GetMeter('ColorsDisk9AlphaBar'),
+						SKIN:GetMeter('ColorsDisk10AlphaBar'),
+						SKIN:GetMeter('ColorsThresholdWarnAlphaBar'),
+						SKIN:GetMeter('ColorsThresholdFullAlphaBar')	}
+						
+			maxBarW = SKIN:GetMeter('ColorsDisk1AlphaBarBg'):GetW()
+		
 		end
 	
 	else
-		print("IG: wtf? invalid subpage id in settings skin!")
+		SKIN:Bang('!Log', 'WTF? invalid subpage id in settings skin!', 'Debug')
 	end
+	
+	-- set the width of the alpha bars
+			for i=1,#colors do
+				tempW = math.floor(getStringAlphaPercent(colors[i]) * maxBarW)
+				SKIN:Bang('!SetOption', bars[i]:GetName(), 'W', tempW)
+				if isDbg == true then
+					SKIN:Bang('!Log', "Set width of '" .. tostring(bars[i]:GetName()) .. "'", 'Debug')
+				end
+			end
+			
 end
 
 function Update()
@@ -47,7 +167,8 @@ end
 -- called from skin - changes alpha value on a color in the specified file
 function changeAlpha(color, percent, filepath)
 	baseColor = SKIN:GetVariable(color)
-	alpha = math.floor(percent*0.01*255)
+	if isDbg == true then SKIN:Bang('!Log', 'filepath = ' .. filepath, 'Debug') end
+	alpha = math.floor(percent * 0.01 * 255)
 	if (string.find(baseColor, ",") ~= nil) then
 		rgb = string.match(baseColor, "%d+,%d+,%d+")
 		newColor = rgb .. ',' .. alpha
@@ -56,7 +177,7 @@ function changeAlpha(color, percent, filepath)
 		alpha = decToHex(alpha)
 		newColor = rgb .. alpha
 	end
-	SKIN:Bang('!WriteKeyValue','Variables',color, newColor, filepath)
+	SKIN:Bang('!WriteKeyValue', 'Variables', color, newColor, '#@#' .. filepath)
 end
 
 -- intended to retrieve the alpha component of an RGBA or hex color and return as a percent 0.0 to 1.0

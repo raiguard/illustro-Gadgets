@@ -1,5 +1,6 @@
 [Variables]
 gadgetSettingsPath=#@#Settings\AllCpuMeterSettings.inc
+gadgetSettingsPathLua=Settings\\AllCpuMeterSettings.inc
 @includeAllCpuMeterSettings=#gadgetSettingsPath#
 bgHeight=660
 
@@ -277,13 +278,13 @@ SolidColor=#sColorRam#
 [ColorsRamAlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
-LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorRam',$MouseX:%$,#gadgetSettingsPath#)"][!RefreshGroup illustroGadgets]
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorRam',$MouseX:%$, '#gadgetSettingsPathLua#')"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsRamAlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
+
 
 [ColorsRamString]
 Meter=String
@@ -312,13 +313,12 @@ SolidColor=#sColorPage#
 [ColorsPageAlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorPage',$MouseX:%$, '#gadgetSettingsPathLua#')"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsPageAlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
-LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorPage',$MouseX:%$)"][!RefreshGroup illustroGadgets]
 
 [ColorsPageString]
 Meter=String
@@ -347,13 +347,12 @@ SolidColor=#sColorFan#
 [ColorsFanAlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorFan',$MouseX:%$, '#gadgetSettingsPathLua#')"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsFanAlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
-LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorFan',$MouseX:%$)"][!RefreshGroup illustroGadgets]
 
 [ColorsFanString]
 Meter=String
@@ -382,13 +381,12 @@ SolidColor=#sColorAvgCpu#
 [ColorsAvgCpuAlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorAvgCpu',$MouseX:%$, '#gadgetSettingsPathLua#')"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsAvgCpuAlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
-; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsAvgCpuString]
 Meter=String
@@ -417,13 +415,12 @@ SolidColor=#sColorCore1#
 [ColorsCore1AlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorCore1',$MouseX:%$, '#gadgetSettingsPathLua#')"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore1AlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
-; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore1String]
 Meter=String
@@ -452,13 +449,12 @@ SolidColor=#sColorCore2#
 [ColorsCore2AlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorCore2',$MouseX:%$, '#gadgetSettingsPathLua#')"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore2AlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
-; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore2String]
 Meter=String
@@ -487,13 +483,12 @@ SolidColor=#sColorCore3#
 [ColorsCore3AlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorCore3',$MouseX:%$, '#gadgetSettingsPathLua#')"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore3AlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
-; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore3String]
 Meter=String
@@ -524,13 +519,12 @@ SolidColor=#sColorCore4#
 [ColorsCore4AlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorCore4',$MouseX:%$, '#gadgetSettingsPathLua#')"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore4AlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
-; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore4String]
 Meter=String
@@ -560,13 +554,12 @@ SolidColor=#sColorCore5#
 [ColorsCore5AlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorCore5',$MouseX:%$, '#gadgetSettingsPathLua#')"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore5AlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
-; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore5String]
 Meter=String
@@ -596,13 +589,12 @@ SolidColor=#sColorCore6#
 [ColorsCore6AlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorCore6',$MouseX:%$, '#gadgetSettingsPathLua#')"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore6AlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
-; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore6String]
 Meter=String
@@ -632,13 +624,12 @@ SolidColor=#sColorCore7#
 [ColorsCore7AlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorCore7',$MouseX:%$, '#gadgetSettingsPathLua#')"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore7AlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
-; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore7String]
 Meter=String
@@ -668,13 +659,12 @@ SolidColor=#sColorCore8#
 [ColorsCore8AlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorCore8',$MouseX:%$, '#gadgetSettingsPathLua#')"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore8AlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
-; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore8String]
 Meter=String
@@ -704,13 +694,12 @@ SolidColor=#sColorCore9#
 [ColorsCore9AlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorCore9',$MouseX:%$, '#gadgetSettingsPathLua#')"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore9AlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
-; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore9String]
 Meter=String
@@ -740,13 +729,12 @@ SolidColor=#sColorCore10#
 [ColorsCore10AlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorCore10',$MouseX:%$, '#gadgetSettingsPathLua#')"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore10AlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
-; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore10String]
 Meter=String
@@ -777,13 +765,12 @@ SolidColor=#sColorCore11#
 [ColorsCore11AlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorCore11',$MouseX:%$, '#gadgetSettingsPathLua#')"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore11AlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
-; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore11String]
 Meter=String
@@ -813,13 +800,12 @@ SolidColor=#sColorCore12#
 [ColorsCore12AlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorCore12',$MouseX:%$, '#gadgetSettingsPathLua#')"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore12AlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
-; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore12String]
 Meter=String
@@ -849,13 +835,12 @@ SolidColor=#sColorCore13#
 [ColorsCore13AlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorCore13',$MouseX:%$, '#gadgetSettingsPathLua#')"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore13AlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
-; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore13String]
 Meter=String
@@ -885,13 +870,12 @@ SolidColor=#sColorCore14#
 [ColorsCore14AlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorCore14',$MouseX:%$, '#gadgetSettingsPathLua#')"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore14AlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
-; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore14String]
 Meter=String
@@ -921,13 +905,12 @@ SolidColor=#sColorCore15#
 [ColorsCore15AlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorCore15',$MouseX:%$, '#gadgetSettingsPathLua#')"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore15AlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
-; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore15String]
 Meter=String
@@ -957,13 +940,12 @@ SolidColor=#sColorCore16#
 [ColorsCore16AlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('sColorCore16',$MouseX:%$, '#gadgetSettingsPathLua#')"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore16AlphaBar]
 Meter=Image
 MeterStyle=StyleColorsAlphaBar
 SolidColor=#colorPrimary#
-W=80
-; LeftMouseUpAction=[!CommandMeasure #settingsScript# "settingsScript" "changeAlpha('primaryColor',$MouseX:%$)"][!RefreshGroup AllCPUMeter][!Refresh]
 
 [ColorsCore16String]
 Meter=String

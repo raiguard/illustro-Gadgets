@@ -39,21 +39,27 @@ PLANNED CHANGES:
  - Polish stuff, finalize the UI
 
 v0.8.0 ??-??-2016:
-PLANNED CHANGES: # = Completed
-# - Added Shader Clock information to GPU meter
-# - Fixed inconsistency with memory fraction on single GPU meter (was bolded, changed to normal)
-# - Add drive capacity warnings to drives meter
- - Implement proper alpha editing support for color pickers
-# - Separated CPU name from clock speed, moved clock speed to bottom
-#  - Add memory controller usage bar to GPU meters
-#  - Update update checker to get rid of versionAbsolute variable
-# - Move readme link to the sidebar, replace previous location with DeviantArt link
-# - Implemented proper support for long drive names in drives meter
-# - Added GPU name to single GPU meter
-# - Implemented proper settings support for dual GPU meter
-
-Bug fixes:
+General Additions / Changes:
+ - Combined all colors with their alpha values
+ - Implemented changing of alpha values using the bars in settings skin color pickers
+ - Added custom LUA script to separate RGB values from their alphas
+ - Changed coloring mechanics in all gadgets to reflect the above changes
+ - Updated update checker to get rid of versionAbsolute variable
+All CPU Meter:
+ - Separated CPU name from clock speed, moved clock speed to bottom
+ - Fixed 'extra operation' errors
+GPU Meter:
+ - Added GPU name to single GPU meter
+ - Implemented proper settings support for dual GPU meter
+ - Added memory controller usage bar
+ - Added Shader Clock information
+ - Fixed inconsistency with memory fraction on single GPU meter (was bolded, changed to normal)
  - Fixed mistake in Dual GPU Meter that would cause GPU 1's name to display as GPU 0's name instead
+Drives Meter:
+ - Implemented proper support for long drive names
+ - Added drive capacity warnings
+ - Moved settings skin readme link to the sidebar, replaced previous location with DeviantArt link
+ - Fixed more copy/paste mistakes
 
 v0.7.1 12-07-2015:
 Settings:

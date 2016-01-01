@@ -20,6 +20,12 @@ Command1=[!WriteKeyValue Variables colorPrimary "$UserInput$" "#commonSettingsPa
 Command2=[!WriteKeyValue Variables colorSecondary "$UserInput$" "#commonSettingsPath#"][!RefreshGroup illustroGadgets] DefaultValue="#colorSecondary#" X=[ColorsSecondaryString:X] Y=[ColorsSecondaryString:Y] W=[ColorsSecondaryString:W] H=[ColorsSecondaryString:H]
 Command3=[!WriteKeyValue Variables colorAccent "$UserInput$" "#commonSettingsPath#"][!RefreshGroup illustroGadgets] DefaultValue="#colorAccent#" X=[ColorsAccentString:X] Y=[ColorsAccentString:Y] W=[ColorsAccentString:W] H=[ColorsAccentString:H]
 Command4=[!WriteKeyValue Variables colorDim "$UserInput$" "#commonSettingsPath#"][!RefreshGroup illustroGadgets] DefaultValue="#colorDim#" X=[ColorsDimString:X] Y=[ColorsDimString:Y] W=[ColorsDimString:W] H=[ColorsDimString:H]
+Command5=[!WriteKeyValue Variables colorGraphBg "$UserInput$" "#commonSettingsPath#"][!RefreshGroup illustroGadgets] DefaultValue="#colorGraphBg#" X=[ColorsGraphBgString:X] Y=[ColorsGraphBgString:Y] W=[ColorsGraphBgString:W] H=[ColorsGraphBgString:H]
+
+[MeasureCommonSettingsAbsolutePathDoubleSlash]
+Measure=String
+String="#commonSettingsPath#"
+Substitute="\":"\\"
 
 ; ========================================================================================================================
 ;   METERS
@@ -101,7 +107,7 @@ SolidColor=#colorPrimary#
 [ColorsPrimaryAlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
-LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('colorPrimary',$MouseX:%$,#commonSettingsPath#)"][!RefreshGroup illustroGadgets]
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('colorPrimary',$MouseX:%$, '#commonSettingsPathLua#')"][!RefreshGroup illustroGadgets]
 
 [ColorsPrimaryAlphaBar]
 Meter=Image
@@ -136,7 +142,7 @@ MiddleMouseUpAction=[!WriteKeyValue Variables colorSecondary "#dColorSecondary#"
 [ColorsSecondaryAlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
-LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('colorSecondary',$MouseX:%$,#commonSettingsPath#)"][!RefreshGroup illustroGadgets]
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('colorSecondary',$MouseX:%$, '#commonSettingsPathLua#')"][!RefreshGroup illustroGadgets]
 
 [ColorsSecondaryAlphaBar]
 Meter=Image
@@ -170,7 +176,7 @@ MiddleMouseUpAction=[!WriteKeyValue Variables colorAccent "#dColorAccent#" "#com
 [ColorsAccentAlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
-LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('colorAccent',$MouseX:%$,#commonSettingsPath#)"][!RefreshGroup illustroGadgets]
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('colorAccent',$MouseX:%$, '#commonSettingsPathLua#')"][!RefreshGroup illustroGadgets]
 
 [ColorsAccentAlphaBar]
 Meter=Image
@@ -204,7 +210,7 @@ MiddleMouseUpAction=[!WriteKeyValue Variables colorDim "#dColorDim#" "#commonSet
 [ColorsDimAlphaBarBg]
 Meter=Image
 MeterStyle=StyleColorsAlphaBarBg
-LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('colorDim',$MouseX:%$,#commonSettingsPath#)"][!RefreshGroup illustroGadgets]
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('colorDim',$MouseX:%$, '#commonSettingsPathLua#')"][!RefreshGroup illustroGadgets]
 
 [ColorsDimAlphaBar]
 Meter=Image
@@ -217,3 +223,37 @@ MeterStyle=StyleText | StyleColorsString
 LeftMouseUpAction=[!CommandMeasure MeasureInputColorConfig "Executebatch 4"]
 MiddleMouseUpAction=[!WriteKeyValue Variables colorDim "#dColorDim#" "#commonSettingsPath#"][!RefreshGroup illustroGadgets]
 Text=#colorDim#
+
+; Graph Background color
+[ColorsGraphBgLabel]
+Meter=String
+MeterStyle=StyleText | StyleColorsLabel
+Text="Graph Background Color"
+
+[ColorsGraphBgBoxBg]
+Meter=Image
+MeterStyle=StyleColorsBoxBg
+
+[ColorsGraphBgBox]
+Meter=Image
+MeterStyle=StyleColorsBox
+SolidColor=#colorGraphBg#
+LeftMouseUpAction=["#rainRgb#" "VarName=colorGraphBg" "FileName=#commonSettingsPath#"]
+MiddleMouseUpAction=[!WriteKeyValue Variables colorGraphBg "#dColorGraphBg#" "#commonSettingsPath#"][!RefreshGroup illustroGadgets]
+
+[ColorsGraphBgAlphaBarBg]
+Meter=Image
+MeterStyle=StyleColorsAlphaBarBg
+LeftMouseUpAction=[!CommandMeasure MeasureSettingsScript "changeAlpha('colorGraphBg',$MouseX:%$, '#commonSettingsPathLua#')"][!RefreshGroup illustroGadgets]
+
+[ColorsGraphBgAlphaBar]
+Meter=Image
+MeterStyle=StyleColorsAlphaBar
+W=1
+
+[ColorsGraphBgString]
+Meter=String
+MeterStyle=StyleText | StyleColorsString
+LeftMouseUpAction=[!CommandMeasure MeasureInputColorConfig "Executebatch 5"]
+MiddleMouseUpAction=[!WriteKeyValue Variables colorGraphBg "#dColorGraphBg#" "#commonSettingsPath#"][!RefreshGroup illustroGadgets]
+Text=#colorGraphBg#

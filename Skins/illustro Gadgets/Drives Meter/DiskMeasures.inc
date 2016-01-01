@@ -44,9 +44,9 @@ IfFalseAction=[!SetVariable DiskNotFoundC 1][!SetOption MeasureDiskPercentFullC 
 Measure=Calc
 Formula=MeasureDiskSpaceUsedC / MeasureDiskSpaceTotalC
 IfCondition=(MeasureDiskPercentFullC > #diskThresholdWarn#) && (#hideCapacityWarnings# = 0)
-IfTrueAction=[!SetOption DriveStoragePercentC FontColor "#colorDiskThresholdWarn#,#alphaPrimary#"][!SetOption DriveStorageBarC BarColor "#colorDiskThresholdWarn#,#alphaPrimary#"]
+IfTrueAction=[!SetOption DriveStoragePercentC FontColor "#sColorDiskThresholdWarn#"][!SetOption DriveStorageBarC BarColor "#sColorDiskThresholdWarn#"]
 IfCondition2=(MeasureDiskPercentFullC > #diskThresholdFull#) && (#hideCapacityWarnings# = 0)
-IfTrueAction2=[!SetOption DriveStoragePercentC FontColor "#colorDiskThresholdFull#,#alphaPrimary#"][!SetOption DriveStorageBarC BarColor "#colorDiskThresholdFull#,#alphaPrimary#"]
+IfTrueAction2=[!SetOption DriveStoragePercentC FontColor "#sColorDiskThresholdFull#"][!SetOption DriveStorageBarC BarColor "#sColorDiskThresholdFull#"]
 
 [MeasureDiskIdleTimeC]
 Measure=Plugin
@@ -139,9 +139,9 @@ IfFalseAction=[!SetVariable diskNotFoundD 1][!SetOption MeasureDiskPercentFullD 
 Measure=Calc
 Formula=MeasureDiskSpaceUsedD / MeasureDiskSpaceTotalD
 IfCondition=(MeasureDiskPercentFullD > #diskThresholdWarn#) && (#hideCapacityWarnings# = 0)
-IfTrueAction=[!SetOption DriveStoragePercentD FontColor "#colorDiskThresholdWarn#,#alphaPrimary#"][!SetOption DriveStorageBarD BarColor "#colorDiskThresholdWarn#,#alphaPrimary#"]
+IfTrueAction=[!SetOption DriveStoragePercentD FontColor "#sColorDiskThresholdWarn#"][!SetOption DriveStorageBarD BarColor "#sColorDiskThresholdWarn#"]
 IfCondition2=(MeasureDiskPercentFullD > #diskThresholdFull#) && (#hideCapacityWarnings# = 0)
-IfTrueAction2=[!SetOption DriveStoragePercentD FontColor "#colorDiskThresholdFull#,#alphaPrimary#"][!SetOption DriveStorageBarD BarColor "#colorDiskThresholdFull#,#alphaPrimary#"]
+IfTrueAction2=[!SetOption DriveStoragePercentD FontColor "#sColorDiskThresholdFull#"][!SetOption DriveStorageBarD BarColor "#sColorDiskThresholdFull#"]
 
 [MeasureDiskIdleTimeD]
 Measure=Plugin
@@ -234,9 +234,9 @@ IfFalseAction=[!SetVariable diskNotFoundE 1][!SetOption MeasureDiskPercentFullE 
 Measure=Calc
 Formula=MeasureDiskSpaceUsedE / MeasureDiskSpaceTotalE
 IfCondition=(MeasureDiskPercentFullE > #diskThresholdWarn#) && (#hideCapacityWarnings# = 0)
-IfTrueAction=[!SetOption DriveStoragePercentE FontColor "#colorDiskThresholdWarn#,#alphaPrimary#"][!SetOption DriveStorageBarE BarColor "#colorDiskThresholdWarn#,#alphaPrimary#"]
+IfTrueAction=[!SetOption DriveStoragePercentE FontColor "#sColorDiskThresholdWarn#"][!SetOption DriveStorageBarE BarColor "#sColorDiskThresholdWarn#"]
 IfCondition2=(MeasureDiskPercentFullE > #diskThresholdFull#) && (#hideCapacityWarnings# = 0)
-IfTrueAction2=[!SetOption DriveStoragePercentE FontColor "#colorDiskThresholdFull#,#alphaPrimary#"][!SetOption DriveStorageBarE BarColor "#colorDiskThresholdFull#,#alphaPrimary#"]
+IfTrueAction2=[!SetOption DriveStoragePercentE FontColor "#sColorDiskThresholdFull#"][!SetOption DriveStorageBarE BarColor "#sColorDiskThresholdFull#"]
 
 [MeasureDiskIdleTimeE]
 Measure=Plugin
@@ -329,9 +329,9 @@ IfFalseAction=[!SetVariable DiskNotFoundF 1][!SetOption MeasureDiskPercentFullF 
 Measure=Calc
 Formula=MeasureDiskSpaceUsedF / MeasureDiskSpaceTotalF
 IfCondition=(MeasureDiskPercentFullF > #diskThresholdWarn#) && (#hideCapacityWarnings# = 0)
-IfTrueAction=[!SetOption DriveStoragePercentF FontColor "#colorDiskThresholdWarn#,#alphaPrimary#"][!SetOption DriveStorageBarF BarColor "#colorDiskThresholdWarn#,#alphaPrimary#"]
+IfTrueAction=[!SetOption DriveStoragePercentF FontColor "#sColorDiskThresholdWarn#"][!SetOption DriveStorageBarF BarColor "#sColorDiskThresholdWarn#"]
 IfCondition2=(MeasureDiskPercentFullF > #diskThresholdFull#) && (#hideCapacityWarnings# = 0)
-IfTrueAction2=[!SetOption DriveStoragePercentF FontColor "#colorDiskThresholdFull#,#alphaPrimary#"][!SetOption DriveStorageBarF BarColor "#colorDiskThresholdFull#,#alphaPrimary#"]
+IfTrueAction2=[!SetOption DriveStoragePercentF FontColor "#sColorDiskThresholdFull#"][!SetOption DriveStorageBarF BarColor "#sColorDiskThresholdFull#"]
 
 [MeasureDiskIdleTimeF]
 Measure=Plugin
@@ -424,9 +424,9 @@ IfFalseAction=[!SetVariable DiskNotFoundG 1][!SetOption MeasureDiskPercentFullG 
 Measure=Calc
 Formula=MeasureDiskSpaceUsedG / MeasureDiskSpaceTotalG
 IfCondition=(MeasureDiskPercentFullG > #diskThresholdWarn#) && (#hideCapacityWarnings# = 0)
-IfTrueAction=[!SetOption DriveStoragePercentG FontColor "#colorDiskThresholdWarn#,#alphaPrimary#"][!SetOption DriveStorageBarG BarColor "#colorDiskThresholdWarn#,#alphaPrimary#"]
+IfTrueAction=[!SetOption DriveStoragePercentG FontColor "#sColorDiskThresholdWarn#"][!SetOption DriveStorageBarG BarColor "#sColorDiskThresholdWarn#"]
 IfCondition2=(MeasureDiskPercentFullG > #diskThresholdFull#) && (#hideCapacityWarnings# = 0)
-IfTrueAction2=[!SetOption DriveStoragePercentG FontColor "#colorDiskThresholdFull#,#alphaPrimary#"][!SetOption DriveStorageBarG BarColor "#colorDiskThresholdFull#,#alphaPrimary#"]
+IfTrueAction2=[!SetOption DriveStoragePercentG FontColor "#sColorDiskThresholdFull#"][!SetOption DriveStorageBarG BarColor "#sColorDiskThresholdFull#"]
 
 [MeasureDiskIdleTimeG]
 Measure=Plugin
@@ -519,9 +519,9 @@ IfFalseAction=[!SetVariable DiskNotFoundH 1][!SetOption MeasureDiskPercentFullH 
 Measure=Calc
 Formula=MeasureDiskSpaceUsedH / MeasureDiskSpaceTotalH
 IfCondition=(MeasureDiskPercentFullH > #diskThresholdWarn#) && (#hideCapacityWarnings# = 0)
-IfTrueAction=[!SetOption DriveStoragePercentH FontColor "#colorDiskThresholdWarn#,#alphaPrimary#"][!SetOption DriveStorageBarH BarColor "#colorDiskThresholdWarn#,#alphaPrimary#"]
+IfTrueAction=[!SetOption DriveStoragePercentH FontColor "#sColorDiskThresholdWarn#"][!SetOption DriveStorageBarH BarColor "#sColorDiskThresholdWarn#"]
 IfCondition2=(MeasureDiskPercentFullH > #diskThresholdFull#) && (#hideCapacityWarnings# = 0)
-IfTrueAction2=[!SetOption DriveStoragePercentH FontColor "#colorDiskThresholdFull#,#alphaPrimary#"][!SetOption DriveStorageBarH BarColor "#colorDiskThresholdFull#,#alphaPrimary#"]
+IfTrueAction2=[!SetOption DriveStoragePercentH FontColor "#sColorDiskThresholdFull#"][!SetOption DriveStorageBarH BarColor "#sColorDiskThresholdFull#"]
 
 [MeasureDiskIdleTimeH]
 Measure=Plugin
@@ -614,9 +614,9 @@ IfFalseAction=[!SetVariable DiskNotFoundI 1][!SetOption MeasureDiskPercentFullI 
 Measure=Calc
 Formula=MeasureDiskSpaceUsedI / MeasureDiskSpaceTotalI
 IfCondition=(MeasureDiskPercentFullI > #diskThresholdWarn#) && (#hideCapacityWarnings# = 0)
-IfTrueAction=[!SetOption DriveStoragePercentI FontColor "#colorDiskThresholdWarn#,#alphaPrimary#"][!SetOption DriveStorageBarI BarColor "#colorDiskThresholdWarn#,#alphaPrimary#"]
+IfTrueAction=[!SetOption DriveStoragePercentI FontColor "#sColorDiskThresholdWarn#"][!SetOption DriveStorageBarI BarColor "#sColorDiskThresholdWarn#"]
 IfCondition2=(MeasureDiskPercentFullI > #diskThresholdFull#) && (#hideCapacityWarnings# = 0)
-IfTrueAction2=[!SetOption DriveStoragePercentI FontColor "#colorDiskThresholdFull#,#alphaPrimary#"][!SetOption DriveStorageBarI BarColor "#colorDiskThresholdFull#,#alphaPrimary#"]
+IfTrueAction2=[!SetOption DriveStoragePercentI FontColor "#sColorDiskThresholdFull#"][!SetOption DriveStorageBarI BarColor "#sColorDiskThresholdFull#"]
 
 [MeasureDiskIdleTimeI]
 Measure=Plugin
@@ -709,9 +709,9 @@ IfFalseAction=[!SetVariable DiskNotFoundJ 1][!SetOption MeasureDiskPercentFullJ 
 Measure=Calc
 Formula=MeasureDiskSpaceUsedJ / MeasureDiskSpaceTotalJ
 IfCondition=(MeasureDiskPercentFullJ > #diskThresholdWarn#) && (#hideCapacityWarnings# = 0)
-IfTrueAction=[!SetOption DriveStoragePercentJ FontColor "#colorDiskThresholdWarn#,#alphaPrimary#"][!SetOption DriveStorageBarJ BarColor "#colorDiskThresholdWarn#,#alphaPrimary#"]
+IfTrueAction=[!SetOption DriveStoragePercentJ FontColor "#sColorDiskThresholdWarn#"][!SetOption DriveStorageBarJ BarColor "#sColorDiskThresholdWarn#"]
 IfCondition2=(MeasureDiskPercentFullJ > #diskThresholdFull#) && (#hideCapacityWarnings# = 0)
-IfTrueAction2=[!SetOption DriveStoragePercentJ FontColor "#colorDiskThresholdFull#,#alphaPrimary#"][!SetOption DriveStorageBarJ BarColor "#colorDiskThresholdFull#,#alphaPrimary#"]
+IfTrueAction2=[!SetOption DriveStoragePercentJ FontColor "#sColorDiskThresholdFull#"][!SetOption DriveStorageBarJ BarColor "#sColorDiskThresholdFull#"]
 
 [MeasureDiskIdleTimeJ]
 Measure=Plugin
@@ -804,9 +804,9 @@ IfFalseAction=[!SetVariable DiskNotFoundK 1][!SetOption MeasureDiskPercentFullK 
 Measure=Calc
 Formula=MeasureDiskSpaceUsedK / MeasureDiskSpaceTotalK
 IfCondition=(MeasureDiskPercentFullK > #diskThresholdWarn#) && (#hideCapacityWarnings# = 0)
-IfTrueAction=[!SetOption DriveStoragePercentK FontColor "#colorDiskThresholdWarn#,#alphaPrimary#"][!SetOption DriveStorageBarK BarColor "#colorDiskThresholdWarn#,#alphaPrimary#"]
+IfTrueAction=[!SetOption DriveStoragePercentK FontColor "#sColorDiskThresholdWarn#"][!SetOption DriveStorageBarK BarColor "#sColorDiskThresholdWarn#"]
 IfCondition2=(MeasureDiskPercentFullK > #diskThresholdFull#) && (#hideCapacityWarnings# = 0)
-IfTrueAction2=[!SetOption DriveStoragePercentK FontColor "#colorDiskThresholdFull#,#alphaPrimary#"][!SetOption DriveStorageBarK BarColor "#colorDiskThresholdFull#,#alphaPrimary#"]
+IfTrueAction2=[!SetOption DriveStoragePercentK FontColor "#sColorDiskThresholdFull#"][!SetOption DriveStorageBarK BarColor "#sColorDiskThresholdFull#"]
 
 [MeasureDiskIdleTimeK]
 Measure=Plugin
@@ -899,9 +899,9 @@ IfFalseAction=[!SetVariable DiskNotFoundL 1][!SetOption MeasureDiskPercentFullL 
 Measure=Calc
 Formula=MeasureDiskSpaceUsedL / MeasureDiskSpaceTotalL
 IfCondition=(MeasureDiskPercentFullL > #diskThresholdWarn#) && (#hideCapacityWarnings# = 0)
-IfTrueAction=[!SetOption DriveStoragePercentL FontColor "#colorDiskThresholdWarn#,#alphaPrimary#"][!SetOption DriveStorageBarL BarColor "#colorDiskThresholdWarn#,#alphaPrimary#"]
+IfTrueAction=[!SetOption DriveStoragePercentL FontColor "#sColorDiskThresholdWarn#"][!SetOption DriveStorageBarL BarColor "#sColorDiskThresholdWarn#"]
 IfCondition2=(MeasureDiskPercentFullL > #diskThresholdFull#) && (#hideCapacityWarnings# = 0)
-IfTrueAction2=[!SetOption DriveStoragePercentL FontColor "#colorDiskThresholdFull#,#alphaPrimary#"][!SetOption DriveStorageBarL BarColor "#colorDiskThresholdFull#,#alphaPrimary#"]
+IfTrueAction2=[!SetOption DriveStoragePercentL FontColor "#sColorDiskThresholdFull#"][!SetOption DriveStorageBarL BarColor "#sColorDiskThresholdFull#"]
 
 [MeasureDiskIdleTimeL]
 Measure=Plugin
@@ -980,148 +980,158 @@ Formula=(CalcDiskExistsC + CalcDiskExistsD + CalcDiskExistsE + CalcDiskExistsF +
 Measure=Calc
 Formula=0
 IfCondition=(CalcDiskNumberC = 0) && (CalcDiskExistsC = 1)
-IfTrueAction=[!SetVariable colorDiskC #colorDisk1#]
+IfTrueAction=[!SetVariable colorDiskC #sColorDisk1#][!SetVariable gColorDiskC #gColorDisk1#][!SetVariable gAlphaDiskC #gAlphaDisk1#]
+DynamicVariables=1
 
 [CalcDiskNumberD]
 Measure=Calc
 Formula=(CalcDiskNumberC + CalcDiskExistsD)
 IfCondition=(CalcDiskNumberD = 0) && (CalcDiskExistsD = 1)
-IfTrueAction=[!SetVariable colorDiskD #colorDisk1#]
+IfTrueAction=[!SetVariable colorDiskD #sColorDisk1#][!SetVariable gColorDiskD #gColorDisk1#][!SetVariable gAlphaDiskD #gAlphaDisk1#]
 IfCondition2=(CalcDiskNumberD = 1) && (CalcDiskExistsD = 1)
-IfTrueAction2=[!SetVariable colorDiskD #colorDisk2#]
+IfTrueAction2=[!SetVariable colorDiskD #sColorDisk2#][!SetVariable gColorDiskD #gColorDisk2#][!SetVariable gAlphaDiskD #gAlphaDisk2#]
+DynamicVariables=1
 
 [CalcDiskNumberE]
 Measure=Calc
 Formula=(CalcDiskNumberC + CalcDiskExistsD + CalcDiskExistsE)
 IfCondition=(CalcDiskNumberE = 0) && (CalcDiskExistsE = 1)
-IfTrueAction=[!SetVariable colorDiskE #colorDisk1#]
+IfTrueAction=[!SetVariable colorDiskE #sColorDisk1#][!SetVariable gColorDiskE #gColorDisk1#][!SetVariable gAlphaDiskE #gAlphaDisk1#]
 IfCondition2=(CalcDiskNumberE = 1) && (CalcDiskExistsE = 1)
-IfTrueAction2=[!SetVariable colorDiskE #colorDisk2#]
+IfTrueAction2=[!SetVariable colorDiskE #sColorDisk2#][!SetVariable gColorDiskE #gColorDisk2#][!SetVariable gAlphaDiskE #gAlphaDisk2#]
 IfCondition3=(CalcDiskNumberE = 2) && (CalcDiskExistsE = 1)
-IfTrueAction3=[!SetVariable colorDiskE #colorDisk3#]
+IfTrueAction3=[!SetVariable colorDiskE #sColorDisk3#][!SetVariable gColorDiskE #gColorDisk3#][!SetVariable gAlphaDiskE #gAlphaDisk3#]
+DynamicVariables=1
 
 [CalcDiskNumberF]
 Measure=Calc
 Formula=(CalcDiskNumberC + CalcDiskExistsD + CalcDiskExistsE + CalcDiskExistsF)
 IfCondition=(CalcDiskNumberF = 0) && (CalcDiskExistsF = 1)
-IfTrueAction=[!SetVariable colorDiskF #colorDisk1#]
+IfTrueAction=[!SetVariable colorDiskF #sColorDisk1#][!SetVariable gColorDiskF #gColorDisk1#][!SetVariable gAlphaDiskF #gAlphaDisk1#]
 IfCondition2=(CalcDiskNumberF = 1) && (CalcDiskExistsF = 1)
-IfTrueAction2=[!SetVariable colorDiskF #colorDisk2#]
+IfTrueAction2=[!SetVariable colorDiskF #sColorDisk2#][!SetVariable gColorDiskF #gColorDisk2#][!SetVariable gAlphaDiskF #gAlphaDisk2#]
 IfCondition3=(CalcDiskNumberF = 2) && (CalcDiskExistsF = 1)
-IfTrueAction3=[!SetVariable colorDiskF #colorDisk3#]
+IfTrueAction3=[!SetVariable colorDiskF #sColorDisk3#][!SetVariable gColorDiskF #gColorDisk3#][!SetVariable gAlphaDiskF #gAlphaDisk3#]
 IfCondition4=(CalcDiskNumberF = 3) && (CalcDiskExistsF = 1)
-IfTrueAction4=[!SetVariable colorDiskF #colorDisk4#]
+IfTrueAction4=[!SetVariable colorDiskF #sColorDisk4#][!SetVariable gColorDiskF #gColorDisk4#][!SetVariable gAlphaDiskF #gAlphaDisk4#]
+DynamicVariables=1
 
 [CalcDiskNumberG]
 Measure=Calc
 Formula=(CalcDiskNumberC + CalcDiskExistsD + CalcDiskExistsE + CalcDiskExistsF + CalcDiskExistsG)
 IfCondition=(CalcDiskNumberG = 0) && (CalcDiskExistsG = 1)
-IfTrueAction=[!SetVariable colorDiskG #colorDisk1#]
+IfTrueAction=[!SetVariable colorDiskG #sColorDisk1#][!SetVariable gColorDiskG #gColorDisk1#][!SetVariable gAlphaDiskG #gAlphaDisk1#]
 IfCondition2=(CalcDiskNumberG = 1) && (CalcDiskExistsG = 1)
-IfTrueAction2=[!SetVariable colorDiskG #colorDisk2#]
+IfTrueAction2=[!SetVariable colorDiskG #sColorDisk2#][!SetVariable gColorDiskG #gColorDisk2#][!SetVariable gAlphaDiskG #gAlphaDisk2#]
 IfCondition3=(CalcDiskNumberG = 2) && (CalcDiskExistsG = 1)
-IfTrueAction3=[!SetVariable colorDiskG #colorDisk3#]
+IfTrueAction3=[!SetVariable colorDiskG #sColorDisk3#][!SetVariable gColorDiskG #gColorDisk3#][!SetVariable gAlphaDiskG #gAlphaDisk3#]
 IfCondition4=(CalcDiskNumberG = 3) && (CalcDiskExistsG = 1)
-IfTrueAction4=[!SetVariable colorDiskG #colorDisk4#]
+IfTrueAction4=[!SetVariable colorDiskG #sColorDisk4#][!SetVariable gColorDiskG #gColorDisk4#][!SetVariable gAlphaDiskG #gAlphaDisk4#]
 IfCondition5=(CalcDiskNumberG = 4) && (CalcDiskExistsG = 1)
-IfTrueAction5=[!SetVariable colorDiskG #colorDisk5#]
+IfTrueAction5=[!SetVariable colorDiskG #sColorDisk5#][!SetVariable gColorDiskG #gColorDisk5#][!SetVariable gAlphaDiskG #gAlphaDisk5#]
+DynamicVariables=1
 
 [CalcDiskNumberH]
 Measure=Calc
 Formula=(CalcDiskNumberC + CalcDiskExistsD + CalcDiskExistsE + CalcDiskExistsF + CalcDiskExistsG + CalcDiskExistsH)
 IfCondition=(CalcDiskNumberH = 0) && (CalcDiskExistsH = 1)
-IfTrueAction=[!SetVariable colorDiskH #colorDisk1#]
+IfTrueAction=[!SetVariable colorDiskH #sColorDisk1#][!SetVariable gColorDiskH #gColorDisk1#][!SetVariable gAlphaDiskH #gAlphaDisk1#]
 IfCondition2=(CalcDiskNumberH = 1) && (CalcDiskExistsH = 1)
-IfTrueAction2=[!SetVariable colorDiskH #colorDisk2#]
+IfTrueAction2=[!SetVariable colorDiskH #sColorDisk2#][!SetVariable gColorDiskH #gColorDisk2#][!SetVariable gAlphaDiskH #gAlphaDisk2#]
 IfCondition3=(CalcDiskNumberH = 2) && (CalcDiskExistsH = 1)
-IfTrueAction3=[!SetVariable colorDiskH #colorDisk3#]
+IfTrueAction3=[!SetVariable colorDiskH #sColorDisk3#][!SetVariable gColorDiskH #gColorDisk3#][!SetVariable gAlphaDiskH #gAlphaDisk3#]
 IfCondition4=(CalcDiskNumberH = 3) && (CalcDiskExistsH = 1)
-IfTrueAction4=[!SetVariable colorDiskH #colorDisk4#]
+IfTrueAction4=[!SetVariable colorDiskH #sColorDisk4#][!SetVariable gColorDiskH #gColorDisk4#][!SetVariable gAlphaDiskH #gAlphaDisk4#]
 IfCondition5=(CalcDiskNumberH = 4) && (CalcDiskExistsH = 1)
-IfTrueAction5=[!SetVariable colorDiskH #colorDisk5#]
+IfTrueAction5=[!SetVariable colorDiskH #sColorDisk5#][!SetVariable gColorDiskH #gColorDisk5#][!SetVariable gAlphaDiskH #gAlphaDisk5#]
 IfCondition6=(CalcDiskNumberH = 5) && (CalcDiskExistsH = 1)
-IfTrueAction6=[!SetVariable colorDiskH #colorDisk6#]
+IfTrueAction6=[!SetVariable colorDiskH #sColorDisk6#][!SetVariable gColorDiskH #gColorDisk6#][!SetVariable gAlphaDiskH #gAlphaDisk6#]
+DynamicVariables=1
 
 [CalcDiskNumberI]
 Measure=Calc
 Formula=(CalcDiskNumberC + CalcDiskExistsD + CalcDiskExistsE + CalcDiskExistsF + CalcDiskExistsG + CalcDiskExistsH + CalcDiskExistsI)
 IfCondition=(CalcDiskNumberI = 0) && (CalcDiskExistsI = 1)
-IfTrueAction=[!SetVariable colorDiskI #colorDisk1#]
+IfTrueAction=[!SetVariable colorDiskI #sColorDisk1#][!SetVariable gColorDiskI #gColorDisk1#][!SetVariable gAlphaDiskI #gAlphaDisk1#]
 IfCondition2=(CalcDiskNumberI = 1) && (CalcDiskExistsI = 1)
-IfTrueAction2=[!SetVariable colorDiskI #colorDisk2#]
+IfTrueAction2=[!SetVariable colorDiskI #sColorDisk2#][!SetVariable gColorDiskI #gColorDisk2#][!SetVariable gAlphaDiskI #gAlphaDisk2#]
 IfCondition3=(CalcDiskNumberI = 2) && (CalcDiskExistsI = 1)
-IfTrueAction3=[!SetVariable colorDiskI #colorDisk3#]
+IfTrueAction3=[!SetVariable colorDiskI #sColorDisk3#][!SetVariable gColorDiskI #gColorDisk3#][!SetVariable gAlphaDiskI #gAlphaDisk3#]
 IfCondition4=(CalcDiskNumberI = 3) && (CalcDiskExistsI = 1)
-IfTrueAction4=[!SetVariable colorDiskI #colorDisk4#]
+IfTrueAction4=[!SetVariable colorDiskI #sColorDisk4#][!SetVariable gColorDiskI #gColorDisk4#][!SetVariable gAlphaDiskI #gAlphaDisk4#]
 IfCondition5=(CalcDiskNumberI = 4) && (CalcDiskExistsI = 1)
-IfTrueAction5=[!SetVariable colorDiskI #colorDisk5#]
+IfTrueAction5=[!SetVariable colorDiskI #sColorDisk5#][!SetVariable gColorDiskI #gColorDisk5#][!SetVariable gAlphaDiskI #gAlphaDisk5#]
 IfCondition6=(CalcDiskNumberI = 5) && (CalcDiskExistsI = 1)
-IfTrueAction6=[!SetVariable colorDiskI #colorDisk6#]
+IfTrueAction6=[!SetVariable colorDiskI #sColorDisk6#][!SetVariable gColorDiskI #gColorDisk6#][!SetVariable gAlphaDiskI #gAlphaDisk6#]
 IfCondition7=(CalcDiskNumberI = 6) && (CalcDiskExistsI = 1)
-IfTrueAction7=[!SetVariable colorDiskI #colorDisk7#]
+IfTrueAction7=[!SetVariable colorDiskI #sColorDisk7#][!SetVariable gColorDiskI #gColorDisk7#][!SetVariable gAlphaDiskI #gAlphaDisk7#]
+DynamicVariables=1
 
 [CalcDiskNumberJ]
 Measure=Calc
 Formula=(CalcDiskNumberC + CalcDiskExistsD + CalcDiskExistsE + CalcDiskExistsF + CalcDiskExistsG + CalcDiskExistsH + CalcDiskExistsI + CalcDiskExistsJ)
 IfCondition=(CalcDiskNumberJ = 0) && (CalcDiskExistsJ = 1)
-IfTrueAction=[!SetVariable colorDiskJ #colorDisk1#]
+IfTrueAction=[!SetVariable colorDiskJ #sColorDisk1#][!SetVariable gColorDiskJ #gColorDisk1#][!SetVariable gAlphaDiskJ #gAlphaDisk1#]
 IfCondition2=(CalcDiskNumberJ = 1) && (CalcDiskExistsJ = 1)
-IfTrueAction2=[!SetVariable colorDiskJ #colorDisk2#]
+IfTrueAction2=[!SetVariable colorDiskJ #sColorDisk2#][!SetVariable gColorDiskJ #gColorDisk2#][!SetVariable gAlphaDiskJ #gAlphaDisk2#]
 IfCondition3=(CalcDiskNumberJ = 2) && (CalcDiskExistsJ = 1)
-IfTrueAction3=[!SetVariable colorDiskJ #colorDisk3#]
+IfTrueAction3=[!SetVariable colorDiskJ #sColorDisk3#][!SetVariable gColorDiskJ #gColorDisk3#][!SetVariable gAlphaDiskJ #gAlphaDisk3#]
 IfCondition4=(CalcDiskNumberJ = 3) && (CalcDiskExistsJ = 1)
-IfTrueAction4=[!SetVariable colorDiskJ #colorDisk4#]
+IfTrueAction4=[!SetVariable colorDiskJ #sColorDisk4#][!SetVariable gColorDiskJ #gColorDisk4#][!SetVariable gAlphaDiskJ #gAlphaDisk4#]
 IfCondition5=(CalcDiskNumberJ = 4) && (CalcDiskExistsJ = 1)
-IfTrueAction5=[!SetVariable colorDiskJ #colorDisk5#]
+IfTrueAction5=[!SetVariable colorDiskJ #sColorDisk5#][!SetVariable gColorDiskJ #gColorDisk5#][!SetVariable gAlphaDiskJ #gAlphaDisk5#]
 IfCondition6=(CalcDiskNumberJ = 5) && (CalcDiskExistsJ = 1)
-IfTrueAction6=[!SetVariable colorDiskJ #colorDisk6#]
+IfTrueAction6=[!SetVariable colorDiskJ #sColorDisk6#][!SetVariable gColorDiskJ #gColorDisk6#][!SetVariable gAlphaDiskJ #gAlphaDisk6#]
 IfCondition7=(CalcDiskNumberJ = 6) && (CalcDiskExistsJ = 1)
-IfTrueAction7=[!SetVariable colorDiskJ #colorDisk7#]
+IfTrueAction7=[!SetVariable colorDiskJ #sColorDisk7#][!SetVariable gColorDiskJ #gColorDisk7#][!SetVariable gAlphaDiskJ #gAlphaDisk7#]
 IfCondition8=(CalcDiskNumberJ = 7) && (CalcDiskExistsJ = 1)
-IfTrueAction8=[!SetVariable colorDiskJ #colorDisk8#]
+IfTrueAction8=[!SetVariable colorDiskJ #sColorDisk8#][!SetVariable gColorDiskJ #gColorDisk8#][!SetVariable gAlphaDiskJ #gAlphaDisk8#]
+DynamicVariables=1
 
 [CalcDiskNumberK]
 Measure=Calc
 Formula=(CalcDiskNumberC + CalcDiskExistsD + CalcDiskExistsE + CalcDiskExistsF + CalcDiskExistsG + CalcDiskExistsH + CalcDiskExistsI + CalcDiskExistsJ + CalcDiskExistsK)
 IfCondition=(CalcDiskNumberK = 0) && (CalcDiskExistsK = 1)
-IfTrueAction=[!SetVariable colorDiskK #colorDisk1#]
+IfTrueAction=[!SetVariable colorDiskK #sColorDisk1#][!SetVariable gColorDiskK #gColorDisk1#][!SetVariable gAlphaDiskK #gAlphaDisk1#]
 IfCondition2=(CalcDiskNumberK = 1) && (CalcDiskExistsK = 1)
-IfTrueAction2=[!SetVariable colorDiskK #colorDisk2#]
+IfTrueAction2=[!SetVariable colorDiskK #sColorDisk2#][!SetVariable gColorDiskK #gColorDisk2#][!SetVariable gAlphaDiskK #gAlphaDisk2#]
 IfCondition3=(CalcDiskNumberK = 2) && (CalcDiskExistsK = 1)
-IfTrueAction3=[!SetVariable colorDiskK #colorDisk3#]
+IfTrueAction3=[!SetVariable colorDiskK #sColorDisk3#][!SetVariable gColorDiskK #gColorDisk3#][!SetVariable gAlphaDiskK #gAlphaDisk3#]
 IfCondition4=(CalcDiskNumberK = 3) && (CalcDiskExistsK = 1)
-IfTrueAction4=[!SetVariable colorDiskK #colorDisk4#]
+IfTrueAction4=[!SetVariable colorDiskK #sColorDisk4#][!SetVariable gColorDiskK #gColorDisk4#][!SetVariable gAlphaDiskK #gAlphaDisk4#]
 IfCondition5=(CalcDiskNumberK = 4) && (CalcDiskExistsK = 1)
-IfTrueAction5=[!SetVariable colorDiskK #colorDisk5#]
+IfTrueAction5=[!SetVariable colorDiskK #sColorDisk5#][!SetVariable gColorDiskK #gColorDisk5#][!SetVariable gAlphaDiskK #gAlphaDisk5#]
 IfCondition6=(CalcDiskNumberK = 5) && (CalcDiskExistsK = 1)
-IfTrueAction6=[!SetVariable colorDiskK #colorDisk6#]
+IfTrueAction6=[!SetVariable colorDiskK #sColorDisk6#][!SetVariable gColorDiskK #gColorDisk6#][!SetVariable gAlphaDiskK #gAlphaDisk6#]
 IfCondition7=(CalcDiskNumberK = 6) && (CalcDiskExistsK = 1)
-IfTrueAction7=[!SetVariable colorDiskK #colorDisk7#]
+IfTrueAction7=[!SetVariable colorDiskK #sColorDisk7#][!SetVariable gColorDiskK #gColorDisk7#][!SetVariable gAlphaDiskK #gAlphaDisk7#]
 IfCondition8=(CalcDiskNumberK = 7) && (CalcDiskExistsK = 1)
-IfTrueAction8=[!SetVariable colorDiskK #colorDisk8#]
+IfTrueAction8=[!SetVariable colorDiskK #sColorDisk8#][!SetVariable gColorDiskK #gColorDisk8#][!SetVariable gAlphaDiskK #gAlphaDisk8#]
 IfCondition9=(CalcDiskNumberK = 8) && (CalcDiskExistsK = 1)
-IfTrueAction9=[!SetVariable colorDiskK #colorDisk9#]
+IfTrueAction9=[!SetVariable colorDiskK #sColorDisk9#][!SetVariable gColorDiskK #gColorDisk9#][!SetVariable gAlphaDiskK #gAlphaDisk9#]
+DynamicVariables=1
 
 [CalcDiskNumberL]
 Measure=Calc
 Formula=(CalcDiskNumberC + CalcDiskExistsD + CalcDiskExistsE + CalcDiskExistsF + CalcDiskExistsG + CalcDiskExistsH + CalcDiskExistsI + CalcDiskExistsJ + CalcDiskExistsK + CalcDiskExistsL)
 IfCondition=(CalcDiskNumberL = 0) && (CalcDiskExistsL = 1)
-IfTrueAction=[!SetVariable colorDiskL #colorDisk1#]
+IfTrueAction=[!SetVariable colorDiskL #sColorDisk1#][!SetVariable gColorDiskL #gColorDisk1#][!SetVariable gAlphaDiskL #gAlphaDisk1#]
 IfCondition2=(CalcDiskNumberL = 1) && (CalcDiskExistsL = 1)
-IfTrueAction2=[!SetVariable colorDiskL #colorDisk2#]
+IfTrueAction2=[!SetVariable colorDiskL #sColorDisk2#][!SetVariable gColorDiskL #gColorDisk2#][!SetVariable gAlphaDiskL #gAlphaDisk2#]
 IfCondition3=(CalcDiskNumberL = 2) && (CalcDiskExistsL = 1)
-IfTrueAction3=[!SetVariable colorDiskL #colorDisk3#]
+IfTrueAction3=[!SetVariable colorDiskL #sColorDisk3#][!SetVariable gColorDiskL #gColorDisk3#][!SetVariable gAlphaDiskL #gAlphaDisk3#]
 IfCondition4=(CalcDiskNumberL = 3) && (CalcDiskExistsL = 1)
-IfTrueAction4=[!SetVariable colorDiskL #colorDisk4#]
+IfTrueAction4=[!SetVariable colorDiskL #sColorDisk4#][!SetVariable gColorDiskL #gColorDisk4#][!SetVariable gAlphaDiskL #gAlphaDisk4#]
 IfCondition5=(CalcDiskNumberL = 4) && (CalcDiskExistsL = 1)
-IfTrueAction5=[!SetVariable colorDiskL #colorDisk5#]
+IfTrueAction5=[!SetVariable colorDiskL #sColorDisk5#][!SetVariable gColorDiskL #gColorDisk5#][!SetVariable gAlphaDiskL #gAlphaDisk5#]
 IfCondition6=(CalcDiskNumberL = 5) && (CalcDiskExistsL = 1)
-IfTrueAction6=[!SetVariable colorDiskL #colorDisk6#]
+IfTrueAction6=[!SetVariable colorDiskL #sColorDisk6#][!SetVariable gColorDiskL #gColorDisk6#][!SetVariable gAlphaDiskL #gAlphaDisk6#]
 IfCondition7=(CalcDiskNumberL = 6) && (CalcDiskExistsL = 1)
-IfTrueAction7=[!SetVariable colorDiskL #colorDisk7#]
+IfTrueAction7=[!SetVariable colorDiskL #sColorDisk7#][!SetVariable gColorDiskL #gColorDisk7#][!SetVariable gAlphaDiskL #gAlphaDisk7#]
 IfCondition8=(CalcDiskNumberL = 7) && (CalcDiskExistsL = 1)
-IfTrueAction8=[!SetVariable colorDiskL #colorDisk8#]
+IfTrueAction8=[!SetVariable colorDiskL #sColorDisk8#][!SetVariable gColorDiskL #gColorDisk8#][!SetVariable gAlphaDiskL #gAlphaDisk8#]
 IfCondition9=(CalcDiskNumberL = 8) && (CalcDiskExistsL = 1)
-IfTrueAction9=[!SetVariable colorDiskL #colorDisk9#]
+IfTrueAction9=[!SetVariable colorDiskL #sColorDisk9#][!SetVariable gColorDiskL #gColorDisk9#][!SetVariable gAlphaDiskL #gAlphaDisk9#]
 IfCondition10=(CalcDiskNumberL = 9) && (CalcDiskExistsL = 1)
-IfTrueAction10=[!SetVariable colorDiskL #colorDisk10#]
+IfTrueAction10=[!SetVariable colorDiskL #sColorDisk10#][!SetVariable gColorDiskL #gColorDisk10#][!SetVariable gAlphaDiskL #gAlphaDisk10#]
+DynamicVariables=1
