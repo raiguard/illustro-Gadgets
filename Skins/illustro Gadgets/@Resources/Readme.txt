@@ -1,5 +1,5 @@
 ILLUSTRO GADGETS
-Version 0.8.0
+Version 0.8.1
 By iamanai
 
 -----------------------
@@ -32,13 +32,13 @@ Special thanks to	SilverAzide
 
 -----------------------
 CHANGELOG
-v1.0.0 ??-??-2016:
-PLANNED CHANGES:
- - Add scaling to the gadgets
- - Implement proper help buttons and documentation
- - Polish stuff, finalize the UI
 
-v0.8.0 ??-??-2016:
+v0.8.1 1-02-2016:
+General Additions / Changes:
+ - Updated HWiNFO plugin to 3.0.0
+ - Removed versionAbsolute variable
+
+v0.8.0 1-01-2016:
 General Additions / Changes:
  - Combined all colors with their alpha values
  - Implemented changing of alpha values using the bars in settings skin color pickers

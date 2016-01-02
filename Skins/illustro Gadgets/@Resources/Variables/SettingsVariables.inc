@@ -1,7 +1,7 @@
 [Variables]
 bgWidth=600
 bgHeight=450
-pageName=welcome
+pageName=hwinfosettings
 gadgetsSubpage=drivesmeter
 hwinfoSubpage=cpu0
 
