@@ -33,6 +33,12 @@ Special thanks to	SilverAzide
 -----------------------
 CHANGELOG
 
+v0.9.0 ??-??-2016:
+General Additions / Changes:
+ - Added tooltip descriptions to various settings that needed them
+ - Changed All CPU Meter name / clock speed settings to reflect v0.8.0 changes
+ - Added disk capacity warning settings to drives meter page
+
 v0.8.1 1-02-2016:
 General Additions / Changes:
  - Updated HWiNFO plugin to 3.0.0

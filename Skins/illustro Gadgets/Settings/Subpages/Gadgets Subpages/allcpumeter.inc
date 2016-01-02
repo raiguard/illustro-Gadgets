@@ -2,7 +2,7 @@
 gadgetSettingsPath=#@#Settings\AllCpuMeterSettings.inc
 gadgetSettingsPathLua=Settings\\AllCpuMeterSettings.inc
 @includeAllCpuMeterSettings=#gadgetSettingsPath#
-bgHeight=660
+bgHeight=680
 
 ; ========================================================================================================================
 ;   MEASURES
@@ -70,23 +70,49 @@ Hidden=#showPage#
 LeftMouseUpAction=[!WriteKeyValue Variables "showPage" 1 "#gadgetSettingsPath#"][!RefreshGroup "AllCPUMeter"][!Refresh]
 MiddleMouseUpAction=[!WriteKeyValue Variables "showPage" "#dShowPage#" "#gadgetSettingsPath#"][!RefreshGroup "AllCPUMeter"][!Refresh]
 
-; Show CPU clock speed and name
-[ShowCpuAndNameLabel]
+; Show CPU name
+[ShowCpuNameLabel]
 Meter=String
 MeterStyle=StyleText | StyleToggleButtonLabel
-Text="CPU Clock Speed and Name:"
+Text="CPU Name:"
 
-[ShowCpuAndNameButtonEnabled]
+[ShowCpuNameButtonEnabled]
 Meter=String
 MeterStyle=StyleText | StyleToggleButton
-X=[ShowCpuAndNameLabel:W]r
+X=[ShowCpuNameLabel:W]r
+Y=0r
+Text="Enabled"
+Hidden=(#showCpuName# = 1 ? 0 : 1)
+LeftMouseUpAction=[!WriteKeyValue Variables "showCpuName" 0 "#gadgetSettingsPath#"][!RefreshGroup "AllCPUMeter"][!Refresh]
+MiddleMouseUpAction=[!WriteKeyValue Variables "showCpuName" "#dShowCpuName#" "#gadgetSettingsPath#"][!RefreshGroup "AllCPUMeter"][!Refresh]
+
+[ShowCpuNameButtonDisabled]
+Meter=String
+MeterStyle=StyleText | StyleToggleButton
+X=0r
+Y=0r
+Text="Disabled"
+Hidden=#showCpuName#
+LeftMouseUpAction=[!WriteKeyValue Variables "showCpuName" 1 "#gadgetSettingsPath#"][!RefreshGroup "AllCPUMeter"][!Refresh]
+MiddleMouseUpAction=[!WriteKeyValue Variables "showCpuName" "#dShowCpuName#" "#gadgetSettingsPath#"][!RefreshGroup "AllCPUMeter"][!Refresh]
+
+; Show CPU clock speed
+[ShowCpuClockSpeedLabel]
+Meter=String
+MeterStyle=StyleText | StyleToggleButtonLabel
+Text="CPU Clock Speed:"
+
+[ShowCpuClockSpeedButtonEnabled]
+Meter=String
+MeterStyle=StyleText | StyleToggleButton
+X=[ShowCpuClockSpeedLabel:W]r
 Y=0r
 Text="Enabled"
 Hidden=(#showCpuClockSpeed# = 1 ? 0 : 1)
 LeftMouseUpAction=[!WriteKeyValue Variables "showCpuClockSpeed" 0 "#gadgetSettingsPath#"][!RefreshGroup "AllCPUMeter"][!Refresh]
 MiddleMouseUpAction=[!WriteKeyValue Variables "showCpuClockSpeed" "#dShowCpuClockSpeed#" "#gadgetSettingsPath#"][!RefreshGroup "AllCPUMeter"][!Refresh]
 
-[ShowCpuAndNameButtonDisabled]
+[ShowCpuClockSpeedButtonDisabled]
 Meter=String
 MeterStyle=StyleText | StyleToggleButton
 X=0r
@@ -100,7 +126,7 @@ MiddleMouseUpAction=[!WriteKeyValue Variables "showCpuClockSpeed" "#dShowCpuCloc
 [UseHWiNFOClockSpeedLabel]
 Meter=String
 MeterStyle=StyleText | StyleToggleButtonLabel
-Text="HWiNFO Clock Speed:"
+Text="Use HWiNFO Clock Speed:"
 
 [UseHWiNFOClockSpeedButtonEnabled]
 Meter=String
@@ -126,7 +152,7 @@ MiddleMouseUpAction=[!WriteKeyValue Variables "useHWiNFOClockSpeed" "#dUseHWiNFO
 [ShowCpuFanSpeedLabel]
 Meter=String
 MeterStyle=StyleText | StyleToggleButtonLabel
-Text="Fan Speed Information:"
+Text="Fan Speed Information (requres HWiNFO):"
 
 [ShowCpuFanSpeedButtonEnabled]
 Meter=String
@@ -189,6 +215,7 @@ Text="Enabled"
 Hidden=(#showAvgCpuOnly# = 1 ? 0 : 1)
 LeftMouseUpAction=[!WriteKeyValue Variables "showAvgCpuOnly" 0 "#gadgetSettingsPath#"][!RefreshGroup "AllCPUMeter"][!Refresh]
 MiddleMouseUpAction=[!WriteKeyValue Variables "showAvgCpuOnly" "#dShowAvgCpuOnly#" "#gadgetSettingsPath#"][!RefreshGroup "AllCPUMeter"][!Refresh]
+ToolTipText="When enabled, replaces the core usages graph with an average usage graph."
 
 [ShowAvgCpuButtonDisabled]
 Meter=String
@@ -199,6 +226,7 @@ Text="Disabled"
 Hidden=#showAvgCpuOnly#
 LeftMouseUpAction=[!WriteKeyValue Variables "showAvgCpuOnly" 1 "#gadgetSettingsPath#"][!RefreshGroup "AllCPUMeter"][!Refresh]
 MiddleMouseUpAction=[!WriteKeyValue Variables "showAvgCpuOnly" "#dShowAvgCpuOnly#" "#gadgetSettingsPath#"][!RefreshGroup "AllCPUMeter"][!Refresh]
+ToolTipText="When enabled, replaces the core usages graph with an average usage graph."
 
 ; Core Temperatures
 [ShowCoreTempsLabel]
@@ -230,7 +258,7 @@ MiddleMouseUpAction=[!WriteKeyValue Variables "disableTemps" "#dDisableTemps#" "
 [TempUOMLabel]
 Meter=String
 MeterStyle=StyleText | StyleToggleButtonLabel
-Text="Temps Unit of Measurement:"
+Text="Temperatures Unit of Measurement:"
 
 [TempUOMDegFButton]
 Meter=String
@@ -241,6 +269,7 @@ Text="Fahrenheit"
 Hidden=#tempsInCelsius#
 LeftMouseUpAction=[!WriteKeyValue Variables "tempUOM" "C" "#gadgetSettingsPath#"][!WriteKeyValue Variables "tempsInCelsius" 1 "#gadgetSettingsPath#"][!RefreshGroup "AllCPUMeter"][!Refresh]
 MiddleMouseUpAction=[!WriteKeyValue Variables "tempUOM" "#dTempUOM#" "#gadgetSettingsPath#"][!WriteKeyValue Variables "tempsInCelsius" "#dTempsInCelsius#" "#gadgetSettingsPath#"][!RefreshGroup "AllCPUMeter"][!Refresh]
+ToolTipText="NOTE: You must also go into HWiNFO and change the temperature output to match the one you set here."
 
 [TempUOMDegCButton]
 Meter=String
@@ -251,6 +280,7 @@ Text="Celsius"
 Hidden=(#tempsInCelsius# = 1 ? 0 : 1)
 LeftMouseUpAction=[!WriteKeyValue Variables "tempUOM" "F" "#gadgetSettingsPath#"][!WriteKeyValue Variables "tempsInCelsius" 0 "#gadgetSettingsPath#"][!RefreshGroup "AllCPUMeter"][!Refresh]
 MiddleMouseUpAction=[!WriteKeyValue Variables "tempUOM" "#dTempUOM#" "#gadgetSettingsPath#"][!WriteKeyValue Variables "tempsInCelsius" "#dTempsInCelsius#" "#gadgetSettingsPath#"][!RefreshGroup "AllCPUMeter"][!Refresh]
+ToolTipText="NOTE: You must also go into HWiNFO and change the temperature output to match the one you set here."
 
 ; ----- Colors -----
 [ColorsLabel]
