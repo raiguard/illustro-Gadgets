@@ -33,18 +33,21 @@ Special thanks to	SilverAzide
 -----------------------
 CHANGELOG
 
-v0.9.0 ??-??-2016:
-General Additions / Changes:
- - Added tooltip descriptions to various settings that needed them
- - Changed All CPU Meter name / clock speed settings to reflect v0.8.0 changes
+v1.0.0 - 2016-??-??
+Additions:
+ - Made lots of settings more descriptive
  - Added disk capacity warning settings to drives meter page
+Changes:
+ - Changed All CPU Meter name / clock speed settings to reflect v0.8.0 changes
+ - Updated changelog date formatting, conforming it to the widely-accepted standard for changelogs
+ - Updated GraphColorConfig script to get rid of hard-coded arrays, changed name to RGBASeparation
 
-v0.8.1 1-02-2016:
+v0.8.1 - 2016-1-2
 General Additions / Changes:
  - Updated HWiNFO plugin to 3.0.0
  - Removed versionAbsolute variable
 
-v0.8.0 1-01-2016:
+v0.8.0 - 2016-1-1
 General Additions / Changes:
  - Combined all colors with their alpha values
  - Implemented changing of alpha values using the bars in settings skin color pickers
@@ -67,7 +70,7 @@ Drives Meter:
  - Moved settings skin readme link to the sidebar, replaced previous location with DeviantArt link
  - Fixed more copy/paste mistakes
 
-v0.7.1 12-07-2015:
+v0.7.1 - 2015-12-7
 Settings:
  - Added ability to middle-click on HWiNFOConfig.inc's file path to reset it to the default value
 Bug fixes:
@@ -77,7 +80,7 @@ Bug fixes:
  - Fixed mistake in Dual GPU Meter that would incorrectly size the background when you hide the line graph
  - Updated v0.7.0's changelog in the readme file to the version currently on the Rainmeter Forums
 
-v0.7.0 12-06-2015:
+v0.7.0 - 2015-12-6
 UI (all skins):
  - Increased row spacing by 1 pixel, and lowered bars from text by 1 pixel
  - Fixed row relative positioning so the 'rowYOffset' variable actually has meaning
@@ -119,7 +122,7 @@ Drives Meter:
  - Fixed flaw in the line graph that would cause a line to not scale itself in relation to the other
  lines
 
-v0.6.3 11-06-2015:
+v0.6.3 - 2015-11-6
 Readme.txt:
  - Backported v0.7.0-d.4 format updating to be more aesthetically pleasing on GitHub
  - Reworded some things
@@ -127,15 +130,15 @@ Readme.txt:
 Drives Meter:
  - Backported fixes from v0.7.0-d.2 to correct copy/paste errors with the L drive's meters
 
-v0.6.2 10-10-2015:
+v0.6.2 - 2015-10-10
 Drives Meter:
  - Fixed more mistakes that broke the functionality of the E drive's information
 
-v0.6.1 10-09-2015:
+v0.6.1 - 2015-10-9
 Drives Meter:
  - Corrected some copy/paste errors made when creating meters for E drive
 
-v0.6 10-04-2015:
+v0.6.0 - 2015-10-4
 Drives Meter:
  - Shows Name, Disk Read Time Percentage, Read/Write Speeds, and storage used / capacity for each hard drive or
  removable disk connected to slots C-L
@@ -152,7 +155,7 @@ Code Cleanup:
  - Fixed mistake in GPU Meter's settings skin that broke middle-click-to-default functionality for the checkboxes
  - Preparation for mass code cleanup to take place in v0.7 and v0.8
 
-v0.5.1 9-13-2015:
+v0.5.1 - 2015-9-13
 All CPU Meter:
  - Added support for HWiNFO core temps and fan speed
  - Implemented HWiNFO configuration into settings skin
@@ -164,7 +167,7 @@ Notes:
  - Auto-detection of system monitoring software is currently broken. Implemented a temporary workaround in
  All CPU Meter's settings skin
 
-v0.5 9-12-2015:
+v0.5.0 - 2015-9-12
 GPU Meter:
  - Monitors your graphics card usage, clock speed, temperature
  - Gives information about memory clock speed, memory usage, fan speed and usage, memory controller usage,
@@ -172,12 +175,12 @@ GPU Meter:
  - Requires HWiNFO
  - Settings skin has tools for configuring the skin to work with HWiNFO as well as color customization
 
-v0.4.1 8-20-2015:
+v0.4.1 - 2015-8-20
 Changed how Network Meter reads the internal I.P. address (It is now REQUIRED to have Rainmeter 3.3 Beta
 installed to make this work properly)
 Fixed a flaw with All CPU Meter that messed up snapping other skins below it.
 
-v0.4 8-19-2015:
+v0.4.0 - 2015-8-19
 Code cleanup:
  - Created a global variables .inc file to share variables between skins
  - Moved more positioning numbers to variables for easy debugging
@@ -205,7 +208,7 @@ Network Meter:
  - Added Network Meter (uses the ActiveNet Plugin)
  - NOTE: To configure the Network Meter, follow this link: http://comments.deviantart.com/1/522574269/3808722511
 
-v0.3 8-05-2015:
+v0.3.0 - 2015-8-5
 Added support for core temperatures using CoreTemp or SpeedFan
 Some code cleanup
 Implemented settings skin (incomplete)
@@ -216,6 +219,6 @@ Settings:
  - Choose either Fahrenheit or Celsius for core temps
  - Customize colors of each bar and its corresponding line on the graph
 
-v0.2 8-02-2015:
+v0.2.0 - 2015-8-2
 Added All CPU Meter
 
