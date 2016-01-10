@@ -33,10 +33,10 @@ Special thanks to	SilverAzide
 -----------------------
 CHANGELOG
 
-v0.8.2 1-08-2016:
+v0.8.2 1-09-2016:
 General Additions / Changes:
  - Actually updated HWiNFO plugin to v3.0.0
- - Updated ActiveNet plugin to v2.1.1
+ - Updated ActiveNet plugin to v2.5.1
  
 v0.8.1 1-02-2016:
 General Additions / Changes:

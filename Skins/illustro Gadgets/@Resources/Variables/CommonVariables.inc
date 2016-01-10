@@ -1,6 +1,6 @@
 [Variables]
 ; -- Version --
-version="0.8.1"
+version="0.8.2"
 
 ; -- Addons --
 rainRGB=#@#Addons\RainRGB\RainRGB4.exe
@@ -36,4 +36,4 @@ fontSize2=9
 fontSize3=12
 titleSize=10
 
-; DEGREES SYMBOL: °
+; DEGREES SYMBOL: ï¿½
