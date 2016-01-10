@@ -7,43 +7,43 @@
 isDbg = false
 
 function Initialize()
-	
+
 	-- these arrays contain the color IDs of all coloring options in each gadget. possible prefixes are sColor, gColor, gAlpha, and color.
 	colorIdsAllCpuMeter = {		'Ram', 'Page', 'Fan', 'AvgCpu',
-								'Core1', 'Core2', 'Core3', 'Core4', 
-								'Core5', 'Core6', 'Core7', 'Core8', 
-								'Core9', 'Core10', 'Core11', 'Core12', 
+								'Core1', 'Core2', 'Core3', 'Core4',
+								'Core5', 'Core6', 'Core7', 'Core8',
+								'Core9', 'Core10', 'Core11', 'Core12',
 								'Core13', 'Core14', 'Core15', 'Core16'	}
-	
+
 	colorIdsNetworkMeter = {	'Upload', 'Download'	}
-												
+
 	colorIdsGpuMeter = {	'TotalUsage', 'MemoryUsage', 'FanUsage', 'MemController'	}
-							
+
 	colorIdsDrivesMeter = {	'Disk1', 'Disk2', 'Disk3', 'Disk4',
 								'Disk5', 'Disk6', 'Disk7', 'Disk8',
 								'Disk9', 'Disk10',	}
-								
+
 	sColorId = 'sColor'
 	gColorId = 'gColor'
 	gAlphaId = 'gAlpha'
 	colorId = 'color'
-	
+
 end
 
 
 function Update()
 
-	
+
 
 end
 
--- 
+--
 function SetGraphColors(targetskin)
 
 	-- retrieved from skin: file paths of the gadget's variables (target) and settings (source) files
 	local targetfile = SKIN:GetVariable('varPath')
 	local sourcefile = SKIN:GetVariable('skinSettingsPath')
-	
+
 	if targetskin == 'allcpumeter' then
 		LogHelper('Target skin: All CPU Meter', 'Debug')
 		LogHelper('Target file: ' .. targetfile, 'Debug')
@@ -87,19 +87,19 @@ function SetGraphColors(targetskin)
 	else
 		LogHelper('Invalid skin target!', 'Warning')
 	end
-	
+
 	LogHelper('Completed graph color/alpha config', 'Debug')
-	
+
 end
 
 function GetStringRgb(source)
-	
+
 	rgbIt = string.gmatch(source,"%d+")
 	rgbTable = {}
 	for match in rgbIt do
 		table.insert(rgbTable, match)
 	end
-		
+
 	return tostring(rgbTable[1] .. ',' .. rgbTable[2] .. ',' .. rgbTable[3])
 
 end
@@ -111,7 +111,7 @@ function GetStringAlpha(source)
 	for match in rgbIt do
 		table.insert(rgbTable, match)
 	end
-		
+
 	return tostring(rgbTable[4])
 
 end
@@ -123,5 +123,5 @@ function LogHelper(message, type)
 	elseif type ~= 'Debug' then
 		SKIN:Bang("!Log", message, type)
 	end
-	
+
 end
