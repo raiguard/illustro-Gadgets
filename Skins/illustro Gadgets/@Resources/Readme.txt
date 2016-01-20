@@ -33,7 +33,7 @@ Special thanks to	SilverAzide
 -----------------------
 CHANGELOG
 
-v1.0.0 - 2016-??-??
+v1.0.0 - 2016-1-20
 Additions:
  - Made some confusing settings more descriptive
  - Added disk capacity warning settings to drives meter settings page
@@ -42,6 +42,7 @@ Changes:
  - Updated changelog date formatting, conforming it to the widely-accepted standard for changelogs
 Fixes:
  - Fixed a mistake in the update checker that caused it to not actually display the new version number
+ - Fixed small typo in changelog for v0.8.0
 
 v0.8.2 - 2016-1-9
 General Additions / Changes:

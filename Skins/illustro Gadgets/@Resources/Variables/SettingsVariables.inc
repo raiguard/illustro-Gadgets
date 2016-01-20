@@ -1,7 +1,7 @@
 [Variables]
 bgWidth=600
 bgHeight=450
-pageName=skinsettings
+pageName=welcome
 gadgetsSubpage=allcpumeter
 hwinfoSubpage=cpu0
 
