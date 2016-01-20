@@ -1,16 +1,16 @@
 [Variables]
 ; -- CPU Cores --
-cpuCores=4
+cpuCores=8
 threadsPerCore=2
 
 ; Hide
 hideCore2=0
 hideCore3=0
 hideCore4=0
-hideCore5=1
-hideCore6=1
-hideCore7=1
-hideCore8=1
+hideCore5=0
+hideCore6=0
+hideCore7=0
+hideCore8=0
 hideCore9=1
 hideCore10=1
 hideCore11=1

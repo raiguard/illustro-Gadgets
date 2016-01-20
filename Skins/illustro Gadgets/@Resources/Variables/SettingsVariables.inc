@@ -1,8 +1,8 @@
 [Variables]
 bgWidth=600
 bgHeight=450
-pageName=welcome
-gadgetsSubpage=drivesmeter
+pageName=skinsettings
+gadgetsSubpage=allcpumeter
 hwinfoSubpage=cpu0
 
 ; -- Visual Properties --

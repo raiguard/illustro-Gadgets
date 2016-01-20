@@ -1,5 +1,5 @@
 ILLUSTRO GADGETS
-Version 0.8.1
+Version 1.0.0
 By iamanai
 
 -----------------------
@@ -35,12 +35,16 @@ CHANGELOG
 
 v1.0.0 - 2016-??-??
 Additions:
- - Made lots of settings more descriptive
- - Added disk capacity warning settings to drives meter page
+ - Made some confusing settings more descriptive
+ - Added disk capacity warning settings to drives meter settings page
 Changes:
  - Changed All CPU Meter name / clock speed settings to reflect v0.8.0 changes
  - Updated changelog date formatting, conforming it to the widely-accepted standard for changelogs
- - Updated GraphColorConfig script to get rid of hard-coded arrays, changed name to RGBASeparation
+
+v0.8.2 - 2016-1-9
+General Additions / Changes:
+ - Actually updated HWiNFO plugin to v3.0.0
+ - Updated ActiveNet plugin to v2.5.1
 
 v0.8.1 - 2016-1-2
 General Additions / Changes:
@@ -54,6 +58,7 @@ General Additions / Changes:
  - Added custom LUA script to separate RGB values from their alphas
  - Changed coloring mechanics in all gadgets to reflect the above changes
  - Updated update checker to get rid of versionAbsolute variable
+ - Moved settings skin readme link to the sidebar, replaced previous location with DeviantArt link
 All CPU Meter:
  - Separated CPU name from clock speed, moved clock speed to bottom
  - Fixed 'extra operation' errors
@@ -67,7 +72,6 @@ GPU Meter:
 Drives Meter:
  - Implemented proper support for long drive names
  - Added drive capacity warnings
- - Moved settings skin readme link to the sidebar, replaced previous location with DeviantArt link
  - Fixed more copy/paste mistakes
 
 v0.7.1 - 2015-12-7
@@ -221,4 +225,3 @@ Settings:
 
 v0.2.0 - 2015-8-2
 Added All CPU Meter
-

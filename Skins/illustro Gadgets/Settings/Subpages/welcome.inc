@@ -25,7 +25,7 @@ Text="Connecting to GitHub..."
 
 [StyleUpdateCheckerYes]
 FontColor=#colorPrimary#
-Text="v[MeasureReleaseVer] is avaliable for download!"
+Text="v[MeasureCurrentReleaseVer] is avaliable for download!"
 DynamicVariables=1
 
 [StyleUpdateCheckerNo]
@@ -110,7 +110,7 @@ ClipString=2
 ClipStringW=(#bgWidth# - [WelcomeText:X] - (#bgWidth# - #generalXMarginRight#) - 5)
 X=#panelContentMarginLeftX#
 Y=30r
-Text="illustro Gadgets is a skin suite designed to present the information provided by the AddGadgets.com gadgets from Windows 7, in the sleek theme of illustro. The included All CPU Meter, Network Meter, GPU Meter, and Drives Meter present various bits of information about your system. For full functionality, the skin pack requires HWiNFO to be installed"
+Text="illustro Gadgets is a skin suite designed to present the information provided by the AddGadgets.com gadgets from Windows 7, in the sleek theme of illustro. The included All CPU Meter, Network Meter, GPU Meter, and Drives Meter present various bits of information about your system. For full functionality, the skin pack requires HWiNFO to be installed."
 
 ; ----- Links Bar -----
 [LinksBarDeviantartButton]

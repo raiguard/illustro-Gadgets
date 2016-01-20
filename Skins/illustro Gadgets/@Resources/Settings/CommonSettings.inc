@@ -1,6 +1,6 @@
 [Variables]
 ; -- HWiNFO --
-HWiNFO-CONFIGPATH=#@#Settings\HWiNFOConfig.inc
+HWiNFO-CONFIGPATH=D:\Files\Settings\Caleb\Rainmeter\HWiNFOConfig.inc
 HWiNFO-CONFIGPATH-DEFAULT=#@#Settings\HWiNFOConfig.inc
 
 ; -- Visual Properties --
