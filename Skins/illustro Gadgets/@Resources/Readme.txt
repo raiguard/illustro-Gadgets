@@ -40,6 +40,8 @@ Additions:
 Changes:
  - Changed All CPU Meter name / clock speed settings to reflect v0.8.0 changes
  - Updated changelog date formatting, conforming it to the widely-accepted standard for changelogs
+Fixes:
+ - Fixed a mistake in the update checker that caused it to not actually display the new version number
 
 v0.8.2 - 2016-1-9
 General Additions / Changes:
