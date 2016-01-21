@@ -2,6 +2,7 @@
 gadgetSettingsPath=#@#Settings\DrivesMeterSettings.inc
 gadgetSettingsPathLua=Settings\\DrivesMeterSettings.inc
 @includeDrivesMeterSettings=#gadgetSettingsPath#
+bgHeight=530
 
 ; ========================================================================================================================
 ;   STYLES
@@ -48,37 +49,24 @@ Command10=[!WriteKeyValue Variables sColorDisk10 "$UserInput$" "#gadgetSettingsP
 Command11=[!WriteKeyValue Variables sColorDiskThresholdWarn "$UserInput$" "#gadgetSettingsPath#"][!RefreshGroup DrivesMeter][!Refresh] DefaultValue="#sColorDiskThresholdWarn#" X=[ColorsThresholdWarnString:X] Y=[ColorsThresholdWarnString:Y] H=[ColorsThresholdWarnString:H]
 Command12=[!WriteKeyValue Variables sColorDiskThresholdFull "$UserInput$" "#gadgetSettingsPath#"][!RefreshGroup DrivesMeter][!Refresh] DefaultValue="#sColorDiskThresholdFull#" X=[ColorsThresholdFullString:X] Y=[ColorsThresholdFullString:Y] H=[ColorsThresholdFullString:H]
 
+[MeasureTextInput]
+Measure=Plugin
+Plugin=InputText
+SolidColor=#colorInputTextBackground#
+FontColor=#colorInputTextFont#
+FontSize=#fontSize#
+StringStyle=Bold
+UpdateDivider=-1
+FocusDismiss=1
+W=30
+Command1=[!WriteKeyValue Variables diskThresholdWarn "$UserInput$" "#gadgetSettingsPath#"][!RefreshGroup DrivesMeter][!Refresh] DefaultValue="#diskThresholdWarn#" X=[CapacityWarningsWarnThresholdString:X] Y=[CapacityWarningsWarnThresholdString:Y] H=[CapacityWarningsWarnThresholdString:H]
+Command2=[!WriteKeyValue Variables diskThresholdFull "$UserInput$" "#gadgetSettingsPath#"][!RefreshGroup DrivesMeter][!Refresh] DefaultValue="#diskThresholdFull#" X=[CapacityWarningsFullThresholdString:X] Y=[CapacityWarningsFullThresholdString:Y] H=[CapacityWarningsFullThresholdString:H]
+
 ; ========================================================================================================================
 ;   METERS
 ; ========================================================================================================================
 
 ; ----- Toggles -----
-
-; Disk Capacity Warnings
-[CapacityWarningsLabel]
-Meter=String
-MeterStyle=StyleText | StyleToggleButtonLabel
-Text="Drive Capacity Warnings:"
-
-[CapacityWarningsButtonEnabled]
-Meter=String
-MeterStyle=StyleText | StyleToggleButton
-X=[CapacityWarningsLabel:W]r
-Y=0r
-Text="Enabled"
-Hidden=#hideCapacityWarnings#
-LeftMouseUpAction=[!WriteKeyValue Variables "hideCapacityWarnings" 1 "#gadgetSettingsPath#"][!RefreshGroup "DrivesMeter"][!Refresh]
-MiddleMouseUpAction=[!WriteKeyValue Variables "hideCapacityWarnings" "#dHideCapacityWarnings#" "#gadgetSettingsPath#"][!RefreshGroup "DrivesMeter"][!Refresh]
-
-[CapacityWarningsButtonDisabled]
-Meter=String
-MeterStyle=StyleText | StyleToggleButton
-X=0r
-Y=0r
-Text="Disabled"
-Hidden=(#hideCapacityWarnings# = 1 ? 0 : 1)
-LeftMouseUpAction=[!WriteKeyValue Variables "hideCapacityWarnings" 0 "#gadgetSettingsPath#"][!RefreshGroup "DrivesMeter"][!Refresh]
-MiddleMouseUpAction=[!WriteKeyValue Variables "hideCapacityWarnings" "#dHideCapacityWarnings#" "#gadgetSettingsPath#"][!RefreshGroup "DrivesMeter"][!Refresh]
 
 ; Line Graph
 [LineGraphLabel]
@@ -131,6 +119,69 @@ Text="Disabled"
 Hidden=(#hideHistogram# = 1 ? 0 : 1)
 LeftMouseUpAction=[!WriteKeyValue Variables "hideHistogram" 0 "#gadgetSettingsPath#"][!RefreshGroup "DrivesMeter"][!Refresh]
 MiddleMouseUpAction=[!WriteKeyValue Variables "hideHistogram" "#dHideHistogram#" "#gadgetSettingsPath#"][!RefreshGroup "DrivesMeter"][!Refresh]
+
+; ----- Disk Capacity Warnings -----
+
+[CapacityWarningsSectionTitle]
+Meter=String
+MeterStyle=StyleText | StyleSectionLabel
+Text="Disk Capacity Warnings"
+
+; Toggle Button
+[CapacityWarningsLabel]
+Meter=String
+MeterStyle=StyleText | StyleToggleButtonLabel
+Text="Warnings:"
+
+[CapacityWarningsButtonEnabled]
+Meter=String
+MeterStyle=StyleText | StyleToggleButton
+X=[CapacityWarningsLabel:W]r
+Y=0r
+Text="Enabled"
+Hidden=#hideCapacityWarnings#
+LeftMouseUpAction=[!WriteKeyValue Variables "hideCapacityWarnings" 1 "#gadgetSettingsPath#"][!RefreshGroup "DrivesMeter"][!Refresh]
+MiddleMouseUpAction=[!WriteKeyValue Variables "hideCapacityWarnings" "#dHideCapacityWarnings#" "#gadgetSettingsPath#"][!RefreshGroup "DrivesMeter"][!Refresh]
+
+[CapacityWarningsButtonDisabled]
+Meter=String
+MeterStyle=StyleText | StyleToggleButton
+X=0r
+Y=0r
+Text="Disabled"
+Hidden=(#hideCapacityWarnings# = 1 ? 0 : 1)
+LeftMouseUpAction=[!WriteKeyValue Variables "hideCapacityWarnings" 0 "#gadgetSettingsPath#"][!RefreshGroup "DrivesMeter"][!Refresh]
+MiddleMouseUpAction=[!WriteKeyValue Variables "hideCapacityWarnings" "#dHideCapacityWarnings#" "#gadgetSettingsPath#"][!RefreshGroup "DrivesMeter"][!Refresh]
+
+; "Warn" Threshold
+[CapacityWarningsWarnThresholdLabel]
+Meter=String
+MeterStyle=StyleText | StyleToggleButtonLabel
+Text="'Warning' Capacity Threshold:"
+
+[CapacityWarningsWarnThresholdString]
+Meter=String
+MeterStyle=StyleText | StyleToggleButton
+X=[CapacityWarningsWarnThresholdLabel:W]r
+Y=0r
+Text="#diskThresholdWarn#"
+LeftMouseUpAction=[!CommandMeasure MeasureTextInput "Executebatch 1"]
+MiddleMouseUpAction=[!WriteKeyValue Variables "diskThresholdWarn" "#dDiskThresholdWarn#" "#gadgetSettingsPath#"][!RefreshGroup "DrivesMeter"][!Refresh]
+
+; "Full" Threshold
+[CapacityWarningsFullThresholdLabel]
+Meter=String
+MeterStyle=StyleText | StyleToggleButtonLabel
+Text="'Full' Capacity Threshold:"
+
+[CapacityWarningsFullThresholdString]
+Meter=String
+MeterStyle=StyleText | StyleToggleButton
+X=[CapacityWarningsFullThresholdLabel:W]r
+Y=0r
+Text="#diskThresholdFull#"
+LeftMouseUpAction=[!CommandMeasure MeasureTextInput "Executebatch 2"]
+MiddleMouseUpAction=[!WriteKeyValue Variables "diskThresholdFull" "#dDiskThresholdFull#" "#gadgetSettingsPath#"][!RefreshGroup "DrivesMeter"][!Refresh]
 
 ; ----- Force Hide Disks -----
 

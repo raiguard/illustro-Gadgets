@@ -39,6 +39,9 @@ dHideLineGraph=0
 dHideHistogram=0
 dHideCapacityWarnings=0
 
+dDiskThresholdWarn=0.8
+dDiskThresholdFull=0.95
+
 dColorDisk1=107,238,98,200
 dColorDisk2=255,246,42,200
 dColorDisk3=250,158,0,200

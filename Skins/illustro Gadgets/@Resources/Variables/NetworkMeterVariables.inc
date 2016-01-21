@@ -12,11 +12,11 @@ graphWidth=(#bgWidth# - #generalXMarginLeft# - (#bgWidth# - #generalXMarginRight
 
 ; -- Dynamic (do not change)--
 ; Colors
-gColorUpload=0,0,0
-gColorDownload=0,0,0
+colorUploadRgb=0,0,0
+colorDownloadRgb=0,0,0
 
-gAlphaUpload=0
-gAlphaDownload=0
+colorUploadA=0
+colorDownloadA=0
 
 ; Data
 dataIsInbound=0

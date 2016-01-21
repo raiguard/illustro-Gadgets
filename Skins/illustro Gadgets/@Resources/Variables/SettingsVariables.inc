@@ -2,7 +2,7 @@
 bgWidth=600
 bgHeight=450
 pageName=welcome
-gadgetsSubpage=drivesmeter
+gadgetsSubpage=allcpumeter
 hwinfoSubpage=cpu0
 
 ; -- Visual Properties --

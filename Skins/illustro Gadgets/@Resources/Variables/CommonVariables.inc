@@ -1,6 +1,6 @@
 [Variables]
 ; -- Version --
-version="0.8.2"
+version="1.0.0"
 
 ; -- Addons --
 rainRGB=#@#Addons\RainRGB\RainRGB4.exe
@@ -10,6 +10,7 @@ hwinfoSmv=#@#Addons\HWiNFO\HWiNFOSharedMemoryViewer.exe
 ; -- Scripts --
 fixedPrecisionFormatScript=#@#Scripts\FixedPrecisionFormat.lua
 settingsScript=#@#Scripts\Settings.lua
+rgbaManipulationScript=#@#Scripts\RGBAManipulation.lua
 graphColorConfigScript=#@#Scripts\GraphColorConfig.lua
 
 ; -- General Visual Properties --
@@ -36,4 +37,4 @@ fontSize2=9
 fontSize3=12
 titleSize=10
 
-; DEGREES SYMBOL: ï¿½
+; DEGREES SYMBOL: °

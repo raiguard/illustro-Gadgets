@@ -31,6 +31,15 @@ Substitute="\":"\\"
 ;   METERS
 ; ========================================================================================================================
 
+; ----- Instructions -----
+[InstructionsString]
+Meter=String
+MeterStyle=StyleText
+FontColor=#colorSecondary#
+X=#panelContentMarginLeftX#
+Y=[CopyrightText:Y]
+Text="Left-click to edit, middle-click to set default"
+
 [NavMenuIndicatorTop]
 Meter=Image
 MeterStyle=StyleNavMenuIndicatorTop
