@@ -152,7 +152,7 @@ MiddleMouseUpAction=[!WriteKeyValue Variables "useHWiNFOClockSpeed" "#dUseHWiNFO
 [ShowCpuFanSpeedLabel]
 Meter=String
 MeterStyle=StyleText | StyleToggleButtonLabel
-Text="Fan Speed Information (requres HWiNFO):"
+Text="Fan Speed Information (requires HWiNFO):"
 
 [ShowCpuFanSpeedButtonEnabled]
 Meter=String
